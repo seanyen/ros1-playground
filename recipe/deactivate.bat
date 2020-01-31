@@ -1,0 +1,10 @@
+@if not defined CONDA_PREFIX goto:eof
+
+@set ROS_DISTRO=
+@set ROS_ETC_DIR=
+@set ROS_PACKAGE_PATH=
+@set ROS_PYTHON_VERSION=
+@set ROS_VERSION=
+@set PYTHONHOME=
+@set PYTHONPATH=
+@set CMAKE_PREFIX_PATH=
