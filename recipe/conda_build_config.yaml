@@ -1,0 +1,4 @@
+channel_sources:
+  - ros-playground,conda-forge,defaults
+channel_targets:
+  - ros-playground main

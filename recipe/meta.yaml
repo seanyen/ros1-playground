@@ -24,7 +24,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [not win64]
+  skip: true  # [not win64 or not py3k]
 
 outputs:
 - name: ros-noetic-catkin
