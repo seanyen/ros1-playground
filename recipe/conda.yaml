@@ -1,0 +1,64 @@
+pkg-config:
+  conda: [pkg-config]
+python-rospkg:
+  conda: [rospkg]
+boost:
+  conda: [boost]
+python-argparse:
+  conda: []
+python-catkin-pkg:
+  conda: [catkin_pkg]
+python3-catkin-pkg:
+  conda: [catkin_pkg]
+python:
+  conda: [python]
+python3:
+  conda: [python]
+python-rosdep:
+  conda: [rosdep]
+python3-rosdep:
+  conda: [rosdep]
+python-empy:
+  conda: [empy]
+python3-empy:
+  conda: [empy]
+tinyxml2:
+  conda: [tinyxml2]
+gtest:
+  conda: [gtest]
+cmake:
+  conda: [cmake]
+google-mock:
+  conda: [gmock]
+python-mock:
+  conda: [mock]
+python3-mock:
+  conda: [mock]
+python-nose:
+  conda: [nose]
+python3-nose:
+  conda: [nose]
+python-coverage:
+  conda: [coverage]
+python3-coverage:
+  conda: [coverage]
+libconsole-bridge-dev:
+  conda: [console_bridge]
+python-yaml:
+  conda: [pyyaml]
+python3-setuptools:
+  conda: [setuptools]
+python3-catkin-pkg-modules:
+  conda: [catkin_pkg]
+python3-rosdep-modules:
+  conda: [rosdep]
+libboost-thread-dev:
+  conda: [boost]
+libboost-system-dev:
+  conda: [boost]
+libboost-system-dev:
+  conda: [boost]
+libboost-date-time-dev:
+  conda: [boost]
+libboost-thread-dev:
+  conda: [boost]
