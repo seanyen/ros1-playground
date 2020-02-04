@@ -2,6 +2,8 @@ pkg-config:
   conda: [pkg-config]
 python-rospkg:
   conda: [rospkg]
+python3-rospkg:
+  conda: [rospkg]
 boost:
   conda: [boost]
 python-argparse:
@@ -46,6 +48,8 @@ libconsole-bridge-dev:
   conda: [console_bridge]
 python-yaml:
   conda: [pyyaml]
+python3-yaml:
+  conda: [pyyaml]
 python3-setuptools:
   conda: [setuptools]
 python3-catkin-pkg-modules:
@@ -62,3 +66,33 @@ libboost-date-time-dev:
   conda: [boost]
 libboost-thread-dev:
   conda: [boost]
+libpoco-dev:
+  conda: [poco]
+python-gnupg:
+  conda: [python-gnupg]
+python-imaging:
+  conda: [pillow]
+python-crypto:
+  conda: [pycrypto]
+bzip2:
+  conda: [bzip2]
+libssl-dev:
+  conda: [openssl]
+libgpgme-dev:
+  conda: [gpgme]
+log4cxx:
+  conda: [log4cxx]
+apr:
+  conda: [apr]
+python-netifaces:
+  conda: [netifaces]
+python-paramiko:
+  conda: [paramiko]
+sbcl:
+  conda: []
+lz4:
+  conda: [lz4]
+python-defusedxml:
+  conda: [defusedxml]
+python-numpy:
+  conda: [numpy]

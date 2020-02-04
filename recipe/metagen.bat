@@ -10,15 +10,25 @@ IF %ERRORLEVEL% NEQ 0 (
   exit /b 1
 )
 
+mkdir %TEMP_PATH%\etc
+set ROS_ETC_DIR=%TEMP_PATH%\etc
+
+rosdep init
+
+set "URI_PATH=%CURRENT_PATH:\=/%/conda.yaml"
+echo yaml file:///%URI_PATH% conda > %ROS_ETC_DIR%\rosdep\sources.list.d\00-default.list
+
+rosdep update
+
 copy metagen.py %TEMP_PATH%\metagen.py /y
 
 pushd %TEMP_PATH%
 
-set ROS_DISTRO=noetic
+set ROS_DISTRO=melodic
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator roscpp_core rospack --deps --tar --flat > ros.rosinstall
+rosinstall_generator ros_core --deps --tar --flat > ros.rosinstall
 
 rd /s /q src
 mkdir src
