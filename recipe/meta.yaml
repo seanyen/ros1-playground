@@ -626,7 +626,6 @@ outputs:
     - ros-melodic-catkin
     - ros-melodic-rostime
     - ros-melodic-pluginlib
-    - gpgme
     - boost
     - ros-melodic-roscpp-traits
     - ros-melodic-cpp-common
@@ -641,7 +640,6 @@ outputs:
     - ros-melodic-catkin
     - ros-melodic-rostime
     - ros-melodic-pluginlib
-    - gpgme
     - boost
     - ros-melodic-roscpp-traits
     - ros-melodic-cpp-common
