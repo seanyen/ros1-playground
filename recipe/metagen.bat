@@ -2,6 +2,12 @@
 setlocal
 
 set CURRENT_PATH=%~dp0
+set UP_TO_PACKAGE=%1
+
+if "%UP_TO_PACKAGE%" == "" (
+  echo "Usage: metagen.bat <up-to-package>"
+  exit /b 0
+)
 
 set TEMP_PATH=%TEMP%\%RANDOM%
 mkdir %TEMP_PATH%
@@ -28,7 +34,7 @@ set ROS_DISTRO=melodic
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator rospack --deps --tar --flat > ros.rosinstall
+rosinstall_generator %UP_TO_PACKAGE% --deps --tar --flat > ros.rosinstall
 
 rd /s /q src
 mkdir src
