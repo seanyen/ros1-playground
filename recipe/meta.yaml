@@ -1,5 +1,5 @@
 package:
-  name: ros
+  name: ros-noetic-catkin
   version: 0.0.1
 
 source:
@@ -45,6 +45,7 @@ outputs:
     - empy
     - setuptools
     - catkin_pkg
+    - conda-build <3.18.11
     run:
     - python
     - mock
@@ -56,155 +57,155 @@ outputs:
     - setuptools
     - catkin_pkg
   script: bld_.bat
-- name: ros-noetic-cmake-modules
-  version: 0.5.0
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - ros-noetic-catkin
-    run:
-    - python
-    - ros-noetic-catkin
-  script: bld_.bat
-- name: ros-noetic-cpp-common
-  version: 0.7.1
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - console_bridge
-    - boost
-    - boost
-    - ros-noetic-catkin
-    run:
-    - python
-    - console_bridge
-    - boost
-    - boost
-    - ros-noetic-catkin
-  script: bld_.bat
-- name: ros-noetic-roscpp-serialization
-  version: 0.7.1
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - ros-noetic-cpp-common
-    - ros-noetic-rostime
-    - ros-noetic-roscpp-traits
-    - ros-noetic-catkin
-    run:
-    - python
-    - ros-noetic-cpp-common
-    - ros-noetic-rostime
-    - ros-noetic-roscpp-traits
-    - ros-noetic-catkin
-  script: bld_.bat
-- name: ros-noetic-roscpp-traits
-  version: 0.7.1
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - ros-noetic-catkin
-    - ros-noetic-cpp-common
-    - ros-noetic-rostime
-    run:
-    - python
-    - ros-noetic-catkin
-    - ros-noetic-cpp-common
-    - ros-noetic-rostime
-  script: bld_.bat
-- name: ros-noetic-rospack
-  version: 2.5.5
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - ros-noetic-ros-environment
-    - tinyxml2
-    - gtest
-    - boost
-    - python
-    - pkg-config
-    - ros-noetic-cmake-modules
-    - catkin_pkg
-    - rosdep
-    - coverage
-    - ros-noetic-catkin
-    run:
-    - python
-    - ros-noetic-ros-environment
-    - tinyxml2
-    - gtest
-    - boost
-    - python
-    - pkg-config
-    - ros-noetic-cmake-modules
-    - catkin_pkg
-    - rosdep
-    - coverage
-    - ros-noetic-catkin
-  script: bld_.bat
-- name: ros-noetic-rostime
-  version: 0.7.1
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - boost
-    - ros-noetic-cpp-common
-    - boost
-    - boost
-    - ros-noetic-catkin
-    run:
-    - python
-    - boost
-    - ros-noetic-cpp-common
-    - boost
-    - boost
-    - ros-noetic-catkin
-  script: bld_.bat
-- name: ros-noetic-ros-environment
-  version: 1.3.0
-  requirements:
-    build:
-    - "{{ compiler('cxx') }}"
-    - "{{ compiler('c') }}"
-    - ninja
-    - cmake
-    host:
-    - python
-    - ros-noetic-catkin
-    run:
-    - python
-    - ros-noetic-catkin
-  script: bld_.bat
+# - name: ros-noetic-cmake-modules
+#   version: 0.5.0
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - ros-noetic-catkin
+#   script: bld_.bat
+# - name: ros-noetic-cpp-common
+#   version: 0.7.1
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - console_bridge
+#     - boost
+#     - boost
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - console_bridge
+#     - boost
+#     - boost
+#     - ros-noetic-catkin
+#   script: bld_.bat
+# - name: ros-noetic-roscpp-serialization
+#   version: 0.7.1
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - ros-noetic-cpp-common
+#     - ros-noetic-rostime
+#     - ros-noetic-roscpp-traits
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - ros-noetic-cpp-common
+#     - ros-noetic-rostime
+#     - ros-noetic-roscpp-traits
+#     - ros-noetic-catkin
+#   script: bld_.bat
+# - name: ros-noetic-roscpp-traits
+#   version: 0.7.1
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - ros-noetic-catkin
+#     - ros-noetic-cpp-common
+#     - ros-noetic-rostime
+#     run:
+#     - python
+#     - ros-noetic-catkin
+#     - ros-noetic-cpp-common
+#     - ros-noetic-rostime
+#   script: bld_.bat
+# - name: ros-noetic-rospack
+#   version: 2.5.5
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - ros-noetic-ros-environment
+#     - tinyxml2
+#     - gtest
+#     - boost
+#     - python
+#     - pkg-config
+#     - ros-noetic-cmake-modules
+#     - catkin_pkg
+#     - rosdep
+#     - coverage
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - ros-noetic-ros-environment
+#     - tinyxml2
+#     - gtest
+#     - boost
+#     - python
+#     - pkg-config
+#     - ros-noetic-cmake-modules
+#     - catkin_pkg
+#     - rosdep
+#     - coverage
+#     - ros-noetic-catkin
+#   script: bld_.bat
+# - name: ros-noetic-rostime
+#   version: 0.7.1
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - boost
+#     - ros-noetic-cpp-common
+#     - boost
+#     - boost
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - boost
+#     - ros-noetic-cpp-common
+#     - boost
+#     - boost
+#     - ros-noetic-catkin
+#   script: bld_.bat
+# - name: ros-noetic-ros-environment
+#   version: 1.3.0
+#   requirements:
+#     build:
+#     - "{{ compiler('cxx') }}"
+#     - "{{ compiler('c') }}"
+#     - ninja
+#     - cmake
+#     host:
+#     - python
+#     - ros-noetic-catkin
+#     run:
+#     - python
+#     - ros-noetic-catkin
+#   script: bld_.bat
 
 about:
   home: https://www.ros.org/
