@@ -634,7 +634,6 @@ outputs:
         - ros-melodic-roslz4
         - ros-melodic-catkin
         - openssl
-        - gpgme
       run:
         - python
         - bzip2
@@ -649,7 +648,6 @@ outputs:
         - ros-melodic-roslz4
         - ros-melodic-catkin
         - openssl
-        - gpgme
     script: bld_.bat
   - name: ros-melodic-rosbash
     version: 1.14.7

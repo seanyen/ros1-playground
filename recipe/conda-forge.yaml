@@ -79,7 +79,7 @@ bzip2:
 libssl-dev:
   conda: [openssl]
 libgpgme-dev:
-  conda: [gpgme]
+  conda: []
 log4cxx:
   conda: [log4cxx]
 apr:
