@@ -989,7 +989,7 @@ outputs:
     - rospkg
   script: bld_.bat
 - name: ros-melodic-roslisp
-  version:
+  version: 1.9.22
   requirements:
     build:
     - "{{ compiler('cxx') }}"
