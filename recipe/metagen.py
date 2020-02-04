@@ -5,6 +5,7 @@ import rosdep2
 import os
 
 yaml = ruamel.yaml.YAML()
+yaml.indent(mapping=2, sequence=4, offset=2)
 
 def convert_os_override_option():
     return 'conda', '10'
@@ -46,7 +47,8 @@ with open("ros.rosinstall", 'r') as stream:
         entry = {}
         entry['url'] = tar['tar']['uri']
         entry['folder'] = pkg_name
-        if os.path.exists('%s.patch' % pkg_name):
+        location_to_test = os.path.join(os.getenv('CURRENT_PATH'), '%s.patch' % pkg_name)
+        if os.path.exists(location_to_test):
             entry['patches'] = [ '%s.patch' % pkg_name ]
         source.append(entry)
 

@@ -2,9 +2,15 @@
 set CC=cl.exe
 set CXX=cl.exe
 
+set IS_CATKIN_PKG=
 set ADDITIONAL_ARGS=-DCATKIN_BUILD_BINARY_PACKAGE=ON
 if "%PKG_NAME%" == "ros-noetic-catkin" (
     set ADDITIONAL_ARGS=
+    set IS_CATKIN_PKG=1
+)
+if "%PKG_NAME%" == "ros-melodic-catkin" (
+    set ADDITIONAL_ARGS=
+    set IS_CATKIN_PKG=1
 )
 
 mkdir %PKG_NAME%\build
@@ -31,7 +37,7 @@ if errorlevel 1 exit 1
 cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
-if "%PKG_NAME%" == "ros-noetic-catkin" (
+if "%IS_CATKIN_PKG%" == "1" (
 
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.

@@ -15,7 +15,7 @@ set ROS_ETC_DIR=%TEMP_PATH%\etc
 
 rosdep init
 
-set "URI_PATH=%CURRENT_PATH:\=/%/conda.yaml"
+set "URI_PATH=%CURRENT_PATH:\=/%/conda-forge.yaml"
 echo yaml file:///%URI_PATH% conda > %ROS_ETC_DIR%\rosdep\sources.list.d\00-default.list
 
 rosdep update
@@ -28,7 +28,7 @@ set ROS_DISTRO=melodic
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator ros_core --deps --tar --flat > ros.rosinstall
+rosinstall_generator rospack --deps --tar --flat > ros.rosinstall
 
 rd /s /q src
 mkdir src
@@ -50,4 +50,4 @@ IF %ERRORLEVEL% NEQ 0 (
   exit /b 1
 )
 
-echo "Succeeded!"
+echo Succeeded! Checkout the genereated meta.yaml file!

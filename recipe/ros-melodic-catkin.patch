@@ -1,5 +1,5 @@
---- ros-noetic-catkin/cmake/catkin_generate_environment.cmake
-+++ ros-noetic-catkin/cmake/catkin_generate_environment.cmake
+--- ros-melodic-catkin/cmake/catkin_generate_environment.cmake
++++ ros-melodic-catkin/cmake/catkin_generate_environment.cmake
 @@ -99,54 +99,38 @@ function(catkin_generate_environment)
        DESTINATION ${CMAKE_INSTALL_PREFIX})
    endif()
