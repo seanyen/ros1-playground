@@ -42,6 +42,9 @@ wstool init src
 wstool merge -r -y -t src ros.rosinstall
 wstool update -t src
 
+:: del unwanted files
+del /f /q src\roslisp\manifest.xml
+
 python metagen.py
 IF %ERRORLEVEL% NEQ 0 (
   echo "Cannot create meta.yaml"
