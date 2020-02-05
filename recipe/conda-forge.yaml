@@ -125,7 +125,7 @@ python3-pytest-mock:
 yaml:
   conda: [yaml]
 asio:
-  conda: [saio]
+  conda: [asio]
 git:
   conda: [git]
 spdlog:
