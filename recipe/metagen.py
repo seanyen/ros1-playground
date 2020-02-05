@@ -53,8 +53,8 @@ with open("ros.rosinstall", 'r') as stream:
             local_name = repo['git']['local-name']
             pkg_name = _resolve(local_name)[0]
             entry['git_url'] = repo['git']['uri']
-            entry['git_rev'] = pkg_name
-            entry['fn'] = repo['git']['version']
+            entry['git_rev'] = repo['git']['version']
+            entry['folder'] = pkg_name
         location_to_test = os.path.join(os.getenv('CURRENT_PATH'), '%s.patch' % pkg_name)
         if os.path.exists(location_to_test):
             entry['patches'] = [ '%s.patch' % pkg_name ]
