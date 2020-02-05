@@ -67,14 +67,8 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--catkin-green.svg)](https://anaconda.org/conda-forge/ros-noetic-catkin) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-catkin.svg)](https://anaconda.org/conda-forge/ros-noetic-catkin) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-catkin.svg)](https://anaconda.org/conda-forge/ros-noetic-catkin) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-catkin.svg)](https://anaconda.org/conda-forge/ros-noetic-catkin) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--cmake--modules-green.svg)](https://anaconda.org/conda-forge/ros-noetic-cmake-modules) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-cmake-modules.svg)](https://anaconda.org/conda-forge/ros-noetic-cmake-modules) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-cmake-modules.svg)](https://anaconda.org/conda-forge/ros-noetic-cmake-modules) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-cmake-modules.svg)](https://anaconda.org/conda-forge/ros-noetic-cmake-modules) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--cpp--common-green.svg)](https://anaconda.org/conda-forge/ros-noetic-cpp-common) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-cpp-common.svg)](https://anaconda.org/conda-forge/ros-noetic-cpp-common) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-cpp-common.svg)](https://anaconda.org/conda-forge/ros-noetic-cpp-common) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-cpp-common.svg)](https://anaconda.org/conda-forge/ros-noetic-cpp-common) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--ros--environment-green.svg)](https://anaconda.org/conda-forge/ros-noetic-ros-environment) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-ros-environment.svg)](https://anaconda.org/conda-forge/ros-noetic-ros-environment) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-ros-environment.svg)](https://anaconda.org/conda-forge/ros-noetic-ros-environment) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-ros-environment.svg)](https://anaconda.org/conda-forge/ros-noetic-ros-environment) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--roscpp--serialization-green.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-serialization) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-roscpp-serialization.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-serialization) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-roscpp-serialization.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-serialization) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-roscpp-serialization.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-serialization) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--roscpp--traits-green.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-traits) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-roscpp-traits.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-traits) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-roscpp-traits.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-traits) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-roscpp-traits.svg)](https://anaconda.org/conda-forge/ros-noetic-roscpp-traits) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--rospack-green.svg)](https://anaconda.org/conda-forge/ros-noetic-rospack) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-rospack.svg)](https://anaconda.org/conda-forge/ros-noetic-rospack) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-rospack.svg)](https://anaconda.org/conda-forge/ros-noetic-rospack) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-rospack.svg)](https://anaconda.org/conda-forge/ros-noetic-rospack) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--noetic--rostime-green.svg)](https://anaconda.org/conda-forge/ros-noetic-rostime) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-noetic-rostime.svg)](https://anaconda.org/conda-forge/ros-noetic-rostime) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-noetic-rostime.svg)](https://anaconda.org/conda-forge/ros-noetic-rostime) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-noetic-rostime.svg)](https://anaconda.org/conda-forge/ros-noetic-rostime) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--ament--cmake--core-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-cmake-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-ament-cmake-core.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-cmake-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-ament-cmake-core.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-cmake-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-ament-cmake-core.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-cmake-core) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--ament--package-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) |
 
 Installing ros
 ==============
@@ -85,16 +79,16 @@ Installing `ros` from the `conda-forge` channel can be achieved by adding `conda
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `ros-noetic-catkin, ros-noetic-cmake-modules, ros-noetic-cpp-common, ros-noetic-ros-environment, ros-noetic-roscpp-serialization, ros-noetic-roscpp-traits, ros-noetic-rospack, ros-noetic-rostime` can be installed with:
+Once the `conda-forge` channel has been enabled, `ros-eloquent-ament-cmake-core, ros-eloquent-ament-package` can be installed with:
 
 ```
-conda install ros-noetic-catkin ros-noetic-cmake-modules ros-noetic-cpp-common ros-noetic-ros-environment ros-noetic-roscpp-serialization ros-noetic-roscpp-traits ros-noetic-rospack ros-noetic-rostime
+conda install ros-eloquent-ament-cmake-core ros-eloquent-ament-package
 ```
 
-It is possible to list all of the versions of `ros-noetic-catkin` available on your platform with:
+It is possible to list all of the versions of `ros-eloquent-ament-cmake-core` available on your platform with:
 
 ```
-conda search ros-noetic-catkin --channel conda-forge
+conda search ros-eloquent-ament-cmake-core --channel conda-forge
 ```
 
 
