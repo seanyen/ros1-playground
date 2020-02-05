@@ -16,6 +16,8 @@ IF %ERRORLEVEL% NEQ 0 (
   exit /b 1
 )
 
+echo Temp directory: %TEMP_PATH%
+
 mkdir %TEMP_PATH%\etc
 set ROS_ETC_DIR=%TEMP_PATH%\etc
 
@@ -34,13 +36,10 @@ set ROS_DISTRO=eloquent
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator %UP_TO_PACKAGE% --deps --tar --flat > ros.rosinstall
+rosinstall_generator %UP_TO_PACKAGE% --deps --flat > ros.rosinstall
 
-rd /s /q src
 mkdir src
-wstool init src
-wstool merge -r -y -t src ros.rosinstall
-wstool update -t src
+vcs import src < ros.rosinstall
 
 :: del unwanted files
 ::del /f /q src\roslisp\manifest.xml

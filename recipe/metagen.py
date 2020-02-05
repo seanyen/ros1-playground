@@ -41,18 +41,26 @@ def _resolve(pkg):
 source = []
 with open("ros.rosinstall", 'r') as stream:
     data = yaml.load(stream)
-    for tar in data:
-        local_name = tar['tar']['local-name']
-        pkg_name = _resolve(local_name)[0]
+    for repo in data:
         entry = {}
-        entry['url'] = tar['tar']['uri']
-        entry['folder'] = pkg_name
-        entry['fn'] = "%s.tar.gz" % pkg_name
+        if 'tar' in repo:
+            local_name = repo['tar']['local-name']
+            pkg_name = _resolve(local_name)[0]
+            entry['url'] = repo['tar']['uri']
+            entry['folder'] = pkg_name
+            entry['fn'] = "%s.tar.gz" % pkg_name
+        if 'git' in repo:
+            local_name = repo['git']['local-name']
+            pkg_name = _resolve(local_name)[0]
+            entry['git_url'] = repo['git']['uri']
+            entry['git_rev'] = pkg_name
+            entry['fn'] = repo['git']['version']
         location_to_test = os.path.join(os.getenv('CURRENT_PATH'), '%s.patch' % pkg_name)
         if os.path.exists(location_to_test):
             entry['patches'] = [ '%s.patch' % pkg_name ]
         source.append(entry)
 
+unsatisfied_deps = set()
 outputs = []
 for pkg in rospack.list():
     pkg_name = _resolve(pkg)[0]
@@ -76,14 +84,15 @@ for pkg in rospack.list():
 
     for dep in deps:
         if not _resolve(dep):
-            print(dep)
+            unsatisfied_deps.add(dep)
             continue
         output['requirements']['host'].extend(_resolve(dep))
         output['requirements']['run'].extend(_resolve(dep))
 
     output['script'] = 'bld_.bat'
-
     outputs.append(output)
+
+print(unsatisfied_deps)
 
 template = """\
 package:

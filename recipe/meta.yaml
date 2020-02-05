@@ -3,324 +3,324 @@ package:
   version: 0.0.1
 
 source:
-  - url: https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/eloquent/action_msgs/0.8.0-1.tar.gz
-    folder: ros-eloquent-action-msgs
-    fn: ros-eloquent-action-msgs.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake
-    fn: ros-eloquent-ament-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_copyright/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-copyright
-    fn: ros-eloquent-ament-cmake-copyright.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_core/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-core
-    fn: ros-eloquent-ament-cmake-core.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_cppcheck/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-cppcheck
-    fn: ros-eloquent-ament-cmake-cppcheck.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_cpplint/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-cpplint
-    fn: ros-eloquent-ament-cmake-cpplint.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_definitions/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-definitions
-    fn: ros-eloquent-ament-cmake-export-definitions.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_dependencies/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-dependencies
-    fn: ros-eloquent-ament-cmake-export-dependencies.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_include_directories/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-include-directories
-    fn: ros-eloquent-ament-cmake-export-include-directories.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_interfaces/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-interfaces
-    fn: ros-eloquent-ament-cmake-export-interfaces.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_libraries/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-libraries
-    fn: ros-eloquent-ament-cmake-export-libraries.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_link_flags/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-export-link-flags
-    fn: ros-eloquent-ament-cmake-export-link-flags.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_flake8/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-flake8
-    fn: ros-eloquent-ament-cmake-flake8.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_gmock/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-gmock
-    fn: ros-eloquent-ament-cmake-gmock.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_gtest/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-gtest
-    fn: ros-eloquent-ament-cmake-gtest.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_include_directories/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-include-directories
-    fn: ros-eloquent-ament-cmake-include-directories.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_libraries/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-libraries
-    fn: ros-eloquent-ament-cmake-libraries.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_lint_cmake/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-lint-cmake
-    fn: ros-eloquent-ament-cmake-lint-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_pep257/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-pep257
-    fn: ros-eloquent-ament-cmake-pep257.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_pytest/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-pytest
-    fn: ros-eloquent-ament-cmake-pytest.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_python/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-python
-    fn: ros-eloquent-ament-cmake-python.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/eloquent/ament_cmake_ros/0.8.0-1.tar.gz
-    folder: ros-eloquent-ament-cmake-ros
-    fn: ros-eloquent-ament-cmake-ros.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_target_dependencies/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-target-dependencies
-    fn: ros-eloquent-ament-cmake-target-dependencies.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_test/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-test
-    fn: ros-eloquent-ament-cmake-test.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_uncrustify/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-uncrustify
-    fn: ros-eloquent-ament-cmake-uncrustify.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_version/0.8.2-1.tar.gz
-    folder: ros-eloquent-ament-cmake-version
-    fn: ros-eloquent-ament-cmake-version.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cmake_xmllint/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cmake-xmllint
-    fn: ros-eloquent-ament-cmake-xmllint.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_copyright/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-copyright
-    fn: ros-eloquent-ament-copyright.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cppcheck/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cppcheck
-    fn: ros-eloquent-ament-cppcheck.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_cpplint/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-cpplint
-    fn: ros-eloquent-ament-cpplint.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_flake8/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-flake8
-    fn: ros-eloquent-ament-flake8.tar.gz
-  - url: https://github.com/ros2-gbp/ament_index-release/archive/release/eloquent/ament_index_python/0.7.2-1.tar.gz
-    folder: ros-eloquent-ament-index-python
-    fn: ros-eloquent-ament-index-python.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-lint
-    fn: ros-eloquent-ament-lint.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint_auto/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-lint-auto
-    fn: ros-eloquent-ament-lint-auto.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint_cmake/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-lint-cmake
-    fn: ros-eloquent-ament-lint-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_lint_common/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-lint-common
-    fn: ros-eloquent-ament-lint-common.tar.gz
-  - url: https://github.com/ros2-gbp/ament_package-release/archive/release/eloquent/ament_package/0.8.8-1.tar.gz
-    folder: ros-eloquent-ament-package
-    fn: ros-eloquent-ament-package.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_pep257/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-pep257
-    fn: ros-eloquent-ament-pep257.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_uncrustify/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-uncrustify
-    fn: ros-eloquent-ament-uncrustify.tar.gz
-  - url: https://github.com/ros2-gbp/ament_lint-release/archive/release/eloquent/ament_xmllint/0.8.1-1.tar.gz
-    folder: ros-eloquent-ament-xmllint
-    fn: ros-eloquent-ament-xmllint.tar.gz
-  - url: https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/eloquent/builtin_interfaces/0.8.0-1.tar.gz
-    folder: ros-eloquent-builtin-interfaces
-    fn: ros-eloquent-builtin-interfaces.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/eloquent/connext_cmake_module/0.8.4-1.tar.gz
-    folder: ros-eloquent-connext-cmake-module
-    fn: ros-eloquent-connext-cmake-module.tar.gz
-  - url: https://github.com/ros2-gbp/cyclonedds-release/archive/release/eloquent/cyclonedds/0.1.0-7.tar.gz
-    folder: ros-eloquent-cyclonedds
-    fn: ros-eloquent-cyclonedds.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/eloquent/cyclonedds_cmake_module/0.4.4-1.tar.gz
-    folder: ros-eloquent-cyclonedds-cmake-module
-    fn: ros-eloquent-cyclonedds-cmake-module.tar.gz
-  - url: https://github.com/ros2-gbp/ament_cmake_ros-release/archive/release/eloquent/domain_coordinator/0.8.0-1.tar.gz
-    folder: ros-eloquent-domain-coordinator
-    fn: ros-eloquent-domain-coordinator.tar.gz
-  - url: https://github.com/ros2-gbp/fastcdr-release/archive/release/eloquent/fastcdr/1.0.11-1.tar.gz
-    folder: ros-eloquent-fastcdr
-    fn: ros-eloquent-fastcdr.tar.gz
-  - url: https://github.com/ros2-gbp/fastrtps-release/archive/release/eloquent/fastrtps/1.9.3-1.tar.gz
-    folder: ros-eloquent-fastrtps
-    fn: ros-eloquent-fastrtps.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/eloquent/fastrtps_cmake_module/0.8.0-1.tar.gz
-    folder: ros-eloquent-fastrtps-cmake-module
-    fn: ros-eloquent-fastrtps-cmake-module.tar.gz
-  - url: https://github.com/ros2-gbp/foonathan_memory_vendor-release/archive/release/eloquent/foonathan_memory_vendor/0.3.0-1.tar.gz
-    folder: ros-eloquent-foonathan-memory-vendor
-    fn: ros-eloquent-foonathan-memory-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/googletest-release/archive/release/eloquent/gmock_vendor/1.8.9000-1.tar.gz
-    folder: ros-eloquent-gmock-vendor
-    fn: ros-eloquent-gmock-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/googletest-release/archive/release/eloquent/gtest_vendor/1.8.9000-1.tar.gz
-    folder: ros-eloquent-gtest-vendor
-    fn: ros-eloquent-gtest-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/launch-release/archive/release/eloquent/launch/0.9.6-1.tar.gz
-    folder: ros-eloquent-launch
-    fn: ros-eloquent-launch.tar.gz
-  - url: https://github.com/ros2-gbp/launch-release/archive/release/eloquent/launch_testing/0.9.6-1.tar.gz
-    folder: ros-eloquent-launch-testing
-    fn: ros-eloquent-launch-testing.tar.gz
-  - url: https://github.com/ros2-gbp/launch-release/archive/release/eloquent/launch_testing_ament_cmake/0.9.6-1.tar.gz
-    folder: ros-eloquent-launch-testing-ament-cmake
-    fn: ros-eloquent-launch-testing-ament-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/libyaml_vendor-release/archive/release/eloquent/libyaml_vendor/1.0.0-1.tar.gz
-    folder: ros-eloquent-libyaml-vendor
-    fn: ros-eloquent-libyaml-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release/archive/release/eloquent/opensplice_cmake_module/0.8.1-1.tar.gz
-    folder: ros-eloquent-opensplice-cmake-module
-    fn: ros-eloquent-opensplice-cmake-module.tar.gz
-  - url: https://github.com/ros2-gbp/osrf_pycommon-release/archive/release/eloquent/osrf_pycommon/0.1.9-2.tar.gz
-    folder: ros-eloquent-osrf-pycommon
-    fn: ros-eloquent-osrf-pycommon.tar.gz
-  - url: https://github.com/ros2-gbp/osrf_testings_tools_cpp-release/archive/release/eloquent/osrf_testing_tools_cpp/1.2.1-1.tar.gz
-    folder: ros-eloquent-osrf-testing-tools-cpp
-    fn: ros-eloquent-osrf-testing-tools-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/poco_vendor-release/archive/release/eloquent/poco_vendor/1.2.0-1.tar.gz
-    folder: ros-eloquent-poco-vendor
-    fn: ros-eloquent-poco-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/python_cmake_module-release/archive/release/eloquent/python_cmake_module/0.8.0-2.tar.gz
-    folder: ros-eloquent-python-cmake-module
-    fn: ros-eloquent-python-cmake-module.tar.gz
-  - url: https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl/0.8.4-1.tar.gz
-    folder: ros-eloquent-rcl
-    fn: ros-eloquent-rcl.tar.gz
-  - url: https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl_action/0.8.4-1.tar.gz
-    folder: ros-eloquent-rcl-action
-    fn: ros-eloquent-rcl-action.tar.gz
-  - url: https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/eloquent/rcl_interfaces/0.8.0-1.tar.gz
-    folder: ros-eloquent-rcl-interfaces
-    fn: ros-eloquent-rcl-interfaces.tar.gz
-  - url: https://github.com/ros2-gbp/rcl_logging-release/archive/release/eloquent/rcl_logging_spdlog/0.3.3-1.tar.gz
-    folder: ros-eloquent-rcl-logging-spdlog
-    fn: ros-eloquent-rcl-logging-spdlog.tar.gz
-  - url: https://github.com/ros2-gbp/rcl-release/archive/release/eloquent/rcl_yaml_param_parser/0.8.4-1.tar.gz
-    folder: ros-eloquent-rcl-yaml-param-parser
-    fn: ros-eloquent-rcl-yaml-param-parser.tar.gz
-  - url: https://github.com/ros2-gbp/rclpy-release/archive/release/eloquent/rclpy/0.8.4-1.tar.gz
-    folder: ros-eloquent-rclpy
-    fn: ros-eloquent-rclpy.tar.gz
-  - url: https://github.com/ros2-gbp/rcpputils-release/archive/release/eloquent/rcpputils/0.2.1-1.tar.gz
-    folder: ros-eloquent-rcpputils
-    fn: ros-eloquent-rcpputils.tar.gz
-  - url: https://github.com/ros2-gbp/rcutils-release/archive/release/eloquent/rcutils/0.8.4-1.tar.gz
-    folder: ros-eloquent-rcutils
-    fn: ros-eloquent-rcutils.tar.gz
-  - url: https://github.com/ros2-gbp/rmw-release/archive/release/eloquent/rmw/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw
-    fn: ros-eloquent-rmw.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_connext-release/archive/release/eloquent/rmw_connext_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-connext-cpp
-    fn: ros-eloquent-rmw-connext-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_connext-release/archive/release/eloquent/rmw_connext_shared_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-connext-shared-cpp
-    fn: ros-eloquent-rmw-connext-shared-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_cyclonedds-release/archive/release/eloquent/rmw_cyclonedds_cpp/0.4.4-1.tar.gz
-    folder: ros-eloquent-rmw-cyclonedds-cpp
-    fn: ros-eloquent-rmw-cyclonedds-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/eloquent/rmw_fastrtps_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-fastrtps-cpp
-    fn: ros-eloquent-rmw-fastrtps-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_fastrtps-release/archive/release/eloquent/rmw_fastrtps_shared_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-fastrtps-shared-cpp
-    fn: ros-eloquent-rmw-fastrtps-shared-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_implementation-release/archive/release/eloquent/rmw_implementation/0.8.2-2.tar.gz
-    folder: ros-eloquent-rmw-implementation
-    fn: ros-eloquent-rmw-implementation.tar.gz
-  - url: https://github.com/ros2-gbp/rmw-release/archive/release/eloquent/rmw_implementation_cmake/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-implementation-cmake
-    fn: ros-eloquent-rmw-implementation-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/rmw_opensplice-release/archive/release/eloquent/rmw_opensplice_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rmw-opensplice-cpp
-    fn: ros-eloquent-rmw-opensplice-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/ros2cli-release/archive/release/eloquent/ros2cli/0.8.7-1.tar.gz
-    folder: ros-eloquent-ros2cli
-    fn: ros-eloquent-ros2cli.tar.gz
-  - url: https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/eloquent/rosgraph_msgs/0.8.0-1.tar.gz
-    folder: ros-eloquent-rosgraph-msgs
-    fn: ros-eloquent-rosgraph-msgs.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_adapter/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-adapter
-    fn: ros-eloquent-rosidl-adapter.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_cmake/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-cmake
-    fn: ros-eloquent-rosidl-cmake.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/eloquent/rosidl_default_generators/0.8.0-1.tar.gz
-    folder: ros-eloquent-rosidl-default-generators
-    fn: ros-eloquent-rosidl-default-generators.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_defaults-release/archive/release/eloquent/rosidl_default_runtime/0.8.0-1.tar.gz
-    folder: ros-eloquent-rosidl-default-runtime
-    fn: ros-eloquent-rosidl-default-runtime.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_generator_c/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-generator-c
-    fn: ros-eloquent-rosidl-generator-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_generator_cpp/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-generator-cpp
-    fn: ros-eloquent-rosidl-generator-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_dds-release/archive/release/eloquent/rosidl_generator_dds_idl/0.7.1-1.tar.gz
-    folder: ros-eloquent-rosidl-generator-dds-idl
-    fn: ros-eloquent-rosidl-generator-dds-idl.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_python-release/archive/release/eloquent/rosidl_generator_py/0.8.1-1.tar.gz
-    folder: ros-eloquent-rosidl-generator-py
-    fn: ros-eloquent-rosidl-generator-py.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_parser/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-parser
-    fn: ros-eloquent-rosidl-parser.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport-release/archive/release/eloquent/rosidl_typesupport_c/0.8.0-2.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-c
-    fn: ros-eloquent-rosidl-typesupport-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/eloquent/rosidl_typesupport_connext_c/0.8.4-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-connext-c
-    fn: ros-eloquent-rosidl-typesupport-connext-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release/archive/release/eloquent/rosidl_typesupport_connext_cpp/0.8.4-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-connext-cpp
-    fn: ros-eloquent-rosidl-typesupport-connext-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport-release/archive/release/eloquent/rosidl_typesupport_cpp/0.8.0-2.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-cpp
-    fn: ros-eloquent-rosidl-typesupport-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/eloquent/rosidl_typesupport_fastrtps_c/0.8.0-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-fastrtps-c
-    fn: ros-eloquent-rosidl-typesupport-fastrtps-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release/archive/release/eloquent/rosidl_typesupport_fastrtps_cpp/0.8.0-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-fastrtps-cpp
-    fn: ros-eloquent-rosidl-typesupport-fastrtps-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_typesupport_interface/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-interface
-    fn: ros-eloquent-rosidl-typesupport-interface.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_typesupport_introspection_c/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-introspection-c
-    fn: ros-eloquent-rosidl-typesupport-introspection-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl-release/archive/release/eloquent/rosidl_typesupport_introspection_cpp/0.8.2-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-introspection-cpp
-    fn: ros-eloquent-rosidl-typesupport-introspection-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release/archive/release/eloquent/rosidl_typesupport_opensplice_c/0.8.1-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-opensplice-c
-    fn: ros-eloquent-rosidl-typesupport-opensplice-c.tar.gz
-  - url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release/archive/release/eloquent/rosidl_typesupport_opensplice_cpp/0.8.1-1.tar.gz
-    folder: ros-eloquent-rosidl-typesupport-opensplice-cpp
-    fn: ros-eloquent-rosidl-typesupport-opensplice-cpp.tar.gz
-  - url: https://github.com/ros2-gbp/spdlog_vendor-release/archive/release/eloquent/spdlog_vendor/1.0.1-1.tar.gz
-    folder: ros-eloquent-spdlog-vendor
-    fn: ros-eloquent-spdlog-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/test_interface_files-release/archive/release/eloquent/test_interface_files/0.8.0-1.tar.gz
-    folder: ros-eloquent-test-interface-files
-    fn: ros-eloquent-test-interface-files.tar.gz
-  - url: https://github.com/ros2-gbp/rcl_interfaces-release/archive/release/eloquent/test_msgs/0.8.0-1.tar.gz
-    folder: ros-eloquent-test-msgs
-    fn: ros-eloquent-test-msgs.tar.gz
-  - url: https://github.com/ros2-gbp/tinydir_vendor-release/archive/release/eloquent/tinydir_vendor/1.1.1-1.tar.gz
-    folder: ros-eloquent-tinydir-vendor
-    fn: ros-eloquent-tinydir-vendor.tar.gz
-  - url: https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release/repository/archive.tar.gz?ref=release/eloquent/tracetools/0.2.12-1
-    folder: ros-eloquent-tracetools
-    fn: ros-eloquent-tracetools.tar.gz
-  - url: https://github.com/ros2-gbp/uncrustify_vendor-release/archive/release/eloquent/uncrustify_vendor/1.3.0-1.tar.gz
-    folder: ros-eloquent-uncrustify-vendor
-    fn: ros-eloquent-uncrustify-vendor.tar.gz
-  - url: https://github.com/ros2-gbp/unique_identifier_msgs-release/archive/release/eloquent/unique_identifier_msgs/2.1.0-1.tar.gz
-    folder: ros-eloquent-unique-identifier-msgs
-    fn: ros-eloquent-unique-identifier-msgs.tar.gz
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: ros-eloquent-action-msgs
+    fn: release/eloquent/action_msgs/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake
+    fn: release/eloquent/ament_cmake/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-copyright
+    fn: release/eloquent/ament_cmake_copyright/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-core
+    fn: release/eloquent/ament_cmake_core/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-cppcheck
+    fn: release/eloquent/ament_cmake_cppcheck/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-cpplint
+    fn: release/eloquent/ament_cmake_cpplint/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-definitions
+    fn: release/eloquent/ament_cmake_export_definitions/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-dependencies
+    fn: release/eloquent/ament_cmake_export_dependencies/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-include-directories
+    fn: release/eloquent/ament_cmake_export_include_directories/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-interfaces
+    fn: release/eloquent/ament_cmake_export_interfaces/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-libraries
+    fn: release/eloquent/ament_cmake_export_libraries/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-export-link-flags
+    fn: release/eloquent/ament_cmake_export_link_flags/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-flake8
+    fn: release/eloquent/ament_cmake_flake8/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-gmock
+    fn: release/eloquent/ament_cmake_gmock/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-gtest
+    fn: release/eloquent/ament_cmake_gtest/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-include-directories
+    fn: release/eloquent/ament_cmake_include_directories/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-libraries
+    fn: release/eloquent/ament_cmake_libraries/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-lint-cmake
+    fn: release/eloquent/ament_cmake_lint_cmake/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-pep257
+    fn: release/eloquent/ament_cmake_pep257/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-pytest
+    fn: release/eloquent/ament_cmake_pytest/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-python
+    fn: release/eloquent/ament_cmake_python/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake_ros-release.git
+    git_rev: ros-eloquent-ament-cmake-ros
+    fn: release/eloquent/ament_cmake_ros/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-target-dependencies
+    fn: release/eloquent/ament_cmake_target_dependencies/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-test
+    fn: release/eloquent/ament_cmake_test/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-uncrustify
+    fn: release/eloquent/ament_cmake_uncrustify/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: ros-eloquent-ament-cmake-version
+    fn: release/eloquent/ament_cmake_version/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cmake-xmllint
+    fn: release/eloquent/ament_cmake_xmllint/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-copyright
+    fn: release/eloquent/ament_copyright/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cppcheck
+    fn: release/eloquent/ament_cppcheck/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-cpplint
+    fn: release/eloquent/ament_cpplint/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-flake8
+    fn: release/eloquent/ament_flake8/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_index-release.git
+    git_rev: ros-eloquent-ament-index-python
+    fn: release/eloquent/ament_index_python/0.7.2-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-lint
+    fn: release/eloquent/ament_lint/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-lint-auto
+    fn: release/eloquent/ament_lint_auto/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-lint-cmake
+    fn: release/eloquent/ament_lint_cmake/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-lint-common
+    fn: release/eloquent/ament_lint_common/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_package-release.git
+    git_rev: ros-eloquent-ament-package
+    fn: release/eloquent/ament_package/0.8.8-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-pep257
+    fn: release/eloquent/ament_pep257/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-uncrustify
+    fn: release/eloquent/ament_uncrustify/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: ros-eloquent-ament-xmllint
+    fn: release/eloquent/ament_xmllint/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: ros-eloquent-builtin-interfaces
+    fn: release/eloquent/builtin_interfaces/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+    git_rev: ros-eloquent-connext-cmake-module
+    fn: release/eloquent/connext_cmake_module/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/cyclonedds-release.git
+    git_rev: ros-eloquent-cyclonedds
+    fn: release/eloquent/cyclonedds/0.1.0-7
+  - git_url: https://github.com/ros2-gbp/rmw_cyclonedds-release.git
+    git_rev: ros-eloquent-cyclonedds-cmake-module
+    fn: release/eloquent/cyclonedds_cmake_module/0.4.4-1
+  - git_url: https://github.com/ros2-gbp/ament_cmake_ros-release.git
+    git_rev: ros-eloquent-domain-coordinator
+    fn: release/eloquent/domain_coordinator/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/fastcdr-release.git
+    git_rev: ros-eloquent-fastcdr
+    fn: release/eloquent/fastcdr/1.0.11-1
+  - git_url: https://github.com/ros2-gbp/fastrtps-release.git
+    git_rev: ros-eloquent-fastrtps
+    fn: release/eloquent/fastrtps/1.9.3-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: ros-eloquent-fastrtps-cmake-module
+    fn: release/eloquent/fastrtps_cmake_module/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/foonathan_memory_vendor-release.git
+    git_rev: ros-eloquent-foonathan-memory-vendor
+    fn: release/eloquent/foonathan_memory_vendor/0.3.0-1
+  - git_url: https://github.com/ros2-gbp/googletest-release.git
+    git_rev: ros-eloquent-gmock-vendor
+    fn: release/eloquent/gmock_vendor/1.8.9000-1
+  - git_url: https://github.com/ros2-gbp/googletest-release.git
+    git_rev: ros-eloquent-gtest-vendor
+    fn: release/eloquent/gtest_vendor/1.8.9000-1
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: ros-eloquent-launch
+    fn: release/eloquent/launch/0.9.6-1
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: ros-eloquent-launch-testing
+    fn: release/eloquent/launch_testing/0.9.6-1
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: ros-eloquent-launch-testing-ament-cmake
+    fn: release/eloquent/launch_testing_ament_cmake/0.9.6-1
+  - git_url: https://github.com/ros2-gbp/libyaml_vendor-release.git
+    git_rev: ros-eloquent-libyaml-vendor
+    fn: release/eloquent/libyaml_vendor/1.0.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    git_rev: ros-eloquent-opensplice-cmake-module
+    fn: release/eloquent/opensplice_cmake_module/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/osrf_pycommon-release.git
+    git_rev: ros-eloquent-osrf-pycommon
+    fn: release/eloquent/osrf_pycommon/0.1.9-2
+  - git_url: https://github.com/ros2-gbp/osrf_testings_tools_cpp-release.git
+    git_rev: ros-eloquent-osrf-testing-tools-cpp
+    fn: release/eloquent/osrf_testing_tools_cpp/1.2.1-1
+  - git_url: https://github.com/ros2-gbp/poco_vendor-release.git
+    git_rev: ros-eloquent-poco-vendor
+    fn: release/eloquent/poco_vendor/1.2.0-1
+  - git_url: https://github.com/ros2-gbp/python_cmake_module-release.git
+    git_rev: ros-eloquent-python-cmake-module
+    fn: release/eloquent/python_cmake_module/0.8.0-2
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: ros-eloquent-rcl
+    fn: release/eloquent/rcl/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: ros-eloquent-rcl-action
+    fn: release/eloquent/rcl_action/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: ros-eloquent-rcl-interfaces
+    fn: release/eloquent/rcl_interfaces/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rcl_logging-release.git
+    git_rev: ros-eloquent-rcl-logging-spdlog
+    fn: release/eloquent/rcl_logging_spdlog/0.3.3-1
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: ros-eloquent-rcl-yaml-param-parser
+    fn: release/eloquent/rcl_yaml_param_parser/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rclpy-release.git
+    git_rev: ros-eloquent-rclpy
+    fn: release/eloquent/rclpy/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rcpputils-release.git
+    git_rev: ros-eloquent-rcpputils
+    fn: release/eloquent/rcpputils/0.2.1-1
+  - git_url: https://github.com/ros2-gbp/rcutils-release.git
+    git_rev: ros-eloquent-rcutils
+    fn: release/eloquent/rcutils/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rmw-release.git
+    git_rev: ros-eloquent-rmw
+    fn: release/eloquent/rmw/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_connext-release.git
+    git_rev: ros-eloquent-rmw-connext-cpp
+    fn: release/eloquent/rmw_connext_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_connext-release.git
+    git_rev: ros-eloquent-rmw-connext-shared-cpp
+    fn: release/eloquent/rmw_connext_shared_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_cyclonedds-release.git
+    git_rev: ros-eloquent-rmw-cyclonedds-cpp
+    fn: release/eloquent/rmw_cyclonedds_cpp/0.4.4-1
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: ros-eloquent-rmw-fastrtps-cpp
+    fn: release/eloquent/rmw_fastrtps_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: ros-eloquent-rmw-fastrtps-shared-cpp
+    fn: release/eloquent/rmw_fastrtps_shared_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
+    git_rev: ros-eloquent-rmw-implementation
+    fn: release/eloquent/rmw_implementation/0.8.2-2
+  - git_url: https://github.com/ros2-gbp/rmw-release.git
+    git_rev: ros-eloquent-rmw-implementation-cmake
+    fn: release/eloquent/rmw_implementation_cmake/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rmw_opensplice-release.git
+    git_rev: ros-eloquent-rmw-opensplice-cpp
+    fn: release/eloquent/rmw_opensplice_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: ros-eloquent-ros2cli
+    fn: release/eloquent/ros2cli/0.8.7-1
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: ros-eloquent-rosgraph-msgs
+    fn: release/eloquent/rosgraph_msgs/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-adapter
+    fn: release/eloquent/rosidl_adapter/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-cmake
+    fn: release/eloquent/rosidl_cmake/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    git_rev: ros-eloquent-rosidl-default-generators
+    fn: release/eloquent/rosidl_default_generators/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    git_rev: ros-eloquent-rosidl-default-runtime
+    fn: release/eloquent/rosidl_default_runtime/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-generator-c
+    fn: release/eloquent/rosidl_generator_c/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-generator-cpp
+    fn: release/eloquent/rosidl_generator_cpp/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl_dds-release.git
+    git_rev: ros-eloquent-rosidl-generator-dds-idl
+    fn: release/eloquent/rosidl_generator_dds_idl/0.7.1-1
+  - git_url: https://github.com/ros2-gbp/rosidl_python-release.git
+    git_rev: ros-eloquent-rosidl-generator-py
+    fn: release/eloquent/rosidl_generator_py/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-parser
+    fn: release/eloquent/rosidl_parser/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-c
+    fn: release/eloquent/rosidl_typesupport_c/0.8.0-2
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-connext-c
+    fn: release/eloquent/rosidl_typesupport_connext_c/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-connext-cpp
+    fn: release/eloquent/rosidl_typesupport_connext_cpp/0.8.4-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-cpp
+    fn: release/eloquent/rosidl_typesupport_cpp/0.8.0-2
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-fastrtps-c
+    fn: release/eloquent/rosidl_typesupport_fastrtps_c/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-fastrtps-cpp
+    fn: release/eloquent/rosidl_typesupport_fastrtps_cpp/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-interface
+    fn: release/eloquent/rosidl_typesupport_interface/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-introspection-c
+    fn: release/eloquent/rosidl_typesupport_introspection_c/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-introspection-cpp
+    fn: release/eloquent/rosidl_typesupport_introspection_cpp/0.8.2-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-opensplice-c
+    fn: release/eloquent/rosidl_typesupport_opensplice_c/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    git_rev: ros-eloquent-rosidl-typesupport-opensplice-cpp
+    fn: release/eloquent/rosidl_typesupport_opensplice_cpp/0.8.1-1
+  - git_url: https://github.com/ros2-gbp/spdlog_vendor-release.git
+    git_rev: ros-eloquent-spdlog-vendor
+    fn: release/eloquent/spdlog_vendor/1.0.1-1
+  - git_url: https://github.com/ros2-gbp/test_interface_files-release.git
+    git_rev: ros-eloquent-test-interface-files
+    fn: release/eloquent/test_interface_files/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: ros-eloquent-test-msgs
+    fn: release/eloquent/test_msgs/0.8.0-1
+  - git_url: https://github.com/ros2-gbp/tinydir_vendor-release.git
+    git_rev: ros-eloquent-tinydir-vendor
+    fn: release/eloquent/tinydir_vendor/1.1.1-1
+  - git_url: https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release.git
+    git_rev: ros-eloquent-tracetools
+    fn: release/eloquent/tracetools/0.2.12-1
+  - git_url: https://github.com/ros2-gbp/uncrustify_vendor-release.git
+    git_rev: ros-eloquent-uncrustify-vendor
+    fn: release/eloquent/uncrustify_vendor/1.3.0-1
+  - git_url: https://github.com/ros2-gbp/unique_identifier_msgs-release.git
+    git_rev: ros-eloquent-unique-identifier-msgs
+    fn: release/eloquent/unique_identifier_msgs/2.1.0-1
 
 build:
   number: 0
@@ -337,22 +337,22 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-unique-identifier-msgs
         - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rosidl-default-runtime
       run:
         - python
+        - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-unique-identifier-msgs
         - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rosidl-default-runtime
     script: bld_.bat
   - name: ros-eloquent-ament-cmake
     version: 0.8.2
@@ -365,33 +365,33 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake-export-definitions
-        - ros-eloquent-ament-cmake-export-link-flags
         - ros-eloquent-ament-cmake-core
         - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-export-include-directories
-        - cmake
-        - ros-eloquent-ament-cmake-export-libraries
-        - ros-eloquent-ament-cmake-libraries
-        - ros-eloquent-ament-cmake-export-interfaces
-        - ros-eloquent-ament-cmake-version
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-python
+        - cmake
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-export-link-flags
+        - ros-eloquent-ament-cmake-export-include-directories
         - ros-eloquent-ament-cmake-target-dependencies
+        - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-libraries
       run:
         - python
         - ros-eloquent-ament-cmake-export-definitions
-        - ros-eloquent-ament-cmake-export-link-flags
         - ros-eloquent-ament-cmake-core
         - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-export-include-directories
-        - cmake
-        - ros-eloquent-ament-cmake-export-libraries
-        - ros-eloquent-ament-cmake-libraries
-        - ros-eloquent-ament-cmake-export-interfaces
-        - ros-eloquent-ament-cmake-version
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-python
+        - cmake
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-export-link-flags
+        - ros-eloquent-ament-cmake-export-include-directories
         - ros-eloquent-ament-cmake-target-dependencies
+        - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-libraries
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-copyright
     version: 0.8.1
@@ -403,15 +403,15 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-core
@@ -424,14 +424,14 @@ outputs:
         - cmake
       host:
         - python
-        - cmake
-        - ros-eloquent-ament-package
         - catkin_pkg
+        - ros-eloquent-ament-package
+        - cmake
       run:
         - python
-        - cmake
-        - ros-eloquent-ament-package
         - catkin_pkg
+        - ros-eloquent-ament-package
+        - cmake
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-cppcheck
     version: 0.8.1
@@ -443,16 +443,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-cpplint
     version: 0.8.1
@@ -464,16 +464,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-export-definitions
     version: 0.8.2
@@ -575,16 +575,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-gmock
     version: 0.8.2
@@ -656,13 +656,13 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-lint-cmake
       run:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-lint-cmake
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-pep257
@@ -675,16 +675,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-pytest
     version: 0.8.2
@@ -726,16 +726,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-domain-coordinator
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-domain-coordinator
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-target-dependencies
     version: 0.8.2
@@ -762,12 +762,12 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-python
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-python
       run:
         - python
-        - ros-eloquent-ament-cmake-python
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-python
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-uncrustify
     version: 0.8.1
@@ -779,16 +779,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-version
     version: 0.8.2
@@ -815,16 +815,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
       run:
         - python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-copyright
     script: bld_.bat
   - name: ros-eloquent-ament-copyright
     version: 0.8.1
@@ -836,16 +836,16 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-ament-flake8
+        - pytest
         - ros-eloquent-ament-pep257
         - ros-eloquent-ament-lint
-        - pytest
-        - ros-eloquent-ament-flake8
       run:
         - python
+        - ros-eloquent-ament-flake8
+        - pytest
         - ros-eloquent-ament-pep257
         - ros-eloquent-ament-lint
-        - pytest
-        - ros-eloquent-ament-flake8
     script: bld_.bat
   - name: ros-eloquent-ament-cppcheck
     version: 0.8.1
@@ -872,16 +872,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
       run:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
     script: bld_.bat
   - name: ros-eloquent-ament-flake8
     version: 0.8.1
@@ -893,12 +893,12 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-lint
         - flake8
+        - ros-eloquent-ament-lint
       run:
         - python
-        - ros-eloquent-ament-lint
         - flake8
+        - ros-eloquent-ament-lint
     script: bld_.bat
   - name: ros-eloquent-ament-index-python
     version: 0.7.2
@@ -910,14 +910,14 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-pep257
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-pep257
       run:
         - python
-        - ros-eloquent-ament-pep257
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-pep257
     script: bld_.bat
   - name: ros-eloquent-ament-lint
     version: 0.8.1
@@ -942,12 +942,12 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
       run:
         - python
-        - ros-eloquent-ament-cmake-test
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
     script: bld_.bat
   - name: ros-eloquent-ament-lint-cmake
     version: 0.8.1
@@ -959,16 +959,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
       run:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
     script: bld_.bat
   - name: ros-eloquent-ament-lint-common
     version: 0.8.1
@@ -980,28 +980,28 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake-cpplint
-        - ros-eloquent-ament-cmake-cppcheck
-        - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
-        - ros-eloquent-ament-cmake-flake8
         - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-uncrustify
-        - ros-eloquent-ament-cmake-xmllint
+        - ros-eloquent-ament-cmake-cpplint
         - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-pep257
+        - ros-eloquent-ament-cmake-xmllint
+        - ros-eloquent-ament-cmake-cppcheck
+        - ros-eloquent-ament-cmake-uncrustify
+        - ros-eloquent-ament-cmake-lint-cmake
+        - ros-eloquent-ament-cmake-flake8
       run:
         - python
-        - ros-eloquent-ament-cmake-cpplint
-        - ros-eloquent-ament-cmake-cppcheck
-        - ros-eloquent-ament-cmake-lint-cmake
         - ros-eloquent-ament-cmake-core
-        - ros-eloquent-ament-cmake-flake8
         - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-uncrustify
-        - ros-eloquent-ament-cmake-xmllint
+        - ros-eloquent-ament-cmake-cpplint
         - ros-eloquent-ament-cmake-copyright
         - ros-eloquent-ament-cmake-pep257
+        - ros-eloquent-ament-cmake-xmllint
+        - ros-eloquent-ament-cmake-cppcheck
+        - ros-eloquent-ament-cmake-uncrustify
+        - ros-eloquent-ament-cmake-lint-cmake
+        - ros-eloquent-ament-cmake-flake8
     script: bld_.bat
   - name: ros-eloquent-ament-package
     version: 0.8.8
@@ -1013,14 +1013,14 @@ outputs:
         - cmake
       host:
         - python
-        - flake8
-        - setuptools
         - pytest
+        - setuptools
+        - flake8
       run:
         - python
-        - flake8
-        - setuptools
         - pytest
+        - setuptools
+        - flake8
     script: bld_.bat
   - name: ros-eloquent-ament-pep257
     version: 0.8.1
@@ -1032,16 +1032,16 @@ outputs:
         - cmake
       host:
         - python
+        - pydocstyle
+        - pytest
         - ros-eloquent-ament-flake8
         - ros-eloquent-ament-lint
-        - pytest
-        - pydocstyle
       run:
         - python
+        - pydocstyle
+        - pytest
         - ros-eloquent-ament-flake8
         - ros-eloquent-ament-lint
-        - pytest
-        - pydocstyle
     script: bld_.bat
   - name: ros-eloquent-ament-uncrustify
     version: 0.8.1
@@ -1068,18 +1068,18 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-pep257
         - ros-eloquent-ament-copyright
-        - ros-eloquent-ament-lint
         - pytest
+        - ros-eloquent-ament-pep257
+        - ros-eloquent-ament-lint
         - ros-eloquent-ament-flake8
         - libxml2
       run:
         - python
-        - ros-eloquent-ament-pep257
         - ros-eloquent-ament-copyright
-        - ros-eloquent-ament-lint
         - pytest
+        - ros-eloquent-ament-pep257
+        - ros-eloquent-ament-lint
         - ros-eloquent-ament-flake8
         - libxml2
     script: bld_.bat
@@ -1093,15 +1093,15 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
     script: bld_.bat
   - name: ros-eloquent-connext-cmake-module
@@ -1115,13 +1115,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-cyclonedds
     version: 0.1.0
@@ -1151,13 +1151,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-domain-coordinator
     version: 0.8.0
@@ -1169,16 +1169,16 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
       run:
         - python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - pytest
         - ros-eloquent-ament-flake8
+        - pytest
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-pep257
     script: bld_.bat
   - name: ros-eloquent-fastcdr
     version: 1.0.11
@@ -1205,19 +1205,19 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-fastcdr
+        - cmake
+        - tinyxml2
         - asio
         - ros-eloquent-foonathan-memory-vendor
-        - cmake
-        - ros-eloquent-fastcdr
-        - tinyxml2
         - openssl
       run:
         - python
+        - ros-eloquent-fastcdr
+        - cmake
+        - tinyxml2
         - asio
         - ros-eloquent-foonathan-memory-vendor
-        - cmake
-        - ros-eloquent-fastcdr
-        - tinyxml2
         - openssl
     script: bld_.bat
   - name: ros-eloquent-fastrtps-cmake-module
@@ -1231,13 +1231,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-foonathan-memory-vendor
     version: 0.3.0
@@ -1249,12 +1249,12 @@ outputs:
         - cmake
       host:
         - python
-        - cmake
         - git
+        - cmake
       run:
         - python
-        - cmake
         - git
+        - cmake
     script: bld_.bat
   - name: ros-eloquent-gmock-vendor
     version: 1.8.9000
@@ -1266,12 +1266,12 @@ outputs:
         - cmake
       host:
         - python
-        - cmake
         - ros-eloquent-gtest-vendor
+        - cmake
       run:
         - python
-        - cmake
         - ros-eloquent-gtest-vendor
+        - cmake
     script: bld_.bat
   - name: ros-eloquent-gtest-vendor
     version: 1.8.9000
@@ -1298,22 +1298,22 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-osrf-pycommon
         - ros-eloquent-ament-copyright
         - pytest
-        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-pep257
         - lark-parser
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-index-python
       run:
         - python
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-pep257
-        - ros-eloquent-osrf-pycommon
         - ros-eloquent-ament-copyright
         - pytest
-        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-pep257
         - lark-parser
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-index-python
     script: bld_.bat
   - name: ros-eloquent-launch-testing
     version: 0.9.6
@@ -1325,23 +1325,23 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-index-python
+        - ros-eloquent-ament-copyright
+        - pytest
         - ros-eloquent-ament-pep257
         - ros-eloquent-osrf-pycommon
-        - ros-eloquent-ament-copyright
         - ros-eloquent-launch
-        - pytest
         - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-index-python
         - mock
       run:
         - python
-        - ros-eloquent-ament-index-python
+        - ros-eloquent-ament-copyright
+        - pytest
         - ros-eloquent-ament-pep257
         - ros-eloquent-osrf-pycommon
-        - ros-eloquent-ament-copyright
         - ros-eloquent-launch
-        - pytest
         - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-index-python
         - mock
     script: bld_.bat
   - name: ros-eloquent-launch-testing-ament-cmake
@@ -1354,14 +1354,14 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-launch-testing
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-cmake-copyright
-        - ros-eloquent-launch-testing
       run:
         - python
+        - ros-eloquent-launch-testing
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-cmake-copyright
-        - ros-eloquent-launch-testing
     script: bld_.bat
   - name: ros-eloquent-libyaml-vendor
     version: 1.0.0
@@ -1389,13 +1389,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-osrf-pycommon
     version: 0.1.9
@@ -1412,6 +1412,21 @@ outputs:
         - python
         - mock
     script: bld_.bat
+  - name: ros-eloquent-osrf-testing-tools-cpp
+    version: 1.2.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python
+        - cmake
+      run:
+        - python
+        - cmake
+    script: bld_.bat
   - name: ros-eloquent-poco-vendor
     version: 1.2.0
     requirements:
@@ -1424,14 +1439,14 @@ outputs:
         - python
         - poco
         - pcre
-        - cmake
         - zlib
+        - cmake
       run:
         - python
         - poco
         - pcre
-        - cmake
         - zlib
+        - cmake
     script: bld_.bat
   - name: ros-eloquent-python-cmake-module
     version: 0.8.0
@@ -1444,13 +1459,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-rcl
     version: 0.8.4
@@ -1462,50 +1477,50 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-osrf-testing-tools-cpp
+        - ros-eloquent-launch
+        - ros-eloquent-rcl-interfaces
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-ament-cmake-gtest
         - ros-eloquent-rmw-implementation
-        - ros-eloquent-test-msgs
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-rmw
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-rcpputils
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-gtest
         - ros-eloquent-ament-lint-auto
+        - ros-eloquent-tracetools
+        - ros-eloquent-rcutils
+        - ros-eloquent-launch-testing-ament-cmake
+        - ros-eloquent-test-msgs
+        - ros-eloquent-rcl-yaml-param-parser
         - ros-eloquent-tinydir-vendor
         - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-launch-testing-ament-cmake
-        - ros-eloquent-tracetools
         - ros-eloquent-launch-testing
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-rcl-logging-spdlog
-        - ros-eloquent-rcl-interfaces
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
-        - ros-eloquent-launch
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-osrf-testing-tools-cpp
       run:
         - python
+        - ros-eloquent-osrf-testing-tools-cpp
+        - ros-eloquent-launch
+        - ros-eloquent-rcl-interfaces
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-ament-cmake-gtest
         - ros-eloquent-rmw-implementation
-        - ros-eloquent-test-msgs
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-rmw
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-rcpputils
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-gtest
         - ros-eloquent-ament-lint-auto
+        - ros-eloquent-tracetools
+        - ros-eloquent-rcutils
+        - ros-eloquent-launch-testing-ament-cmake
+        - ros-eloquent-test-msgs
+        - ros-eloquent-rcl-yaml-param-parser
         - ros-eloquent-tinydir-vendor
         - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-launch-testing-ament-cmake
-        - ros-eloquent-tracetools
         - ros-eloquent-launch-testing
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-rcl-logging-spdlog
-        - ros-eloquent-rcl-interfaces
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
-        - ros-eloquent-launch
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-osrf-testing-tools-cpp
     script: bld_.bat
   - name: ros-eloquent-rclpy
     version: 0.8.4
@@ -1517,46 +1532,46 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-test-msgs
-        - ros-eloquent-rcl-action
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rcl
-        - pytest
-        - ros-eloquent-rosgraph-msgs
         - ros-eloquent-ament-cmake
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-unique-identifier-msgs
         - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rcl
+        - ros-eloquent-rosgraph-msgs
+        - ros-eloquent-rmw-implementation
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rcutils
+        - ros-eloquent-unique-identifier-msgs
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-python-cmake-module
+        - pytest
         - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rcl-action
+        - ros-eloquent-rcutils
+        - ros-eloquent-test-msgs
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-builtin-interfaces
       run:
         - python
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-test-msgs
-        - ros-eloquent-rcl-action
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rcl
-        - pytest
-        - ros-eloquent-rosgraph-msgs
         - ros-eloquent-ament-cmake
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-unique-identifier-msgs
         - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rcl
+        - ros-eloquent-rosgraph-msgs
+        - ros-eloquent-rmw-implementation
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rcutils
+        - ros-eloquent-unique-identifier-msgs
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-python-cmake-module
+        - pytest
         - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rcl-action
+        - ros-eloquent-rcutils
+        - ros-eloquent-test-msgs
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-builtin-interfaces
     script: bld_.bat
   - name: ros-eloquent-rcl-action
     version: 0.8.4
@@ -1569,31 +1584,31 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-test-msgs
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
         - ros-eloquent-rcl
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rmw
         - ros-eloquent-osrf-testing-tools-cpp
-        - ros-eloquent-action-msgs
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-test-msgs
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-action-msgs
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-test-msgs
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
         - ros-eloquent-rcl
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rmw
         - ros-eloquent-osrf-testing-tools-cpp
-        - ros-eloquent-action-msgs
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-test-msgs
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-action-msgs
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rcl-interfaces
     version: 0.8.0
@@ -1605,20 +1620,20 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rosidl-default-runtime
       run:
         - python
+        - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rosidl-default-runtime
     script: bld_.bat
   - name: ros-eloquent-rcl-logging-spdlog
     version: 0.3.3
@@ -1630,19 +1645,19 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-rcutils
         - spdlog
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
+        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-spdlog-vendor
       run:
         - python
+        - ros-eloquent-rcutils
         - spdlog
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
+        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-spdlog-vendor
     script: bld_.bat
   - name: ros-eloquent-rcl-yaml-param-parser
@@ -1655,24 +1670,24 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - yaml
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-libyaml-vendor
         - ros-eloquent-rcutils
         - ros-eloquent-osrf-testing-tools-cpp
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-libyaml-vendor
+        - ros-eloquent-ament-cmake-ros
+        - yaml
       run:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - yaml
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-libyaml-vendor
         - ros-eloquent-rcutils
         - ros-eloquent-osrf-testing-tools-cpp
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-libyaml-vendor
+        - ros-eloquent-ament-cmake-ros
+        - yaml
     script: bld_.bat
   - name: ros-eloquent-rcpputils
     version: 0.2.1
@@ -1684,20 +1699,20 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rcutils
     version: 0.8.4
@@ -1709,30 +1724,30 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-gmock
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-launch-testing-ament-cmake
         - ros-eloquent-ament-cmake-pytest
-        - empy
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-launch
-        - ros-eloquent-launch-testing
         - ros-eloquent-osrf-testing-tools-cpp
+        - ros-eloquent-launch
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-launch-testing
+        - empy
       run:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-gmock
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-launch-testing-ament-cmake
         - ros-eloquent-ament-cmake-pytest
-        - empy
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-launch
-        - ros-eloquent-launch-testing
         - ros-eloquent-osrf-testing-tools-cpp
+        - ros-eloquent-launch
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-launch-testing
+        - empy
     script: bld_.bat
   - name: ros-eloquent-rmw
     version: 0.8.1
@@ -1745,21 +1760,21 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-gmock
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-ament-cmake-version
         - ros-eloquent-rcutils
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-gmock
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-ament-cmake-version
         - ros-eloquent-rcutils
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rmw-connext-cpp
     version: 0.8.1
@@ -1771,34 +1786,34 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-typesupport-connext-cpp
         - ros-eloquent-rmw-connext-shared-cpp
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
         - ros-eloquent-rosidl-generator-dds-idl
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-typesupport-connext-c
         - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-connext-cmake-module
       run:
         - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-typesupport-connext-cpp
         - ros-eloquent-rmw-connext-shared-cpp
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
         - ros-eloquent-rosidl-generator-dds-idl
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-typesupport-connext-c
         - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-connext-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rmw-connext-shared-cpp
     version: 0.8.1
@@ -1810,24 +1825,24 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-rcutils
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcpputils
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rcutils
         - ros-eloquent-rmw
+        - ros-eloquent-connext-cmake-module
       run:
         - python
+        - ros-eloquent-rcutils
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcpputils
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rcutils
         - ros-eloquent-rmw
+        - ros-eloquent-connext-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rmw-cyclonedds-cpp
     version: 0.4.4
@@ -1840,27 +1855,27 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-cyclonedds-cmake-module
+        - ros-eloquent-rosidl-typesupport-introspection-c
         - ros-eloquent-cyclonedds
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rcutils
         - ros-eloquent-rmw
-        - ros-eloquent-cyclonedds-cmake-module
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-cyclonedds-cmake-module
+        - ros-eloquent-rosidl-typesupport-introspection-c
         - ros-eloquent-cyclonedds
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rcutils
         - ros-eloquent-rmw
-        - ros-eloquent-cyclonedds-cmake-module
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
     script: bld_.bat
   - name: ros-eloquent-rmw-fastrtps-cpp
     version: 0.8.1
@@ -1872,36 +1887,36 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
         - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rmw
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rmw-fastrtps-shared-cpp
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rcutils
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-fastcdr
-        - ros-eloquent-rosidl-typesupport-fastrtps-c
-        - ros-eloquent-rosidl-generator-cpp
       run:
         - python
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
         - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rmw
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rmw-fastrtps-shared-cpp
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rcutils
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-fastcdr
-        - ros-eloquent-rosidl-typesupport-fastrtps-c
-        - ros-eloquent-rosidl-generator-cpp
     script: bld_.bat
   - name: ros-eloquent-rmw-fastrtps-shared-cpp
     version: 0.8.1
@@ -1913,26 +1928,26 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-fastrtps
         - ros-eloquent-rcutils
         - ros-eloquent-fastcdr
+        - ros-eloquent-rcpputils
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-fastrtps
         - ros-eloquent-rcutils
         - ros-eloquent-fastcdr
+        - ros-eloquent-rcpputils
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rmw-implementation
     version: 0.8.2
@@ -1944,36 +1959,36 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-fastrtps-cpp
-        - ros-eloquent-ament-cmake-python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw-opensplice-cpp
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rmw
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rmw-connext-cpp
         - poco
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-cyclonedds-cpp
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rmw-opensplice-cpp
+        - ros-eloquent-rmw-connext-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-rmw-fastrtps-cpp
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-fastrtps-cpp
-        - ros-eloquent-ament-cmake-python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw-opensplice-cpp
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-ament-index-python
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rcutils
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rmw
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rmw-connext-cpp
         - poco
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-cyclonedds-cpp
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rmw-opensplice-cpp
+        - ros-eloquent-rmw-connext-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-rmw-fastrtps-cpp
     script: bld_.bat
   - name: ros-eloquent-rmw-implementation-cmake
     version: 0.8.1
@@ -1986,13 +2001,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-rmw-opensplice-cpp
     version: 0.8.1
@@ -2005,33 +2020,33 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-opensplice-c
-        - ros-eloquent-opensplice-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-generator-dds-idl
-        - ros-eloquent-rcutils
         - ros-eloquent-rosidl-typesupport-opensplice-cpp
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rosidl-typesupport-opensplice-c
+        - ros-eloquent-rosidl-generator-dds-idl
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-opensplice-cmake-module
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-opensplice-c
-        - ros-eloquent-opensplice-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rcpputils
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-generator-dds-idl
-        - ros-eloquent-rcutils
         - ros-eloquent-rosidl-typesupport-opensplice-cpp
-        - ros-eloquent-rmw
+        - ros-eloquent-rcutils
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rosidl-typesupport-opensplice-c
+        - ros-eloquent-rosidl-generator-dds-idl
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-opensplice-cmake-module
     script: bld_.bat
   - name: ros-eloquent-ros2cli
     version: 0.8.7
@@ -2043,22 +2058,22 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-ament-copyright
+        - pytest
         - netifaces
         - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - ros-eloquent-rclpy
-        - ros-eloquent-ament-xmllint
         - ros-eloquent-ament-flake8
-        - pytest
+        - ros-eloquent-ament-xmllint
+        - ros-eloquent-rclpy
       run:
         - python
+        - ros-eloquent-ament-copyright
+        - pytest
         - netifaces
         - ros-eloquent-ament-pep257
-        - ros-eloquent-ament-copyright
-        - ros-eloquent-rclpy
-        - ros-eloquent-ament-xmllint
         - ros-eloquent-ament-flake8
-        - pytest
+        - ros-eloquent-ament-xmllint
+        - ros-eloquent-rclpy
     script: bld_.bat
   - name: ros-eloquent-rosgraph-msgs
     version: 0.8.0
@@ -2070,18 +2085,18 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-builtin-interfaces
         - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-builtin-interfaces
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-builtin-interfaces
         - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-builtin-interfaces
     script: bld_.bat
   - name: ros-eloquent-rosidl-adapter
     version: 0.8.2
@@ -2093,18 +2108,18 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-cmake-pytest
-        - empy
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - empy
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-cmake-pytest
-        - empy
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
+        - empy
     script: bld_.bat
   - name: ros-eloquent-rosidl-cmake
     version: 0.8.2
@@ -2117,18 +2132,18 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-adapter
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-adapter
         - ros-eloquent-ament-cmake-python
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-adapter
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-adapter
         - ros-eloquent-ament-cmake-python
     script: bld_.bat
   - name: ros-eloquent-rosidl-default-generators
@@ -2142,13 +2157,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-rosidl-default-runtime
     version: 0.8.0
@@ -2160,26 +2175,26 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rosidl-generator-cpp
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rosidl-generator-cpp
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
     script: bld_.bat
   - name: ros-eloquent-rosidl-generator-c
     version: 0.8.2
@@ -2191,24 +2206,24 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-typesupport-interface
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-typesupport-interface
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rosidl-generator-cpp
     version: 0.8.2
@@ -2220,24 +2235,24 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-parser
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-parser
     script: bld_.bat
   - name: ros-eloquent-rosidl-generator-dds-idl
     version: 0.7.1
@@ -2250,13 +2265,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-rosidl-generator-py
     version: 0.8.1
@@ -2268,40 +2283,40 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
+        - pytest
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-index-python
         - numpy
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - pytest
         - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-typesupport-c
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-python-cmake-module
       run:
         - python
-        - ros-eloquent-ament-cmake
+        - pytest
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-index-python
         - numpy
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-cmake
         - ros-eloquent-test-interface-files
-        - pytest
         - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-typesupport-c
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-python-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rosidl-parser
     version: 0.8.2
@@ -2313,22 +2328,22 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-adapter
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-ament-lint-common
         - pytest
         - lark-parser
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-adapter
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-adapter
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-pytest
-        - ros-eloquent-ament-lint-common
         - pytest
         - lark-parser
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-adapter
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-c
     version: 0.8.0
@@ -2340,30 +2355,30 @@ outputs:
         - cmake
       host:
         - python
+        - poco
         - ros-eloquent-rosidl-generator-c
         - ros-eloquent-rosidl-typesupport-opensplice-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-typesupport-connext-c
-        - ros-eloquent-rosidl-typesupport-interface
-        - poco
-        - ros-eloquent-poco-vendor
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
+        - poco
         - ros-eloquent-rosidl-generator-c
         - ros-eloquent-rosidl-typesupport-opensplice-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-ament-lint-common
         - ros-eloquent-rosidl-typesupport-connext-c
-        - ros-eloquent-rosidl-typesupport-interface
-        - poco
-        - ros-eloquent-poco-vendor
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-connext-c
     version: 0.8.4
@@ -2375,26 +2390,26 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-connext-cmake-module
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-connext-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-connext-cpp
     version: 0.8.4
@@ -2406,28 +2421,28 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
+        - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
         - ros-eloquent-rosidl-parser
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-connext-cmake-module
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-connext-cmake-module
+        - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
         - ros-eloquent-rosidl-parser
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-connext-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-cpp
     version: 0.8.0
@@ -2439,32 +2454,32 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-rosidl-typesupport-connext-cpp
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-typesupport-opensplice-cpp
         - poco
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-typesupport-opensplice-cpp
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-poco-vendor
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
       run:
         - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-rosidl-typesupport-connext-cpp
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-typesupport-opensplice-cpp
         - poco
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-connext-cpp
+        - ros-eloquent-rosidl-typesupport-opensplice-cpp
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-poco-vendor
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-fastrtps-c
     version: 0.8.0
@@ -2476,32 +2491,32 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-parser
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-parser
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-fastrtps-cpp
     version: 0.8.0
@@ -2513,32 +2528,32 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-generator-cpp
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-fastcdr
         - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-ament-lint-common
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-generator-cpp
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-rmw
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-fastrtps
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-fastcdr
         - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-ament-lint-common
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-interface
     version: 0.8.2
@@ -2551,13 +2566,13 @@ outputs:
       host:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
       run:
         - python
         - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-lint-auto
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-introspection-c
     version: 0.8.2
@@ -2570,19 +2585,19 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-introspection-cpp
     version: 0.8.2
@@ -2595,25 +2610,25 @@ outputs:
       host:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
       run:
         - python
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-typesupport-introspection-c
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake-ros
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-opensplice-c
     version: 0.8.1
@@ -2625,26 +2640,26 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-opensplice-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-typesupport-opensplice-cpp
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-opensplice-cmake-module
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-opensplice-cmake-module
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rmw
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-typesupport-opensplice-cpp
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-opensplice-cmake-module
     script: bld_.bat
   - name: ros-eloquent-rosidl-typesupport-opensplice-cpp
     version: 0.8.1
@@ -2656,28 +2671,28 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-opensplice-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-opensplice-cmake-module
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-opensplice-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-parser
         - ros-eloquent-rmw
         - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-opensplice-cmake-module
     script: bld_.bat
   - name: ros-eloquent-spdlog-vendor
     version: 1.0.1
@@ -2689,12 +2704,12 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - spdlog
+        - ros-eloquent-ament-cmake
       run:
         - python
-        - ros-eloquent-ament-cmake
         - spdlog
+        - ros-eloquent-ament-cmake
     script: bld_.bat
   - name: ros-eloquent-test-interface-files
     version: 0.8.0
@@ -2721,26 +2736,26 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-test-interface-files
         - ros-eloquent-rosidl-default-runtime
-        - ros-eloquent-action-msgs
+        - ros-eloquent-test-interface-files
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-action-msgs
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-builtin-interfaces
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-test-interface-files
         - ros-eloquent-rosidl-default-runtime
-        - ros-eloquent-action-msgs
+        - ros-eloquent-test-interface-files
         - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-action-msgs
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-builtin-interfaces
     script: bld_.bat
   - name: ros-eloquent-tinydir-vendor
     version: 1.1.1
@@ -2757,6 +2772,29 @@ outputs:
         - python
         - cmake
     script: bld_.bat
+  - name: ros-eloquent-tracetools
+    version: 0.2.12
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python
+        - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - pkg-config
+        - ros-eloquent-ament-cmake-ros
+      run:
+        - python
+        - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-lint-common
+        - pkg-config
+        - ros-eloquent-ament-cmake-ros
+    script: bld_.bat
   - name: ros-eloquent-uncrustify-vendor
     version: 1.3.0
     requirements:
@@ -2767,12 +2805,12 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - uncrustify
+        - ros-eloquent-ament-cmake
       run:
         - python
-        - ros-eloquent-ament-cmake
         - uncrustify
+        - ros-eloquent-ament-cmake
     script: bld_.bat
   - name: ros-eloquent-unique-identifier-msgs
     version: 2.1.0
@@ -2784,14 +2822,14 @@ outputs:
         - cmake
       host:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
       run:
         - python
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
     script: bld_.bat
 
 about:
