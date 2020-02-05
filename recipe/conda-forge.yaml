@@ -86,6 +86,8 @@ apr:
   conda: [apr]
 python-netifaces:
   conda: [netifaces]
+python3-netifaces:
+  conda: [netifaces]
 python-paramiko:
   conda: [paramiko]
 sbcl:
@@ -96,3 +98,49 @@ python-defusedxml:
   conda: [defusedxml]
 python-numpy:
   conda: [numpy]
+python3-pytest:
+  conda: [pytest]
+python3-rosdistro-modules:
+  conda: [rosdistro]
+python3-lark-parser:
+  conda: [lark-parser]
+cppcheck:
+  conda: [cppcheck]
+python3-mypy:
+  conda: [mypy]
+zlib:
+  conda: [zlib]
+python3-pkg-resources:
+  conda: []
+python3-cryptography:
+  conda: [cryptography]
+python3-numpy:
+  conda: [numpy]
+python3-ifcfg:
+  conda: [ifcfg]
+python3-flake8:
+  conda: [flake8]
+python3-pytest-mock:
+  conda: [pytest-mock]
+yaml:
+  conda: [yaml]
+asio:
+  conda: [saio]
+git:
+  conda: [git]
+spdlog:
+  conda: [spdlog]
+pcre:
+  conda: [pcre]
+pydocstyle:
+  conda: [pydocstyle]
+libxml2-utils:
+  conda: [libxml2]
+libcunit-dev:
+  conda: []
+uncrustify:
+  conda: [uncrustify]
+python3-lxml:
+  conda: [lxml]
+openssl:
+  conda: [openssl]

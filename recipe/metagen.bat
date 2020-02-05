@@ -30,7 +30,7 @@ copy metagen.py %TEMP_PATH%\metagen.py /y
 
 pushd %TEMP_PATH%
 
-set ROS_DISTRO=melodic
+set ROS_DISTRO=eloquent
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
@@ -43,7 +43,7 @@ wstool merge -r -y -t src ros.rosinstall
 wstool update -t src
 
 :: del unwanted files
-del /f /q src\roslisp\manifest.xml
+::del /f /q src\roslisp\manifest.xml
 
 python metagen.py
 IF %ERRORLEVEL% NEQ 0 (
