@@ -1,4 +1,5 @@
 :: MSVC is preferred.
+setlocal
 set CC=cl.exe
 set CXX=cl.exe
 
@@ -11,6 +12,11 @@ if "%PKG_NAME%" == "ros-noetic-catkin" (
 if "%PKG_NAME%" == "ros-melodic-catkin" (
     set ADDITIONAL_ARGS=
     set IS_CATKIN_PKG=1
+)
+
+if not exist "%SRC_DIR%\%PKG_NAME%\CMakeLists.txt" (
+    python -m pip install %SRC_DIR%\%PKG_NAME% -vv
+    exit /b 0
 )
 
 mkdir %PKG_NAME%\build

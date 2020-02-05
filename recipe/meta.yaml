@@ -5,34 +5,49 @@ package:
 source:
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake
+    fn: ros-eloquent-ament-cmake.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_core/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-core
+    fn: ros-eloquent-ament-cmake-core.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_definitions/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-definitions
+    fn: ros-eloquent-ament-cmake-export-definitions.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_dependencies/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-dependencies
+    fn: ros-eloquent-ament-cmake-export-dependencies.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_include_directories/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-include-directories
+    fn: ros-eloquent-ament-cmake-export-include-directories.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_interfaces/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-interfaces
+    fn: ros-eloquent-ament-cmake-export-interfaces.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_libraries/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-libraries
+    fn: ros-eloquent-ament-cmake-export-libraries.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_export_link_flags/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-export-link-flags
+    fn: ros-eloquent-ament-cmake-export-link-flags.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_include_directories/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-include-directories
+    fn: ros-eloquent-ament-cmake-include-directories.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_libraries/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-libraries
+    fn: ros-eloquent-ament-cmake-libraries.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_python/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-python
+    fn: ros-eloquent-ament-cmake-python.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_target_dependencies/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-target-dependencies
+    fn: ros-eloquent-ament-cmake-target-dependencies.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_test/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-test
+    fn: ros-eloquent-ament-cmake-test.tar.gz
   - url: https://github.com/ros2-gbp/ament_cmake-release/archive/release/eloquent/ament_cmake_version/0.8.2-1.tar.gz
     folder: ros-eloquent-ament-cmake-version
+    fn: ros-eloquent-ament-cmake-version.tar.gz
   - url: https://github.com/ros2-gbp/ament_package-release/archive/release/eloquent/ament_package/0.8.8-1.tar.gz
     folder: ros-eloquent-ament-package
+    fn: ros-eloquent-ament-package.tar.gz
 
 build:
   number: 0
@@ -49,34 +64,34 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-ament-cmake-export-link-flags
         - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-export-include-directories
+        - ros-eloquent-ament-cmake-libraries
+        - ros-eloquent-ament-cmake-export-definitions
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-export-dependencies
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-ament-cmake-export-libraries
+        - cmake
         - ros-eloquent-ament-cmake-target-dependencies
         - ros-eloquent-ament-cmake-core
-        - ros-eloquent-ament-cmake-export-libraries
-        - ros-eloquent-ament-cmake-libraries
-        - ros-eloquent-ament-cmake-export-link-flags
-        - cmake
-        - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-export-include-directories
-        - ros-eloquent-ament-cmake-python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-version
-        - ros-eloquent-ament-cmake-export-definitions
       run:
         - python
+        - ros-eloquent-ament-cmake-export-link-flags
         - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-export-include-directories
+        - ros-eloquent-ament-cmake-libraries
+        - ros-eloquent-ament-cmake-export-definitions
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-export-dependencies
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-ament-cmake-export-libraries
+        - cmake
         - ros-eloquent-ament-cmake-target-dependencies
         - ros-eloquent-ament-cmake-core
-        - ros-eloquent-ament-cmake-export-libraries
-        - ros-eloquent-ament-cmake-libraries
-        - ros-eloquent-ament-cmake-export-link-flags
-        - cmake
-        - ros-eloquent-ament-cmake-export-dependencies
-        - ros-eloquent-ament-cmake-export-include-directories
-        - ros-eloquent-ament-cmake-python
-        - ros-eloquent-ament-cmake-test
-        - ros-eloquent-ament-cmake-version
-        - ros-eloquent-ament-cmake-export-definitions
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-core
     version: 0.8.2
@@ -88,14 +103,14 @@ outputs:
         - cmake
       host:
         - python
+        - ros-eloquent-ament-package
         - catkin_pkg
         - cmake
-        - ros-eloquent-ament-package
       run:
         - python
+        - ros-eloquent-ament-package
         - catkin_pkg
         - cmake
-        - ros-eloquent-ament-package
     script: bld_.bat
   - name: ros-eloquent-ament-cmake-export-definitions
     version: 0.8.2
@@ -289,14 +304,14 @@ outputs:
         - cmake
       host:
         - python
-        - pytest
-        - setuptools
         - flake8
+        - setuptools
+        - pytest
       run:
         - python
-        - pytest
-        - setuptools
         - flake8
+        - setuptools
+        - pytest
     script: bld_.bat
 
 about:

@@ -47,6 +47,7 @@ with open("ros.rosinstall", 'r') as stream:
         entry = {}
         entry['url'] = tar['tar']['uri']
         entry['folder'] = pkg_name
+        entry['fn'] = "%s.tar.gz" % pkg_name
         location_to_test = os.path.join(os.getenv('CURRENT_PATH'), '%s.patch' % pkg_name)
         if os.path.exists(location_to_test):
             entry['patches'] = [ '%s.patch' % pkg_name ]
