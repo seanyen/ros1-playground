@@ -1892,7 +1892,6 @@ outputs:
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
         - ros-eloquent-ament-index-python
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-ament-cmake-python
         - ros-eloquent-rmw-implementation-cmake
         - ros-eloquent-rmw
@@ -1908,7 +1907,6 @@ outputs:
         - ros-eloquent-ament-lint-auto
         - ros-eloquent-ament-lint-common
         - ros-eloquent-ament-index-python
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-ament-cmake-python
         - ros-eloquent-rmw-implementation-cmake
         - ros-eloquent-rmw
