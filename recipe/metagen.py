@@ -3,6 +3,7 @@ import subprocess
 import rospkg
 import rosdep2
 import os
+import catkin_pkg.package
 
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=2, sequence=4, offset=2)
@@ -62,9 +63,10 @@ with open("ros.rosinstall", 'r') as stream:
 
 unsatisfied_deps = set()
 outputs = []
-for pkg in rospack.list():
-    pkg_name = _resolve(pkg)[0]
-    manifest = rospack.get_manifest(pkg)
+catkin_paths = lookup.get_loader().get_catkin_paths()
+for pkg_shortname in rospack.list():
+    pkg_name = _resolve(pkg_shortname)[0]
+    manifest = rospack.get_manifest(pkg_shortname)
     output = {
         'name': pkg_name,
         'version': manifest.version,
@@ -79,7 +81,10 @@ for pkg in rospack.list():
             'run': ['python']
         }
     }
-    deps = lookup.get_rosdeps(pkg)
+    pkg = catkin_pkg.package.parse_package(catkin_paths[pkg_shortname])
+    pkg.evaluate_conditions(os.environ)
+    deps = pkg.build_depends + pkg.buildtool_depends + pkg.run_depends + pkg.test_depends + pkg.build_export_depends + pkg.buildtool_export_depends + pkg.exec_depends
+    deps = [d.name for d in deps if d.evaluated_condition]
     deps = set(deps)
 
     for dep in deps:
