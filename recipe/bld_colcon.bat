@@ -9,10 +9,12 @@ set CXX=cl.exe
 pushd %PKG_NAME%
 
 colcon build ^
-    --cmake-args -G Ninja ^
     --install-base %LIBRARY_PREFIX% ^
     --merge-install ^
-    --event-handlers console_cohesion+
+    --event-handlers console_cohesion+ ^
+    --cmake-args ^
+        -G Ninja ^
+        -DBUILD_TESTING=OFF
 if errorlevel 1 exit 1
 
 if exist %LIBRARY_PREFIX%\.colcon_install_layout (
