@@ -75,7 +75,7 @@ for pkg in rospack.list():
                 "ninja",
                 "cmake"
             ],
-            'host': ['python'],
+            'host': ['python', 'setuptools', 'pip'],
             'run': ['python']
         }
     }
