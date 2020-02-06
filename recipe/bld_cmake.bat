@@ -14,11 +14,6 @@ if "%PKG_NAME%" == "ros-melodic-catkin" (
     set IS_CATKIN_PKG=1
 )
 
-if not exist "%SRC_DIR%\%PKG_NAME%\CMakeLists.txt" (
-    python -m pip install %SRC_DIR%\%PKG_NAME% -vv
-    exit /b 0
-)
-
 mkdir %PKG_NAME%\build
 pushd %PKG_NAME%\build
 

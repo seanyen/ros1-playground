@@ -51,7 +51,7 @@ python-yaml:
 python3-yaml:
   conda: [pyyaml]
 python3-setuptools:
-  conda: [setuptools, pip]
+  conda: [setuptools]
 python3-catkin-pkg-modules:
   conda: [catkin_pkg]
 python3-rosdep-modules:
