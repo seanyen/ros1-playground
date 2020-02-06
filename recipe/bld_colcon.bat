@@ -1,6 +1,6 @@
 setlocal
 
-set "PYTHONPATH=%SP_DIR%"
+set "PYTHONPATH=%LIBRARY_PREFIX%\lib\site-packages;%SP_DIR%"
 
 :: MSVC is preferred.
 set CC=cl.exe
