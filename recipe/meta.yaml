@@ -1941,7 +1941,6 @@ outputs:
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-rmw-fastrtps-cpp
         - ros-eloquent-rmw-opensplice-cpp
         - ros-eloquent-rmw-implementation-cmake
@@ -1957,7 +1956,6 @@ outputs:
         - ros-eloquent-ament-cmake
         - ros-eloquent-ament-lint-common
         - ros-eloquent-rcutils
-        - ros-eloquent-rmw-cyclonedds-cpp
         - ros-eloquent-rmw-fastrtps-cpp
         - ros-eloquent-rmw-opensplice-cpp
         - ros-eloquent-rmw-implementation-cmake
