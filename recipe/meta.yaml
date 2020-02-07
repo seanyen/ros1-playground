@@ -1250,10 +1250,12 @@ outputs:
         - colcon-common-extensions
         - git
         - cmake
+        - foonathan-memory
       run:
         - python
         - git
         - cmake
+        - foonathan-memory
     script: bld_colcon.bat
   - name: ros-eloquent-gmock-vendor
     version: 1.8.9000
