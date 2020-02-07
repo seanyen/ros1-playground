@@ -159,9 +159,6 @@ source:
   - git_url: https://github.com/ros2-gbp/launch-release.git
     git_rev: release/eloquent/launch_testing_ament_cmake/0.9.6-1
     folder: ros-eloquent-launch-testing-ament-cmake/src/work
-  - git_url: https://github.com/ros2-gbp/libyaml_vendor-release.git
-    git_rev: release/eloquent/libyaml_vendor/1.0.0-1
-    folder: ros-eloquent-libyaml-vendor/src/work
   - git_url: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
     git_rev: release/eloquent/opensplice_cmake_module/0.8.1-1
     folder: ros-eloquent-opensplice-cmake-module/src/work
@@ -192,6 +189,8 @@ source:
   - git_url: https://github.com/ros2-gbp/rcl-release.git
     git_rev: release/eloquent/rcl_yaml_param_parser/0.8.4-1
     folder: ros-eloquent-rcl-yaml-param-parser/src/work
+    patches:
+      - rcl_yaml_param_parser.patch
   - git_url: https://github.com/ros2-gbp/rclpy-release.git
     git_rev: release/eloquent/rclpy/0.8.4-1
     folder: ros-eloquent-rclpy/src/work
@@ -1359,21 +1358,6 @@ outputs:
         - ros-eloquent-python-cmake-module
         - ros-eloquent-launch-testing
     script: bld_colcon.bat
-  - name: ros-eloquent-libyaml-vendor
-    version: 1.0.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-ament-cmake
-    script: bld_colcon.bat
   - name: ros-eloquent-opensplice-cmake-module
     version: 0.8.1
     requirements:
@@ -1670,7 +1654,6 @@ outputs:
         - ros-eloquent-osrf-testing-tools-cpp
         - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-libyaml-vendor
         - ros-eloquent-ament-cmake-gtest
         - yaml
         - ros-eloquent-ament-lint-common
@@ -1680,7 +1663,6 @@ outputs:
         - ros-eloquent-osrf-testing-tools-cpp
         - ros-eloquent-ament-cmake-ros
         - ros-eloquent-ament-lint-auto
-        - ros-eloquent-libyaml-vendor
         - ros-eloquent-ament-cmake-gtest
         - yaml
         - ros-eloquent-ament-lint-common
