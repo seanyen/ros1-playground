@@ -1,6 +1,7 @@
 setlocal
 
 set "PYTHONPATH=%LIBRARY_PREFIX%\lib\site-packages;%SP_DIR%"
+set "CMAKE_BUILD_PARALLEL_LEVEL=%NUMBER_OF_PROCESSOR%"
 
 :: MSVC is preferred.
 set CC=cl.exe

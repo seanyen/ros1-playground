@@ -36,7 +36,7 @@ set ROS_DISTRO=eloquent
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator %UP_TO_PACKAGE% --deps --flat --exclude rmw_cyclonedds_cpp > ros.rosinstall
+rosinstall_generator %UP_TO_PACKAGE% --deps --flat --exclude rmw_cyclonedds_cpp rmw_opensplice_cpp rmw_connext_cpp > ros.rosinstall
 
 mkdir src
 vcs import src < ros.rosinstall
