@@ -1,5 +1,5 @@
---- ros-eloquent-rcl-yaml-param-parser\src\work\CMakeLists.txt
-+++ ros-eloquent-rcl-yaml-param-parser\src\work\CMakeLists.txt
+--- CMakeLists.txt
++++ CMakeLists.txt
 @@ -4,7 +4,6 @@
  
  find_package(ament_cmake_ros REQUIRED)
