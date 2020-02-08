@@ -141,9 +141,6 @@ source:
   - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
     git_rev: release/eloquent/fastrtps_cmake_module/0.8.0-1
     folder: ros-eloquent-fastrtps-cmake-module/src/work
-  - git_url: https://github.com/ros2-gbp/foonathan_memory_vendor-release.git
-    git_rev: release/eloquent/foonathan_memory_vendor/0.3.0-1
-    folder: ros-eloquent-foonathan-memory-vendor/src/work
   - git_url: https://github.com/ros2-gbp/launch-release.git
     git_rev: release/eloquent/launch/0.9.6-1
     folder: ros-eloquent-launch/src/work
@@ -1008,13 +1005,13 @@ outputs:
         - ros-eloquent-fastcdr
         - openssl
         - tinyxml2
-        - ros-eloquent-foonathan-memory-vendor
+        - foonathan-memory
         - cmake
       run:
         - python
         - ros-eloquent-fastcdr
         - tinyxml2
-        - ros-eloquent-foonathan-memory-vendor
+        - foonathan-memory
         - openssl
     script: bld_colcon.bat
   - name: ros-eloquent-fastrtps-cmake-module
@@ -1028,21 +1025,6 @@ outputs:
       host:
         - colcon-common-extensions
         - ros-eloquent-ament-cmake
-      run:
-        - python
-    script: bld_colcon.bat
-  - name: ros-eloquent-foonathan-memory-vendor
-    version: 0.3.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - cmake
-        - git
       run:
         - python
     script: bld_colcon.bat
