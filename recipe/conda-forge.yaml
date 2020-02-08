@@ -16,6 +16,8 @@ python:
   conda: [python]
 python3:
   conda: [python]
+python3-dev:
+  conda: [python]
 python-rosdep:
   conda: [rosdep]
 python3-rosdep:

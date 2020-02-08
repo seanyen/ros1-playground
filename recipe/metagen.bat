@@ -36,7 +36,15 @@ set ROS_DISTRO=eloquent
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
-rosinstall_generator %UP_TO_PACKAGE% --deps --flat --exclude rmw_cyclonedds_cpp rmw_opensplice_cpp rmw_connext_cpp > ros.rosinstall
+rosinstall_generator %UP_TO_PACKAGE% --deps --flat ^
+  --exclude ^
+    rmw_cyclonedds_cpp rmw_opensplice_cpp rmw_connext_cpp ^
+    gmock_vendor gtest_vendor libyaml_vendor ^
+  > ros.rosinstall
+IF %ERRORLEVEL% NEQ 0 (
+  echo "Cannot create meta.yaml"
+  exit /b 1
+)
 
 mkdir src
 vcs import src < ros.rosinstall
@@ -57,5 +65,7 @@ IF %ERRORLEVEL% NEQ 0 (
   echo "Cannot copy over meta.yaml"
   exit /b 1
 )
+
+rd /s /q %TEMP_PATH%
 
 echo Succeeded! Checkout the genereated meta.yaml file!

@@ -48,7 +48,7 @@ with open("ros.rosinstall", 'r') as stream:
             local_name = repo['tar']['local-name']
             pkg_name = _resolve(local_name)[0]
             entry['url'] = repo['tar']['uri']
-            entry['folder'] = pkg_name
+            entry['folder'] = '%s/src/work' % pkg_name
             entry['fn'] = "%s.tar.gz" % pkg_name
         if 'git' in repo:
             local_name = repo['git']['local-name']
@@ -56,9 +56,9 @@ with open("ros.rosinstall", 'r') as stream:
             entry['git_url'] = repo['git']['uri']
             entry['git_rev'] = repo['git']['version']
             entry['folder'] = '%s/src/work' % pkg_name
-        location_to_test = os.path.join(os.getenv('CURRENT_PATH'), '%s.patch' % pkg_name)
+        location_to_test = os.path.join(os.getenv('CURRENT_PATH'), 'patch', '%s.patch' % pkg_name)
         if os.path.exists(location_to_test):
-            entry['patches'] = [ '%s.patch' % pkg_name ]
+            entry['patches'] = [ 'patch/%s.patch' % pkg_name ]
         source.append(entry)
 
 unsatisfied_deps = set()
@@ -83,16 +83,31 @@ for pkg_shortname in rospack.list():
     }
     pkg = catkin_pkg.package.parse_package(catkin_paths[pkg_shortname])
     pkg.evaluate_conditions(os.environ)
-    deps = pkg.build_depends + pkg.buildtool_depends + pkg.run_depends + pkg.test_depends + pkg.build_export_depends + pkg.buildtool_export_depends + pkg.exec_depends
-    deps = [d.name for d in deps if d.evaluated_condition]
-    deps = set(deps)
+    build_deps = pkg.build_depends + pkg.buildtool_depends + pkg.build_export_depends + pkg.buildtool_export_depends
+    build_deps = [d.name for d in build_deps if d.evaluated_condition]
+    build_deps = set(build_deps)
 
-    for dep in deps:
-        if not _resolve(dep):
+    for dep in build_deps:
+        resolved_dep = _resolve(dep)
+        if not resolved_dep:
             unsatisfied_deps.add(dep)
             continue
-        output['requirements']['host'].extend(_resolve(dep))
-        output['requirements']['run'].extend(_resolve(dep))
+        if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
+            continue
+        output['requirements']['host'].extend(resolved_dep)
+
+    run_deps = pkg.run_depends + pkg.exec_depends
+    run_deps = [d.name for d in run_deps if d.evaluated_condition]
+    run_deps = set(run_deps)
+
+    for dep in run_deps:
+        resolved_dep = _resolve(dep)
+        if not resolved_dep:
+            unsatisfied_deps.add(dep)
+            continue
+        if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
+            continue
+        output['requirements']['run'].extend(resolved_dep)
 
     output['script'] = 'bld_colcon.bat'
     outputs.append(output)
