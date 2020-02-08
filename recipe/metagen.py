@@ -83,7 +83,7 @@ for pkg_shortname in rospack.list():
     }
     pkg = catkin_pkg.package.parse_package(catkin_paths[pkg_shortname])
     pkg.evaluate_conditions(os.environ)
-    build_deps = pkg.build_depends + pkg.buildtool_depends + pkg.build_export_depends + pkg.buildtool_export_depends
+    build_deps = pkg.build_depends + pkg.buildtool_depends
     build_deps = [d.name for d in build_deps if d.evaluated_condition]
     build_deps = set(build_deps)
 
@@ -96,7 +96,7 @@ for pkg_shortname in rospack.list():
             continue
         output['requirements']['host'].extend(resolved_dep)
 
-    run_deps = pkg.run_depends + pkg.exec_depends
+    run_deps = pkg.run_depends + pkg.exec_depends + pkg.build_export_depends + pkg.buildtool_export_depends
     run_deps = [d.name for d in run_deps if d.evaluated_condition]
     run_deps = set(run_deps)
 
