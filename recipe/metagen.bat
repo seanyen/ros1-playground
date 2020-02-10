@@ -2,7 +2,7 @@
 setlocal
 
 set CURRENT_PATH=%~dp0
-set UP_TO_PACKAGE=%1
+set UP_TO_PACKAGE=%*
 
 if "%UP_TO_PACKAGE%" == "" (
   echo "Usage: metagen.bat <up-to-package>"

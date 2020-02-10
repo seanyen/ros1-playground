@@ -15,7 +15,8 @@ colcon build ^
     --event-handlers console_cohesion+ ^
     --cmake-args ^
         -G Ninja ^
-        -DBUILD_TESTING=OFF
+        -DBUILD_TESTING=OFF ^
+        -DCMAKE_BUILD_TYPE=Release
 if errorlevel 1 exit 1
 
 if exist %LIBRARY_PREFIX%\.colcon_install_layout (
