@@ -83,7 +83,7 @@ for pkg_shortname in rospack.list():
     }
     pkg = catkin_pkg.package.parse_package(catkin_paths[pkg_shortname])
     pkg.evaluate_conditions(os.environ)
-    build_deps = pkg.build_depends + pkg.buildtool_depends
+    build_deps = pkg.build_depends + pkg.buildtool_depends + pkg.build_export_depends + pkg.buildtool_export_depends
     build_deps = [d.name for d in build_deps if d.evaluated_condition]
     build_deps = set(build_deps)
 
