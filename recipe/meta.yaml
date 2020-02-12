@@ -3,32 +3,70 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
-    git_rev: release/eloquent/action_msgs/0.8.0-1
-    folder: ros-eloquent-action-msgs/src/work
-  - git_url: https://github.com/ros2-gbp/rcl-release.git
-    git_rev: release/eloquent/rcl_action/0.8.4-1
-    folder: ros-eloquent-rcl-action/src/work
-  - git_url: https://github.com/ros2-gbp/rclpy-release.git
-    git_rev: release/eloquent/rclpy/0.8.4-1
-    folder: ros-eloquent-rclpy/src/work
-  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
-    git_rev: release/eloquent/ros2cli/0.8.7-1
-    folder: ros-eloquent-ros2cli/src/work
-  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
-    git_rev: release/eloquent/rosgraph_msgs/0.8.0-1
-    folder: ros-eloquent-rosgraph-msgs/src/work
-  - git_url: https://github.com/ros2-gbp/unique_identifier_msgs-release.git
-    git_rev: release/eloquent/unique_identifier_msgs/2.1.0-1
-    folder: ros-eloquent-unique-identifier-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/actionlib_msgs/0.8.1-1
+    folder: ros-eloquent-actionlib-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/common_interfaces/0.8.1-1
+    folder: ros-eloquent-common-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/diagnostic_msgs/0.8.1-1
+    folder: ros-eloquent-diagnostic-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/geometry_msgs/0.8.1-1
+    folder: ros-eloquent-geometry-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/nav_msgs/0.8.1-1
+    folder: ros-eloquent-nav-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/sensor_msgs/0.8.1-1
+    folder: ros-eloquent-sensor-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/shape_msgs/0.8.1-1
+    folder: ros-eloquent-shape-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/std_msgs/0.8.1-1
+    folder: ros-eloquent-std-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/std_srvs/0.8.1-1
+    folder: ros-eloquent-std-srvs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/stereo_msgs/0.8.1-1
+    folder: ros-eloquent-stereo-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/trajectory_msgs/0.8.1-1
+    folder: ros-eloquent-trajectory-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/visualization_msgs/0.8.1-1
+    folder: ros-eloquent-visualization-msgs/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-action-msgs
-    version: 0.8.0
+  - name: ros-eloquent-actionlib-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-common-interfaces
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -38,17 +76,143 @@ outputs:
       host:
         - colcon-common-extensions
         - ros-eloquent-ament-cmake
+      run:
+        - python
         - ros-eloquent-builtin-interfaces
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-trajectory-msgs
+        - ros-eloquent-nav-msgs
+        - ros-eloquent-std-msgs
+        - ros-eloquent-std-srvs
+        - ros-eloquent-diagnostic-msgs
+        - ros-eloquent-visualization-msgs
+        - ros-eloquent-stereo-msgs
+        - ros-eloquent-actionlib-msgs
+        - ros-eloquent-shape-msgs
+        - ros-eloquent-geometry-msgs
+    script: bld_colcon.bat
+  - name: ros-eloquent-diagnostic-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
         - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-unique-identifier-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-geometry-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-std-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+      run:
+        - python
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+    script: bld_colcon.bat
+  - name: ros-eloquent-nav-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-sensor-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-shape-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-geometry-msgs
+    script: bld_colcon.bat
+  - name: ros-eloquent-std-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
       run:
         - python
         - ros-eloquent-builtin-interfaces
         - ros-eloquent-rosidl-default-runtime
-        - ros-eloquent-unique-identifier-msgs
     script: bld_colcon.bat
-  - name: ros-eloquent-rclpy
-    version: 0.8.4
+  - name: ros-eloquent-std-srvs
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -57,86 +221,14 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rcutils
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-rcl
-        - ros-eloquent-rcl-action
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-rmw-implementation-cmake
         - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-unique-identifier-msgs
-      run:
-        - python
-        - ros-eloquent-rosgraph-msgs
-        - ros-eloquent-rcl
-        - ros-eloquent-rcl-action
-        - ros-eloquent-rcl-yaml-param-parser
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-rcl-interfaces
-        - ros-eloquent-unique-identifier-msgs
-    script: bld_colcon.bat
-  - name: ros-eloquent-rcl-action
-    version: 0.8.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rcutils
-        - ros-eloquent-rcl
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-action-msgs
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rmw
-      run:
-        - python
-        - ros-eloquent-rcutils
-        - ros-eloquent-rcl
-        - ros-eloquent-action-msgs
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rmw
-    script: bld_colcon.bat
-  - name: ros-eloquent-ros2cli
-    version: 0.8.7
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-      run:
-        - python
-        - netifaces
-        - ros-eloquent-rclpy
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosgraph-msgs
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-builtin-interfaces
         - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-ament-cmake
       run:
         - python
-        - ros-eloquent-builtin-interfaces
         - ros-eloquent-rosidl-default-runtime
     script: bld_colcon.bat
-  - name: ros-eloquent-unique-identifier-msgs
-    version: 2.1.0
+  - name: ros-eloquent-stereo-msgs
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -145,10 +237,58 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-std-msgs
         - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
       run:
         - python
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-sensor-msgs
+    script: bld_colcon.bat
+  - name: ros-eloquent-trajectory-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-visualization-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
         - ros-eloquent-rosidl-default-runtime
     script: bld_colcon.bat
 
