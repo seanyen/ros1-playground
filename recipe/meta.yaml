@@ -3,17 +3,17 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
-    git_rev: release/eloquent/rmw_fastrtps_dynamic_cpp/0.8.1-1
-    folder: ros-eloquent-rmw-fastrtps-dynamic-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
+    git_rev: release/eloquent/rmw_implementation/0.8.2-2
+    folder: ros-eloquent-rmw-implementation/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-rmw-fastrtps-dynamic-cpp
-    version: 0.8.1
+  - name: ros-eloquent-rmw-implementation
+    version: 0.8.2
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -22,35 +22,21 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rcpputils
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rmw-fastrtps-cpp
+        - ros-eloquent-ament-cmake-python
+        - poco
+        - ros-eloquent-poco-vendor
         - ros-eloquent-rcutils
+        - ros-eloquent-rmw
         - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-fastrtps-shared-cpp
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-rosidl-typesupport-fastrtps-c
-        - ros-eloquent-fastrtps-cmake-module
       run:
         - python
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rcpputils
-        - ros-eloquent-rcutils
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-fastrtps-shared-cpp
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-rosidl-typesupport-fastrtps-c
-        - ros-eloquent-fastrtps-cmake-module
+        - poco
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rmw-fastrtps-cpp
     script: bld_colcon.bat
 
 about:
