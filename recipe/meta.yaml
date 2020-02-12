@@ -3,47 +3,32 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
-    git_rev: release/eloquent/fastrtps_cmake_module/0.8.0-1
-    folder: ros-eloquent-fastrtps-cmake-module/src/work
+  - git_url: https://github.com/ros2-gbp/poco_vendor-release.git
+    git_rev: release/eloquent/poco_vendor/1.2.0-1
+    folder: ros-eloquent-poco-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/rcpputils-release.git
+    git_rev: release/eloquent/rcpputils/0.2.1-1
+    folder: ros-eloquent-rcpputils/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: release/eloquent/rmw_fastrtps_cpp/0.8.1-1
+    folder: ros-eloquent-rmw-fastrtps-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: release/eloquent/rmw_fastrtps_shared_cpp/0.8.1-1
+    folder: ros-eloquent-rmw-fastrtps-shared-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
+    git_rev: release/eloquent/rmw_implementation/0.8.2-2
+    folder: ros-eloquent-rmw-implementation/src/work
   - git_url: https://github.com/ros2-gbp/rmw-release.git
-    git_rev: release/eloquent/rmw/0.8.1-1
-    folder: ros-eloquent-rmw/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_adapter/0.8.2-1
-    folder: ros-eloquent-rosidl-adapter/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_cmake/0.8.2-1
-    folder: ros-eloquent-rosidl-cmake/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_generator_c/0.8.2-1
-    folder: ros-eloquent-rosidl-generator-c/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_generator_cpp/0.8.2-1
-    folder: ros-eloquent-rosidl-generator-cpp/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_parser/0.8.2-1
-    folder: ros-eloquent-rosidl-parser/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
-    git_rev: release/eloquent/rosidl_typesupport_fastrtps_c/0.8.0-1
-    folder: ros-eloquent-rosidl-typesupport-fastrtps-c/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
-    git_rev: release/eloquent/rosidl_typesupport_fastrtps_cpp/0.8.0-1
-    folder: ros-eloquent-rosidl-typesupport-fastrtps-cpp/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_typesupport_interface/0.8.2-1
-    folder: ros-eloquent-rosidl-typesupport-interface/src/work
-  - git_url: https://github.com/ros2-gbp/test_interface_files-release.git
-    git_rev: release/eloquent/test_interface_files/0.8.0-1
-    folder: ros-eloquent-test-interface-files/src/work
+    git_rev: release/eloquent/rmw_implementation_cmake/0.8.1-1
+    folder: ros-eloquent-rmw-implementation-cmake/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-fastrtps-cmake-module
-    version: 0.8.0
+  - name: ros-eloquent-poco-vendor
+    version: 1.2.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -52,11 +37,34 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
+        - poco
+        - cmake
+        - pcre
+        - zlib
+      run:
+        - python
+        - poco
+        - cmake
+        - pcre
+        - zlib
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcpputils
+    version: 0.2.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rcutils
         - ros-eloquent-ament-cmake
       run:
         - python
     script: bld_colcon.bat
-  - name: ros-eloquent-rmw
+  - name: ros-eloquent-rmw-fastrtps-cpp
     version: 0.8.1
     requirements:
       build:
@@ -66,31 +74,63 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-fastcdr
         - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rcutils
-        - ros-eloquent-ament-cmake-version
-      run:
-        - python
+        - ros-eloquent-rosidl-cmake
         - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rcutils
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-adapter
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
         - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rmw-fastrtps-shared-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rmw
       run:
         - python
-        - empy
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rmw-fastrtps-shared-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-fastcdr
     script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-cmake
+  - name: ros-eloquent-rmw-fastrtps-shared-cpp
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rcpputils
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rcutils
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-fastcdr
+      run:
+        - python
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rcpputils
+        - ros-eloquent-fastrtps
+        - ros-eloquent-rcutils
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-fastcdr
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw-implementation
     version: 0.8.2
     requirements:
       build:
@@ -100,137 +140,23 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
+        - poco
+        - ros-eloquent-ament-cmake
         - ros-eloquent-ament-cmake-python
-        - empy
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-parser
-        - empy
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-adapter
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-generator-c
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-ament-cmake
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-generator-cpp
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-ament-cmake
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-parser
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - lark-parser
-        - ros-eloquent-rosidl-adapter
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-fastrtps-c
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-fastrtps-cpp
         - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
       run:
         - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
+        - poco
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-poco-vendor
     script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-fastrtps-cpp
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
-      run:
-        - python
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-fastrtps-cmake-module
-        - ros-eloquent-rmw
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-fastrtps
-        - ros-eloquent-fastcdr
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-interface
-    version: 0.8.2
+  - name: ros-eloquent-rmw-implementation-cmake
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -242,20 +168,7 @@ outputs:
         - ros-eloquent-ament-cmake
       run:
         - python
-    script: bld_colcon.bat
-  - name: ros-eloquent-test-interface-files
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake-core
-      run:
-        - python
+        - ros-eloquent-ament-cmake
     script: bld_colcon.bat
 
 about:
