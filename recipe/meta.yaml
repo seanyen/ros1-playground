@@ -3,35 +3,17 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
-    git_rev: release/eloquent/rosidl_default_generators/0.8.0-1
-    folder: ros-eloquent-rosidl-default-generators/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
-    git_rev: release/eloquent/rosidl_default_runtime/0.8.0-1
-    folder: ros-eloquent-rosidl-default-runtime/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_python-release.git
-    git_rev: release/eloquent/rosidl_generator_py/0.8.1-1
-    folder: ros-eloquent-rosidl-generator-py/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
-    git_rev: release/eloquent/rosidl_typesupport_c/0.8.0-2
-    folder: ros-eloquent-rosidl-typesupport-c/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
-    git_rev: release/eloquent/rosidl_typesupport_cpp/0.8.0-2
-    folder: ros-eloquent-rosidl-typesupport-cpp/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_typesupport_introspection_c/0.8.2-1
-    folder: ros-eloquent-rosidl-typesupport-introspection-c/src/work
-  - git_url: https://github.com/ros2-gbp/rosidl-release.git
-    git_rev: release/eloquent/rosidl_typesupport_introspection_cpp/0.8.2-1
-    folder: ros-eloquent-rosidl-typesupport-introspection-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
+    git_rev: release/eloquent/rmw_implementation/0.8.2-2
+    folder: ros-eloquent-rmw-implementation/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-rosidl-default-generators
-    version: 0.8.0
+  - name: ros-eloquent-rmw-implementation
+    version: 0.8.2
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -40,183 +22,20 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rosidl-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-generator-py
-        - ros-eloquent-rosidl-cmake
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-default-runtime
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-generator-py
-      run:
-        - python
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-rosidl-typesupport-cpp
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-generator-py
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-generator-py
-    version: 0.8.1
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rmw
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-python-cmake-module
-      run:
-        - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-index-python
-        - numpy
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-python-cmake-module
-        - ros-eloquent-rmw-implementation
-        - ros-eloquent-rmw
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-typesupport-c
-        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw-fastrtps-cpp
+        - ros-eloquent-poco-vendor
+        - poco
         - ros-eloquent-rmw-implementation-cmake
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-c
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rmw-implementation
-        - poco
-        - ros-eloquent-poco-vendor
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-ament-cmake
       run:
         - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rmw-implementation
         - poco
-        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rmw-implementation-cmake
         - ros-eloquent-poco-vendor
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-cpp
-    version: 0.8.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rosidl-typesupport-introspection-cpp
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rmw-implementation
-        - poco
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rosidl-typesupport-c
-      run:
-        - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-ament-cmake-core
-        - ros-eloquent-rmw-implementation
-        - poco
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rosidl-typesupport-c
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-introspection-c
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-ament-cmake
-    script: bld_colcon.bat
-  - name: ros-eloquent-rosidl-typesupport-introspection-cpp
-    version: 0.8.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-cmake
-      run:
-        - python
-        - ros-eloquent-rosidl-generator-c
-        - ros-eloquent-rosidl-typesupport-introspection-c
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rosidl-generator-cpp
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-typesupport-interface
-        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-index-python
     script: bld_colcon.bat
 
 about:
