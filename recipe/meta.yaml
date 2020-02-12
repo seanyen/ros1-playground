@@ -3,17 +3,40 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
-    git_rev: release/eloquent/rmw_implementation/0.8.2-2
-    folder: ros-eloquent-rmw-implementation/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/builtin_interfaces/0.8.0-1
+    folder: ros-eloquent-builtin-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl/0.8.4-1
+    folder: ros-eloquent-rcl/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/rcl_interfaces/0.8.0-1
+    folder: ros-eloquent-rcl-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_logging-release.git
+    git_rev: release/eloquent/rcl_logging_spdlog/0.3.3-1
+    folder: ros-eloquent-rcl-logging-spdlog/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl_yaml_param_parser/0.8.4-1
+    folder: ros-eloquent-rcl-yaml-param-parser/src/work
+    patches:
+      - patch/ros-eloquent-rcl-yaml-param-parser.patch
+  - git_url: https://github.com/ros2-gbp/spdlog_vendor-release.git
+    git_rev: release/eloquent/spdlog_vendor/1.0.1-1
+    folder: ros-eloquent-spdlog-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/tinydir_vendor-release.git
+    git_rev: release/eloquent/tinydir_vendor/1.1.1-1
+    folder: ros-eloquent-tinydir-vendor/src/work
+  - git_url: https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release.git
+    git_rev: release/eloquent/tracetools/0.2.12-1
+    folder: ros-eloquent-tracetools/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-rmw-implementation
-    version: 0.8.2
+  - name: ros-eloquent-builtin-interfaces
+    version: 0.8.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -22,21 +45,141 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rmw-fastrtps-cpp
-        - ros-eloquent-ament-cmake-python
-        - poco
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rcutils
-        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-ament-cmake
       run:
         - python
-        - poco
-        - ros-eloquent-poco-vendor
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rmw-fastrtps-cpp
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-rcutils
+        - ros-eloquent-tinydir-vendor
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-rmw
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-tracetools
+      run:
+        - python
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-rcutils
+        - ros-eloquent-tinydir-vendor
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-rmw
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-tracetools
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-interfaces
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ament-cmake
+      run:
+        - python
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-logging-spdlog
+    version: 0.3.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-spdlog-vendor
+        - spdlog
+        - ros-eloquent-rcutils
+        - ros-eloquent-ament-cmake-ros
+      run:
+        - python
+        - ros-eloquent-rcutils
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-yaml-param-parser
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rcutils
+        - yaml
+      run:
+        - python
+        - yaml
+    script: bld_colcon.bat
+  - name: ros-eloquent-spdlog-vendor
+    version: 1.0.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - spdlog
+        - ros-eloquent-ament-cmake
+      run:
+        - python
+        - spdlog
+    script: bld_colcon.bat
+  - name: ros-eloquent-tinydir-vendor
+    version: 1.1.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - cmake
+      run:
+        - python
+    script: bld_colcon.bat
+  - name: ros-eloquent-tracetools
+    version: 0.2.12
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - pkg-config
+        - ros-eloquent-ament-cmake-ros
+      run:
+        - python
     script: bld_colcon.bat
 
 about:

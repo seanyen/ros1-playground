@@ -43,6 +43,7 @@ rosinstall_generator %UP_TO_PACKAGE% --deps --flat ^
     connext_cmake_module opensplice_cmake_module ^
     rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp ^
     rosidl_typesupport_opensplice_cpp rosidl_typesupport_opensplice_c ^
+    test_msgs ^
   > ros.rosinstall
 IF %ERRORLEVEL% NEQ 0 (
   echo "Cannot create meta.yaml"
