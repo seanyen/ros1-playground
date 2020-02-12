@@ -7,9 +7,13 @@ set "CMAKE_BUILD_PARALLEL_LEVEL=%NUMBER_OF_PROCESSOR%"
 set CC=cl.exe
 set CXX=cl.exe
 
+:: remove the build folder
+rd /s /q "%SRC_DIR%\build"
+
 pushd %PKG_NAME%
 
 colcon build ^
+    --build-base %SRC_DIR% ^
     --install-base %LIBRARY_PREFIX% ^
     --merge-install ^
     --event-handlers console_cohesion+ ^
