@@ -4,12 +4,16 @@ import rospkg
 import rosdep2
 import os
 import catkin_pkg.package
+import json
 
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=2, sequence=4, offset=2)
 
 def convert_os_override_option():
     return 'conda', '10'
+
+json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True)
+packages_released = json.loads(json_result)
 
 rospack = rospkg.RosPack()
 
@@ -56,6 +60,8 @@ with open("ros.rosinstall", 'r') as stream:
             entry['git_url'] = repo['git']['uri']
             entry['git_rev'] = repo['git']['version']
             entry['folder'] = '%s/src/work' % pkg_name
+        if pkg_name in packages_released:
+            continue
         location_to_test = os.path.join(os.getenv('CURRENT_PATH'), 'patch', '%s.patch' % pkg_name)
         if os.path.exists(location_to_test):
             entry['patches'] = [ 'patch/%s.patch' % pkg_name ]
@@ -67,6 +73,8 @@ catkin_paths = lookup.get_loader().get_catkin_paths()
 for pkg_shortname in rospack.list():
     pkg_name = _resolve(pkg_shortname)[0]
     manifest = rospack.get_manifest(pkg_shortname)
+    if pkg_name in packages_released:
+        continue
     output = {
         'name': pkg_name,
         'version': manifest.version,
@@ -92,8 +100,8 @@ for pkg_shortname in rospack.list():
         if not resolved_dep:
             unsatisfied_deps.add(dep)
             continue
-        if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
-            continue
+        # if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
+        #    continue
         output['requirements']['host'].extend(resolved_dep)
 
     run_deps = pkg.run_depends + pkg.exec_depends + pkg.build_export_depends + pkg.buildtool_export_depends
@@ -105,8 +113,8 @@ for pkg_shortname in rospack.list():
         if not resolved_dep:
             unsatisfied_deps.add(dep)
             continue
-        if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
-            continue
+        # if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
+        #    continue
         output['requirements']['run'].extend(resolved_dep)
 
     output['script'] = 'bld_colcon.bat'
