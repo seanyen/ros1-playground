@@ -26,6 +26,8 @@ python-empy:
   conda: [empy]
 python3-empy:
   conda: [empy]
+tinyxml:
+  conda: [tinyxml]
 tinyxml2:
   conda: [tinyxml2]
 gtest:
@@ -146,3 +148,5 @@ python3-lxml:
   conda: [lxml]
 openssl:
   conda: [openssl]
+eigen:
+  conda: [eigen]

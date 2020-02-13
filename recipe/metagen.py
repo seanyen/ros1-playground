@@ -69,7 +69,6 @@ with open("ros.rosinstall", 'r') as stream:
 
 unsatisfied_deps = set()
 outputs = []
-catkin_paths = lookup.get_loader().get_catkin_paths()
 for pkg_shortname in rospack.list():
     pkg_name = _resolve(pkg_shortname)[0]
     manifest = rospack.get_manifest(pkg_shortname)
@@ -89,7 +88,7 @@ for pkg_shortname in rospack.list():
             'run': ['python']
         }
     }
-    pkg = catkin_pkg.package.parse_package(catkin_paths[pkg_shortname])
+    pkg = catkin_pkg.package.parse_package('src\\%s\\package.xml' % pkg_shortname)
     pkg.evaluate_conditions(os.environ)
     build_deps = pkg.build_depends + pkg.buildtool_depends + pkg.build_export_depends + pkg.buildtool_export_depends
     build_deps = [d.name for d in build_deps if d.evaluated_condition]
