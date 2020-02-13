@@ -150,3 +150,29 @@ openssl:
   conda: [openssl]
 eigen:
   conda: [eigen]
+assimp:
+  conda: [assimp]
+libqt5-opengl:
+  conda: [qt]
+libqt5-widgets:
+  conda: [qt]
+curl:
+  conda: [libcurl]
+qtbase5-dev:
+  conda: [qt]
+libqt5-gui:
+  conda: [qt]
+libqt5-core:
+  conda: [qt]
+libfreetype6-dev:
+  conda: [freetype]
+libfreetype6:
+  conda: [freetype]
+opengl:
+  conda: []
+libxaw:
+  conda: []
+libx11-dev:
+  conda: []
+libxrandr:
+  conda: []
