@@ -18,33 +18,6 @@ source:
   - git_url: https://github.com/ros2-gbp/resource_retriever-release.git
     git_rev: release/eloquent/resource_retriever/2.2.1-1
     folder: ros-eloquent-resource-retriever/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz2/7.0.4-1
-    folder: ros-eloquent-rviz2/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_assimp_vendor/7.0.4-1
-    folder: ros-eloquent-rviz-assimp-vendor/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_common/7.0.4-1
-    folder: ros-eloquent-rviz-common/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_default_plugins/7.0.4-1
-    folder: ros-eloquent-rviz-default-plugins/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_ogre_vendor/7.0.4-1
-    folder: ros-eloquent-rviz-ogre-vendor/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_rendering/7.0.4-1
-    folder: ros-eloquent-rviz-rendering/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_rendering_tests/7.0.4-1
-    folder: ros-eloquent-rviz-rendering-tests/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_visual_testing_framework/7.0.4-1
-    folder: ros-eloquent-rviz-visual-testing-framework/src/work
-  - git_url: https://github.com/ros2-gbp/yaml_cpp_vendor-release.git
-    git_rev: release/eloquent/yaml_cpp_vendor/7.0.0-1
-    folder: ros-eloquent-yaml-cpp-vendor/src/work
 
 build:
   number: 0
@@ -61,23 +34,23 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-rmw
-        - ros-eloquent-visualization-msgs
         - ros-eloquent-tf2
+        - ros-eloquent-rmw
         - ros-eloquent-rclcpp
         - ros-eloquent-ament-cmake-python
+        - ros-eloquent-tf2-geometry-msgs
         - ros-eloquent-ament-cmake
+        - ros-eloquent-visualization-msgs
       run:
         - python
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-rmw
-        - ros-eloquent-visualization-msgs
-        - ros-eloquent-tf2
-        - ros-eloquent-rclcpp
         - ros-eloquent-rclpy
+        - ros-eloquent-rmw
+        - ros-eloquent-rclcpp
+        - ros-eloquent-visualization-msgs
+        - ros-eloquent-tf2-geometry-msgs
         - ros-eloquent-std-msgs
+        - ros-eloquent-tf2
+        - ros-eloquent-builtin-interfaces
     script: bld_colcon.bat
   - name: ros-eloquent-laser-geometry
     version: 2.1.1
@@ -90,19 +63,19 @@ outputs:
       host:
         - colcon-common-extensions
         - eigen
-        - ros-eloquent-tf2
         - ros-eloquent-rclcpp
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-eigen3-cmake-module
         - ros-eloquent-ament-cmake
+        - ros-eloquent-eigen3-cmake-module
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-tf2
       run:
         - python
         - eigen
-        - ros-eloquent-tf2
         - ros-eloquent-rclcpp
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-eigen3-cmake-module
         - ros-eloquent-ament-cmake
+        - ros-eloquent-eigen3-cmake-module
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-tf2
     script: bld_colcon.bat
   - name: ros-eloquent-libcurl-vendor
     version: 2.2.1
@@ -114,13 +87,13 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - pkg-config
-        - libcurl
         - ros-eloquent-ament-cmake
+        - libcurl
+        - pkg-config
       run:
         - python
-        - pkg-config
         - libcurl
+        - pkg-config
     script: bld_colcon.bat
   - name: ros-eloquent-map-msgs
     version: 2.0.2
@@ -132,17 +105,17 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rosidl-default-generators
         - ros-eloquent-nav-msgs
-        - ros-eloquent-std-msgs
-        - ros-eloquent-sensor-msgs
         - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-sensor-msgs
       run:
         - python
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-std-msgs
         - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-sensor-msgs
+        - ros-eloquent-std-msgs
+        - ros-eloquent-nav-msgs
     script: bld_colcon.bat
   - name: ros-eloquent-resource-retriever
     version: 2.2.1
@@ -154,255 +127,13 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-ament-index-cpp
         - ros-eloquent-ament-cmake-ros
         - ros-eloquent-libcurl-vendor
+        - ros-eloquent-ament-index-cpp
       run:
         - python
-        - ros-eloquent-ament-index-cpp
         - ros-eloquent-libcurl-vendor
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz2
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rviz-ogre-vendor
-        - qt
-        - ros-eloquent-rviz-common
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-rviz-common
-        - ros-eloquent-rviz-default-plugins
-        - ros-eloquent-rviz-ogre-vendor
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-assimp-vendor
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - assimp
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - assimp
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-common
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rviz-assimp-vendor
-        - qt
-        - ros-eloquent-geometry-msgs
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-tinyxml-vendor
-        - ros-eloquent-urdf
-        - ros-eloquent-yaml-cpp-vendor
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-rviz-rendering
-        - ros-eloquent-tf2
-        - ros-eloquent-rclcpp
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-pluginlib
-        - ros-eloquent-message-filters
-        - ros-eloquent-std-msgs
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - qt
-        - ros-eloquent-geometry-msgs
-        - qt
-        - ros-eloquent-tf2
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-rviz-assimp-vendor
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-yaml-cpp-vendor
-        - ros-eloquent-rclcpp
-        - ros-eloquent-std-msgs
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-tinyxml-vendor
-        - ros-eloquent-urdf
-        - ros-eloquent-rviz-rendering
-        - ros-eloquent-rviz-ogre-vendor
-        - qt
-        - qt
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-pluginlib
-        - ros-eloquent-message-filters
-        - qt
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-default-plugins
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - qt
-        - ros-eloquent-geometry-msgs
-        - ros-eloquent-laser-geometry
-        - ros-eloquent-rviz-common
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-tinyxml-vendor
-        - ros-eloquent-urdf
-        - ros-eloquent-map-msgs
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-visualization-msgs
-        - ros-eloquent-rviz-rendering
-        - ros-eloquent-tf2
-        - ros-eloquent-rclcpp
-        - ros-eloquent-pluginlib
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-interactive-markers
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - qt
-        - ros-eloquent-geometry-msgs
-        - ros-eloquent-map-msgs
-        - ros-eloquent-tf2
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-interactive-markers
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-rclcpp
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-laser-geometry
-        - ros-eloquent-tinyxml-vendor
-        - ros-eloquent-urdf
-        - ros-eloquent-visualization-msgs
-        - ros-eloquent-rviz-rendering
-        - qt
-        - qt
-        - ros-eloquent-rviz-common
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-pluginlib
-        - qt
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-ogre-vendor
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - git
-        - pkg-config
-        - freetype
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - freetype
-        - freetype
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-rendering
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - eigen
-        - ros-eloquent-rviz-assimp-vendor
-        - qt
         - ros-eloquent-ament-index-cpp
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-eigen3-cmake-module
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-ament-cmake
-      run:
-        - python
-        - ros-eloquent-rviz-assimp-vendor
-        - qt
-        - qt
-        - eigen
-        - qt
-        - ros-eloquent-ament-index-cpp
-        - ros-eloquent-rviz-ogre-vendor
-        - qt
-        - qt
-        - ros-eloquent-eigen3-cmake-module
-        - ros-eloquent-resource-retriever
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-rendering-tests
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-        - qt
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-rviz-rendering
-      run:
-        - python
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-rviz-rendering
-    script: bld_colcon.bat
-  - name: ros-eloquent-rviz-visual-testing-framework
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - qt
-        - ros-eloquent-rviz-common
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-cmake-gtest
-      run:
-        - python
-        - ros-eloquent-rviz-common
-        - ros-eloquent-ament-cmake-gtest
-    script: bld_colcon.bat
-  - name: ros-eloquent-yaml-cpp-vendor
-    version: 7.0.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-      run:
-        - python
     script: bld_colcon.bat
 
 about:
