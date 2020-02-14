@@ -1,14 +1,20 @@
 c_compiler:
-- vs2015
+- vs2017
 channel_sources:
 - ros-playground,conda-forge,defaults
 channel_targets:
 - ros-playground main
 cxx_compiler:
-- vs2015
+- vs2017
+openssl:
+- 1.1.1a
 pin_run_as_build:
+  openssl:
+    max_pin: x.x.x
   python:
     min_pin: x.x
+    max_pin: x.x
+  zlib:
     max_pin: x.x
 python:
 - '3.7'
@@ -16,3 +22,5 @@ zip_keys:
 - - python
   - c_compiler
   - cxx_compiler
+zlib:
+- '1.2'
