@@ -6,5 +6,7 @@ c_compiler:                    # [win]
   - vs2017                     # [win]
 cxx_compiler:                  # [win]
   - vs2017                     # [win]
-python:
-  - 3.7
+vc:                            # [win]
+  - 14                         # [win]
+python:                        # [win]
+  - 3.7                        # [win]
