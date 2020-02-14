@@ -3,17 +3,19 @@ package:
   version: 0.0.1
 
 source:
-  - git_url: https://github.com/ros2-gbp/ament_package-release.git
-    git_rev: release/eloquent/ament_package/0.8.8-1
-    folder: ros-eloquent-ament-package/src/work
+  - git_url: https://github.com/ros2-gbp/rviz-release.git
+    git_rev: release/eloquent/rviz_rendering/7.0.4-1
+    folder: ros-eloquent-rviz-rendering/src/work
+    patches:
+      - patch/ros-eloquent-rviz-rendering.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-ament-package
-    version: 0.8.8
+  - name: ros-eloquent-rviz-rendering
+    version: 7.0.4
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -22,10 +24,27 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - setuptools
+        - ros-eloquent-rviz-assimp-vendor
+        - ros-eloquent-rviz-ogre-vendor
+        - ros-eloquent-eigen3-cmake-module
+        - ros-eloquent-resource-retriever
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-index-cpp
+        - qt
+        - eigen
       run:
         - python
-        - setuptools
+        - qt
+        - qt
+        - ros-eloquent-rviz-assimp-vendor
+        - qt
+        - ros-eloquent-rviz-ogre-vendor
+        - ros-eloquent-eigen3-cmake-module
+        - ros-eloquent-resource-retriever
+        - qt
+        - ros-eloquent-ament-index-cpp
+        - qt
+        - eigen
     script: bld_colcon.bat
 
 about:
