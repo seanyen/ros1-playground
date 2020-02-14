@@ -4,9 +4,6 @@ package:
 
 source:
   - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz2/7.0.4-1
-    folder: ros-eloquent-rviz2/src/work
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
     git_rev: release/eloquent/rviz_assimp_vendor/7.0.4-1
     folder: ros-eloquent-rviz-assimp-vendor/src/work
   - git_url: https://github.com/ros2-gbp/rviz-release.git
@@ -40,26 +37,6 @@ build:
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-rviz2
-    version: 7.0.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - colcon-common-extensions
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-rviz-common
-        - ros-eloquent-ament-cmake
-        - qt
-      run:
-        - python
-        - ros-eloquent-rviz-default-plugins
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-rviz-common
-    script: bld_colcon.bat
   - name: ros-eloquent-rviz-assimp-vendor
     version: 7.0.4
     requirements:
