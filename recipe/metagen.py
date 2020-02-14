@@ -13,7 +13,8 @@ def convert_os_override_option():
     return 'conda', '10'
 
 json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True)
-packages_released = json.loads(json_result)
+#packages_released = json.loads(json_result)
+packages_released = {}
 
 rospack = rospkg.RosPack()
 
