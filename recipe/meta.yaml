@@ -6,6 +6,8 @@ source:
   - git_url: https://github.com/ros2-gbp/rviz-release.git
     git_rev: release/eloquent/rviz2/7.0.4-1
     folder: ros-eloquent-rviz2/src/work
+    patches:
+      - patch/ros-eloquent-rviz2.patch
 
 build:
   number: 0
@@ -22,15 +24,15 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - qt
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rviz-common
+        - ros-eloquent-ament-cmake
         - ros-eloquent-rviz-ogre-vendor
+        - qt
       run:
         - python
-        - ros-eloquent-rviz-default-plugins
         - ros-eloquent-rviz-common
         - ros-eloquent-rviz-ogre-vendor
+        - ros-eloquent-rviz-default-plugins
     script: bld_colcon.bat
 
 about:
