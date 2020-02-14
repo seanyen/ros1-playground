@@ -13,11 +13,11 @@ python-catkin-pkg:
 python3-catkin-pkg:
   conda: [catkin_pkg]
 python:
-  conda: [python]
+  conda: []
 python3:
-  conda: [python]
+  conda: []
 python3-dev:
-  conda: [python]
+  conda: []
 python-rosdep:
   conda: [rosdep]
 python3-rosdep:

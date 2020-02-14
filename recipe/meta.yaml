@@ -1,21 +1,533 @@
 package:
   name: ros
-  version: 0.0.1
+  version: 2020.02.14
 
 source:
-  - git_url: https://github.com/ros2-gbp/rviz-release.git
-    git_rev: release/eloquent/rviz_rendering/7.0.4-1
-    folder: ros-eloquent-rviz-rendering/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/action_msgs/0.8.0-1
+    folder: ros-eloquent-action-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/actionlib_msgs/0.8.1-1
+    folder: ros-eloquent-actionlib-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake/0.8.2-1
+    folder: ros-eloquent-ament-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_auto/0.8.2-1
+    folder: ros-eloquent-ament-cmake-auto/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_copyright/0.8.1-1
+    folder: ros-eloquent-ament-cmake-copyright/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_core/0.8.2-1
+    folder: ros-eloquent-ament-cmake-core/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_cppcheck/0.8.1-1
+    folder: ros-eloquent-ament-cmake-cppcheck/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_cpplint/0.8.1-1
+    folder: ros-eloquent-ament-cmake-cpplint/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_definitions/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-definitions/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_dependencies/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-dependencies/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_include_directories/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-include-directories/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_interfaces/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_libraries/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-libraries/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_link_flags/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-link-flags/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_flake8/0.8.1-1
+    folder: ros-eloquent-ament-cmake-flake8/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_gmock/0.8.2-1
+    folder: ros-eloquent-ament-cmake-gmock/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_gtest/0.8.2-1
+    folder: ros-eloquent-ament-cmake-gtest/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_include_directories/0.8.2-1
+    folder: ros-eloquent-ament-cmake-include-directories/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_libraries/0.8.2-1
+    folder: ros-eloquent-ament-cmake-libraries/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_lint_cmake/0.8.1-1
+    folder: ros-eloquent-ament-cmake-lint-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_pep257/0.8.1-1
+    folder: ros-eloquent-ament-cmake-pep257/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_pytest/0.8.2-1
+    folder: ros-eloquent-ament-cmake-pytest/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_python/0.8.2-1
+    folder: ros-eloquent-ament-cmake-python/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake_ros-release.git
+    git_rev: release/eloquent/ament_cmake_ros/0.8.0-1
+    folder: ros-eloquent-ament-cmake-ros/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_target_dependencies/0.8.2-1
+    folder: ros-eloquent-ament-cmake-target-dependencies/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_test/0.8.2-1
+    folder: ros-eloquent-ament-cmake-test/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_uncrustify/0.8.1-1
+    folder: ros-eloquent-ament-cmake-uncrustify/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_version/0.8.2-1
+    folder: ros-eloquent-ament-cmake-version/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cmake_xmllint/0.8.1-1
+    folder: ros-eloquent-ament-cmake-xmllint/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_copyright/0.8.1-1
+    folder: ros-eloquent-ament-copyright/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cppcheck/0.8.1-1
+    folder: ros-eloquent-ament-cppcheck/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_cpplint/0.8.1-1
+    folder: ros-eloquent-ament-cpplint/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_flake8/0.8.1-1
+    folder: ros-eloquent-ament-flake8/src/work
+  - git_url: https://github.com/ros2-gbp/ament_index-release.git
+    git_rev: release/eloquent/ament_index_cpp/0.7.2-1
+    folder: ros-eloquent-ament-index-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/ament_index-release.git
+    git_rev: release/eloquent/ament_index_python/0.7.2-1
+    folder: ros-eloquent-ament-index-python/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_lint/0.8.1-1
+    folder: ros-eloquent-ament-lint/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_lint_auto/0.8.1-1
+    folder: ros-eloquent-ament-lint-auto/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_lint_cmake/0.8.1-1
+    folder: ros-eloquent-ament-lint-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_lint_common/0.8.1-1
+    folder: ros-eloquent-ament-lint-common/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_mypy/0.8.1-1
+    folder: ros-eloquent-ament-mypy/src/work
+  - git_url: https://github.com/ros2-gbp/ament_package-release.git
+    git_rev: release/eloquent/ament_package/0.8.8-1
+    folder: ros-eloquent-ament-package/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_pep257/0.8.1-1
+    folder: ros-eloquent-ament-pep257/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_uncrustify/0.8.1-1
+    folder: ros-eloquent-ament-uncrustify/src/work
+  - git_url: https://github.com/ros2-gbp/ament_lint-release.git
+    git_rev: release/eloquent/ament_xmllint/0.8.1-1
+    folder: ros-eloquent-ament-xmllint/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/builtin_interfaces/0.8.0-1
+    folder: ros-eloquent-builtin-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/class_loader-release.git
+    git_rev: release/eloquent/class_loader/1.4.1-1
+    folder: ros-eloquent-class-loader/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/common_interfaces/0.8.1-1
+    folder: ros-eloquent-common-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/composition_interfaces/0.8.0-1
+    folder: ros-eloquent-composition-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/console_bridge_vendor-release.git
+    git_rev: release/eloquent/console_bridge_vendor/1.2.0-1
+    folder: ros-eloquent-console-bridge-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/diagnostic_msgs/0.8.1-1
+    folder: ros-eloquent-diagnostic-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake_ros-release.git
+    git_rev: release/eloquent/domain_coordinator/0.8.0-1
+    folder: ros-eloquent-domain-coordinator/src/work
+  - git_url: https://github.com/ros2-gbp/fastcdr-release.git
+    git_rev: release/eloquent/fastcdr/1.0.11-1
+    folder: ros-eloquent-fastcdr/src/work
+  - git_url: https://github.com/ros2-gbp/fastrtps-release.git
+    git_rev: release/eloquent/fastrtps/1.9.3-1
+    folder: ros-eloquent-fastrtps/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: release/eloquent/fastrtps_cmake_module/0.8.0-1
+    folder: ros-eloquent-fastrtps-cmake-module/src/work
+  - git_url: https://github.com/ros2-gbp/foonathan_memory_vendor-release.git
+    git_rev: release/eloquent/foonathan_memory_vendor/0.3.0-1
+    folder: ros-eloquent-foonathan-memory-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/geometry_msgs/0.8.1-1
+    folder: ros-eloquent-geometry-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: release/eloquent/launch/0.9.6-1
+    folder: ros-eloquent-launch/src/work
+  - git_url: https://github.com/ros2-gbp/launch_ros-release.git
+    git_rev: release/eloquent/launch_ros/0.9.5-1
+    folder: ros-eloquent-launch-ros/src/work
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: release/eloquent/launch_testing/0.9.6-1
+    folder: ros-eloquent-launch-testing/src/work
+  - git_url: https://github.com/ros2-gbp/launch-release.git
+    git_rev: release/eloquent/launch_testing_ament_cmake/0.9.6-1
+    folder: ros-eloquent-launch-testing-ament-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/launch_ros-release.git
+    git_rev: release/eloquent/launch_testing_ros/0.9.5-1
+    folder: ros-eloquent-launch-testing-ros/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/lifecycle_msgs/0.8.0-1
+    folder: ros-eloquent-lifecycle-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/nav_msgs/0.8.1-1
+    folder: ros-eloquent-nav-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/osrf_pycommon-release.git
+    git_rev: release/eloquent/osrf_pycommon/0.1.9-2
+    folder: ros-eloquent-osrf-pycommon/src/work
+  - git_url: https://github.com/ros2-gbp/osrf_testings_tools_cpp-release.git
+    git_rev: release/eloquent/osrf_testing_tools_cpp/1.2.1-1
+    folder: ros-eloquent-osrf-testing-tools-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/pluginlib-release.git
+    git_rev: release/eloquent/pluginlib/2.4.1-1
+    folder: ros-eloquent-pluginlib/src/work
+  - git_url: https://github.com/ros2-gbp/poco_vendor-release.git
+    git_rev: release/eloquent/poco_vendor/1.2.0-1
+    folder: ros-eloquent-poco-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/python_cmake_module-release.git
+    git_rev: release/eloquent/python_cmake_module/0.8.0-2
+    folder: ros-eloquent-python-cmake-module/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl/0.8.4-1
+    folder: ros-eloquent-rcl/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl_action/0.8.4-1
+    folder: ros-eloquent-rcl-action/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/rcl_interfaces/0.8.0-1
+    folder: ros-eloquent-rcl-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl_lifecycle/0.8.4-1
+    folder: ros-eloquent-rcl-lifecycle/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_logging-release.git
+    git_rev: release/eloquent/rcl_logging_spdlog/0.3.3-1
+    folder: ros-eloquent-rcl-logging-spdlog/src/work
+  - git_url: https://github.com/ros2-gbp/rcl-release.git
+    git_rev: release/eloquent/rcl_yaml_param_parser/0.8.4-1
+    folder: ros-eloquent-rcl-yaml-param-parser/src/work
     patches:
-      - patch/ros-eloquent-rviz-rendering.patch
+      - patch/ros-eloquent-rcl-yaml-param-parser.patch
+  - git_url: https://github.com/ros2-gbp/rclcpp-release.git
+    git_rev: release/eloquent/rclcpp/0.8.4-1
+    folder: ros-eloquent-rclcpp/src/work
+  - git_url: https://github.com/ros2-gbp/rclcpp-release.git
+    git_rev: release/eloquent/rclcpp_components/0.8.4-1
+    folder: ros-eloquent-rclcpp-components/src/work
+  - git_url: https://github.com/ros2-gbp/rclcpp-release.git
+    git_rev: release/eloquent/rclcpp_lifecycle/0.8.4-1
+    folder: ros-eloquent-rclcpp-lifecycle/src/work
+  - git_url: https://github.com/ros2-gbp/rclpy-release.git
+    git_rev: release/eloquent/rclpy/0.8.4-1
+    folder: ros-eloquent-rclpy/src/work
+  - git_url: https://github.com/ros2-gbp/rcpputils-release.git
+    git_rev: release/eloquent/rcpputils/0.2.1-1
+    folder: ros-eloquent-rcpputils/src/work
+  - git_url: https://github.com/ros2-gbp/rcutils-release.git
+    git_rev: release/eloquent/rcutils/0.8.4-1
+    folder: ros-eloquent-rcutils/src/work
+  - git_url: https://github.com/ros2-gbp/rmw-release.git
+    git_rev: release/eloquent/rmw/0.8.1-1
+    folder: ros-eloquent-rmw/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: release/eloquent/rmw_fastrtps_cpp/0.8.1-1
+    folder: ros-eloquent-rmw-fastrtps-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    git_rev: release/eloquent/rmw_fastrtps_shared_cpp/0.8.1-1
+    folder: ros-eloquent-rmw-fastrtps-shared-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rmw_implementation-release.git
+    git_rev: release/eloquent/rmw_implementation/0.8.2-2
+    folder: ros-eloquent-rmw-implementation/src/work
+  - git_url: https://github.com/ros2-gbp/rmw-release.git
+    git_rev: release/eloquent/rmw_implementation_cmake/0.8.1-1
+    folder: ros-eloquent-rmw-implementation-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2action/0.8.7-1
+    folder: ros-eloquent-ros2action/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2cli/0.8.7-1
+    folder: ros-eloquent-ros2cli/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2component/0.8.7-1
+    folder: ros-eloquent-ros2component/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2doctor/0.8.7-1
+    folder: ros-eloquent-ros2doctor/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2interface/0.8.7-1
+    folder: ros-eloquent-ros2interface/src/work
+  - git_url: https://github.com/ros2-gbp/launch_ros-release.git
+    git_rev: release/eloquent/ros2launch/0.9.5-1
+    folder: ros-eloquent-ros2launch/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2lifecycle/0.8.7-1
+    folder: ros-eloquent-ros2lifecycle/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2lifecycle_test_fixtures/0.8.7-1
+    folder: ros-eloquent-ros2lifecycle-test-fixtures/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2msg/0.8.7-1
+    folder: ros-eloquent-ros2msg/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2multicast/0.8.7-1
+    folder: ros-eloquent-ros2multicast/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2node/0.8.7-1
+    folder: ros-eloquent-ros2node/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2param/0.8.7-1
+    folder: ros-eloquent-ros2param/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2pkg/0.8.7-1
+    folder: ros-eloquent-ros2pkg/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2run/0.8.7-1
+    folder: ros-eloquent-ros2run/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2service/0.8.7-1
+    folder: ros-eloquent-ros2service/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2srv/0.8.7-1
+    folder: ros-eloquent-ros2srv/src/work
+  - git_url: https://github.com/ros2-gbp/ros_testing-release.git
+    git_rev: release/eloquent/ros2test/0.2.0-1
+    folder: ros-eloquent-ros2test/src/work
+  - git_url: https://github.com/ros2-gbp/ros2cli-release.git
+    git_rev: release/eloquent/ros2topic/0.8.7-1
+    folder: ros-eloquent-ros2topic/src/work
+  - git_url: https://github.com/ros2-gbp/variants-release.git
+    git_rev: release/eloquent/ros_core/0.8.4-1
+    folder: ros-eloquent-ros-core/src/work
+  - git_url: https://github.com/ros2-gbp/ros_environment-release.git
+    git_rev: release/eloquent/ros_environment/2.4.1-1
+    folder: ros-eloquent-ros-environment/src/work
+  - git_url: https://github.com/ros2-gbp/ros_testing-release.git
+    git_rev: release/eloquent/ros_testing/0.2.0-1
+    folder: ros-eloquent-ros-testing/src/work
+  - git_url: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    git_rev: release/eloquent/rosgraph_msgs/0.8.0-1
+    folder: ros-eloquent-rosgraph-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_adapter/0.8.2-1
+    folder: ros-eloquent-rosidl-adapter/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_cmake/0.8.2-1
+    folder: ros-eloquent-rosidl-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    git_rev: release/eloquent/rosidl_default_generators/0.8.0-1
+    folder: ros-eloquent-rosidl-default-generators/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    git_rev: release/eloquent/rosidl_default_runtime/0.8.0-1
+    folder: ros-eloquent-rosidl-default-runtime/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_generator_c/0.8.2-1
+    folder: ros-eloquent-rosidl-generator-c/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_generator_cpp/0.8.2-1
+    folder: ros-eloquent-rosidl-generator-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_python-release.git
+    git_rev: release/eloquent/rosidl_generator_py/0.8.1-1
+    folder: ros-eloquent-rosidl-generator-py/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_parser/0.8.2-1
+    folder: ros-eloquent-rosidl-parser/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_runtime_py-release.git
+    git_rev: release/eloquent/rosidl_runtime_py/0.8.2-1
+    folder: ros-eloquent-rosidl-runtime-py/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    git_rev: release/eloquent/rosidl_typesupport_c/0.8.0-2
+    folder: ros-eloquent-rosidl-typesupport-c/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    git_rev: release/eloquent/rosidl_typesupport_cpp/0.8.0-2
+    folder: ros-eloquent-rosidl-typesupport-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: release/eloquent/rosidl_typesupport_fastrtps_c/0.8.0-1
+    folder: ros-eloquent-rosidl-typesupport-fastrtps-c/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    git_rev: release/eloquent/rosidl_typesupport_fastrtps_cpp/0.8.0-1
+    folder: ros-eloquent-rosidl-typesupport-fastrtps-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_typesupport_interface/0.8.2-1
+    folder: ros-eloquent-rosidl-typesupport-interface/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_typesupport_introspection_c/0.8.2-1
+    folder: ros-eloquent-rosidl-typesupport-introspection-c/src/work
+  - git_url: https://github.com/ros2-gbp/rosidl-release.git
+    git_rev: release/eloquent/rosidl_typesupport_introspection_cpp/0.8.2-1
+    folder: ros-eloquent-rosidl-typesupport-introspection-cpp/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/sensor_msgs/0.8.1-1
+    folder: ros-eloquent-sensor-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/shape_msgs/0.8.1-1
+    folder: ros-eloquent-shape-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/spdlog_vendor-release.git
+    git_rev: release/eloquent/spdlog_vendor/1.0.1-1
+    folder: ros-eloquent-spdlog-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/sros2-release.git
+    git_rev: release/eloquent/sros2/0.8.1-1
+    folder: ros-eloquent-sros2/src/work
+  - git_url: https://github.com/ros2-gbp/sros2-release.git
+    git_rev: release/eloquent/sros2_cmake/0.8.1-1
+    folder: ros-eloquent-sros2-cmake/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/std_msgs/0.8.1-1
+    folder: ros-eloquent-std-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/std_srvs/0.8.1-1
+    folder: ros-eloquent-std-srvs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/stereo_msgs/0.8.1-1
+    folder: ros-eloquent-stereo-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/test_interface_files-release.git
+    git_rev: release/eloquent/test_interface_files/0.8.0-1
+    folder: ros-eloquent-test-interface-files/src/work
+  - git_url: https://github.com/ros2-gbp/tinydir_vendor-release.git
+    git_rev: release/eloquent/tinydir_vendor/1.1.1-1
+    folder: ros-eloquent-tinydir-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/tinyxml2_vendor-release.git
+    git_rev: release/eloquent/tinyxml2_vendor/0.6.1-1
+    folder: ros-eloquent-tinyxml2-vendor/src/work
+  - git_url: https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing-release.git
+    git_rev: release/eloquent/tracetools/0.2.12-1
+    folder: ros-eloquent-tracetools/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/trajectory_msgs/0.8.1-1
+    folder: ros-eloquent-trajectory-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/uncrustify_vendor-release.git
+    git_rev: release/eloquent/uncrustify_vendor/1.3.0-1
+    folder: ros-eloquent-uncrustify-vendor/src/work
+  - git_url: https://github.com/ros2-gbp/unique_identifier_msgs-release.git
+    git_rev: release/eloquent/unique_identifier_msgs/2.1.0-1
+    folder: ros-eloquent-unique-identifier-msgs/src/work
+  - git_url: https://github.com/ros2-gbp/common_interfaces-release.git
+    git_rev: release/eloquent/visualization_msgs/0.8.1-1
+    folder: ros-eloquent-visualization-msgs/src/work
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-rviz-rendering
-    version: 7.0.4
+  - name: ros-eloquent-actionlib-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-action-msgs
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-unique-identifier-msgs
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-unique-identifier-msgs
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-target-dependencies
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-export-link-flags
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-export-dependencies
+        - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-export-definitions
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-libraries
+        - cmake
+        - ros-eloquent-ament-cmake-export-include-directories
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-python
+      run:
+        - ros-eloquent-ament-cmake-target-dependencies
+        - ros-eloquent-ament-cmake-export-link-flags
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-export-dependencies
+        - ros-eloquent-ament-cmake-export-interfaces
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-export-definitions
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-libraries
+        - cmake
+        - ros-eloquent-ament-cmake-export-include-directories
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-python
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-auto
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-copyright
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -24,27 +536,2726 @@ outputs:
         - cmake
       host:
         - colcon-common-extensions
-        - ros-eloquent-rviz-assimp-vendor
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-eigen3-cmake-module
-        - ros-eloquent-resource-retriever
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-index-cpp
-        - qt
-        - eigen
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
       run:
-        - python
-        - qt
-        - qt
-        - ros-eloquent-rviz-assimp-vendor
-        - qt
-        - ros-eloquent-rviz-ogre-vendor
-        - ros-eloquent-eigen3-cmake-module
-        - ros-eloquent-resource-retriever
-        - qt
+        - ros-eloquent-ament-copyright
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-core
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - catkin_pkg
+        - cmake
+        - ros-eloquent-ament-package
+        - python {{ python }}
+      run:
+        - cmake
+        - ros-eloquent-ament-package
+        - catkin_pkg
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-cppcheck
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cppcheck
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cppcheck
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-cpplint
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cpplint
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cpplint
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-definitions
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-dependencies
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-include-directories
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-interfaces
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-export-libraries
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-export-libraries
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-libraries
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-export-link-flags
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-flake8
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-flake8
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-gmock
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-cmake-test
+        - gmock
+      run:
+        - ros-eloquent-ament-cmake-test
+        - ros-eloquent-ament-cmake-gtest
+        - gmock
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-gtest
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - gtest
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - gtest
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-include-directories
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-libraries
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-lint-cmake
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-lint-cmake
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-lint-cmake
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-pep257
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-pep257
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-pep257
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-pytest
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - pytest
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - pytest
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-python
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-ros
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-domain-coordinator
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-ament-cmake-gtest
+        - python {{ python }}
+      run:
+        - ros-eloquent-domain-coordinator
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-ament-cmake-gtest
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-target-dependencies
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-libraries
+        - ros-eloquent-ament-cmake-include-directories
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-libraries
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-include-directories
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-test
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-uncrustify
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-uncrustify
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-uncrustify
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-version
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cmake-xmllint
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-xmllint
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-xmllint
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-copyright
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-lint
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cppcheck
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - cppcheck
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-cpplint
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-flake8
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - flake8
+        - ros-eloquent-ament-lint
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-index-cpp
+    version: 0.7.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-index-python
+    version: 0.7.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-lint
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-lint-auto
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-lint-cmake
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-lint-common
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-export-dependencies
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-flake8
+        - ros-eloquent-ament-cmake-cppcheck
+        - ros-eloquent-ament-cmake-uncrustify
+        - ros-eloquent-ament-cmake-pep257
+        - ros-eloquent-ament-cmake-lint-cmake
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-copyright
+        - ros-eloquent-ament-cmake-cpplint
+        - ros-eloquent-ament-cmake-xmllint
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-mypy
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - mypy
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-package
+    version: 0.8.8
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - setuptools
+        - python {{ python }}
+      run:
+        - setuptools
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-pep257
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - pydocstyle
+        - ros-eloquent-ament-lint
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-uncrustify
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-uncrustify-vendor
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ament-xmllint
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - libxml2
+        - ros-eloquent-ament-lint
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-builtin-interfaces
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-class-loader
+    version: 1.4.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-console-bridge-vendor
+        - colcon-common-extensions
+        - poco
+        - console_bridge
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-poco-vendor
+        - python {{ python }}
+      run:
+        - ros-eloquent-console-bridge-vendor
+        - poco
+        - console_bridge
+        - ros-eloquent-poco-vendor
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-common-interfaces
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-std-srvs
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-nav-msgs
+        - ros-eloquent-actionlib-msgs
+        - ros-eloquent-visualization-msgs
+        - ros-eloquent-diagnostic-msgs
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-trajectory-msgs
+        - ros-eloquent-stereo-msgs
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-shape-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-composition-interfaces
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcl-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-console-bridge-vendor
+    version: 1.2.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - console_bridge
+        - python {{ python }}
+      run:
+        - console_bridge
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-diagnostic-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-domain-coordinator
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-fastcdr
+    version: 1.0.11
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-fastrtps
+    version: 1.9.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - tinyxml2
+        - colcon-common-extensions
+        - ros-eloquent-fastcdr
+        - asio
+        - openssl
+        - cmake
+        - ros-eloquent-foonathan-memory-vendor
+        - python {{ python }}
+      run:
+        - tinyxml2
+        - ros-eloquent-fastcdr
+        - openssl
+        - ros-eloquent-foonathan-memory-vendor
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-fastrtps-cmake-module
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-foonathan-memory-vendor
+    version: 0.3.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - git
+        - cmake
+        - foonathan-memory
+        - python {{ python }}
+      run:
+        - cmake
+        - foonathan-memory
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-geometry-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-launch
+    version: 0.9.6
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-osrf-pycommon
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-ament-index-python
+        - lark-parser
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-launch-ros
+    version: 0.9.5
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-composition-interfaces
+        - pyyaml
+        - colcon-common-extensions
+        - ros-eloquent-rclpy
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-launch
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+      run:
+        - ros-eloquent-composition-interfaces
+        - pyyaml
+        - ros-eloquent-rclpy
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-launch
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-launch-testing
+    version: 0.9.6
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-osrf-pycommon
+        - ros-eloquent-launch
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-launch-testing-ament-cmake
+    version: 0.9.6
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-python-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-launch-testing
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-python-cmake-module
+        - ros-eloquent-launch-testing
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-launch-testing-ros
+    version: 0.9.5
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-launch-ros
+        - ros-eloquent-launch-testing
+        - ros-eloquent-rclpy
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-lifecycle-msgs
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-nav-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-osrf-pycommon
+    version: 0.1.9
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - mock
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-osrf-testing-tools-cpp
+    version: 1.2.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-pluginlib
+    version: 2.4.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
         - ros-eloquent-ament-index-cpp
-        - qt
-        - eigen
+        - ros-eloquent-tinyxml2-vendor
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-class-loader
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcutils
+        - ros-eloquent-ament-index-cpp
+        - ros-eloquent-tinyxml2-vendor
+        - ros-eloquent-class-loader
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-poco-vendor
+    version: 1.2.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - pcre
+        - colcon-common-extensions
+        - poco
+        - zlib
+        - cmake
+        - python {{ python }}
+      run:
+        - pcre
+        - poco
+        - zlib
+        - cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-python-cmake-module
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rcl-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-tracetools
+        - ros-eloquent-rmw
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-tinydir-vendor
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcl-logging-spdlog
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-rmw
+        - ros-eloquent-tracetools
+        - ros-eloquent-tinydir-vendor
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rclcpp
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rcl
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rcl-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-tracetools
+        - ros-eloquent-rmw
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosgraph-msgs
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rcl
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-tracetools
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosgraph-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rclcpp-components
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcpputils
+        - ros-eloquent-composition-interfaces
+        - ros-eloquent-ament-index-cpp
+        - colcon-common-extensions
+        - ros-eloquent-class-loader
+        - ros-eloquent-rclcpp
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-composition-interfaces
+        - ros-eloquent-ament-index-cpp
+        - ros-eloquent-class-loader
+        - ros-eloquent-rclcpp
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rclcpp-lifecycle
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rmw-implementation
+        - colcon-common-extensions
+        - ros-eloquent-rcl-lifecycle
+        - ros-eloquent-rclcpp
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rcl-lifecycle
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rclcpp
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rclpy
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcl
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rcl-action
+        - ros-eloquent-unique-identifier-msgs
+        - colcon-common-extensions
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-python-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw-implementation-cmake
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcl
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rcl-action
+        - ros-eloquent-unique-identifier-msgs
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rcl-yaml-param-parser
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rosgraph-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-action
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcl
+        - ros-eloquent-rcutils
+        - ros-eloquent-action-msgs
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcl
+        - ros-eloquent-rcutils
+        - ros-eloquent-action-msgs
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rmw
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-interfaces
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-lifecycle
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcl
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcl
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-lifecycle-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-logging-spdlog
+    version: 0.3.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - colcon-common-extensions
+        - spdlog
+        - ros-eloquent-spdlog-vendor
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcutils
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcl-yaml-param-parser
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - yaml
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - yaml
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcpputils
+    version: 0.2.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcutils
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-ros
+        - empy
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-version
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcutils
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw-fastrtps-cpp
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
+        - ros-eloquent-rmw-fastrtps-shared-cpp
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rcutils
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-typesupport-fastrtps-c
+        - ros-eloquent-rmw-fastrtps-shared-cpp
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw-fastrtps-shared-cpp
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rcutils
+        - colcon-common-extensions
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-fastrtps
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcpputils
+        - ros-eloquent-rcutils
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw-implementation
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcutils
+        - colcon-common-extensions
+        - ros-eloquent-rmw-fastrtps-cpp
+        - poco
+        - python {{ python }}
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-python
+      run:
+        - poco
+        - ros-eloquent-rmw-fastrtps-cpp
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rmw-implementation-cmake
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2action
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rclpy
+        - python {{ python }}
+      run:
+        - ros-eloquent-action-msgs
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rosidl-runtime-py
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2cli
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - netifaces
+        - ros-eloquent-rclpy
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2component
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-composition-interfaces
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rclpy
+        - ros-eloquent-rclcpp-components
+        - ros-eloquent-ros2param
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ros2pkg
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-ros2node
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2doctor
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - rosdistro
+        - ifcfg
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2interface
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rosidl-runtime-py
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2launch
+    version: 0.9.5
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-launch-ros
+        - colcon-common-extensions
+        - ros-eloquent-launch
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ros2pkg
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+      run:
+        - ros-eloquent-launch-ros
+        - ros-eloquent-launch
+        - ros-eloquent-ros2pkg
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2lifecycle
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rclpy
+        - python {{ python }}
+      run:
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2service
+        - ros-eloquent-ros2cli
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-ros2node
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2lifecycle-test-fixtures
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-rclcpp-lifecycle
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rclcpp
+        - python {{ python }}
+      run:
+        - ros-eloquent-rclcpp-lifecycle
+        - ros-eloquent-rclcpp
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2msg
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2multicast
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2node
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2param
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rcl-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2service
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ros2node
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2pkg
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - catkin_pkg
+        - empy
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ament-index-python
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2run
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ros2pkg
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2service
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rclpy
+        - python {{ python }}
+      run:
+        - pyyaml
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rosidl-runtime-py
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2srv
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2test
+    version: 0.2.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-launch-testing-ros
+        - ros-eloquent-launch-ros
+        - colcon-common-extensions
+        - ros-eloquent-launch
+        - ros-eloquent-ros2cli
+        - ros-eloquent-launch-testing
+        - python {{ python }}
+      run:
+        - ros-eloquent-launch-testing-ros
+        - ros-eloquent-launch-ros
+        - ros-eloquent-domain-coordinator
+        - ros-eloquent-launch
+        - ros-eloquent-ros2cli
+        - ros-eloquent-launch-testing
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros2topic
+    version: 0.8.7
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - python {{ python }}
+      run:
+        - numpy
+        - pyyaml
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rosidl-runtime-py
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosgraph-msgs
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-adapter
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - empy
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-cmake
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - empy
+        - python {{ python }}
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ament-cmake-python
+      run:
+        - ros-eloquent-rosidl-parser
+        - empy
+        - ros-eloquent-rosidl-adapter
+        - ros-eloquent-ament-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-default-generators
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-default-runtime
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rosidl-typesupport-c
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-typesupport-cpp
+        - ros-eloquent-rosidl-generator-py
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-generator-c
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-typesupport-interface
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-generator-cpp
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-generator-py
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-typesupport-interface
+        - colcon-common-extensions
+        - ros-eloquent-python-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rmw-implementation
+        - numpy
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-python-cmake-module
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-parser
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-adapter
+        - lark-parser
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-runtime-py
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - pyyaml
+        - ros-eloquent-rosidl-parser
+        - numpy
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-c
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - poco
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+      run:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - poco
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-cpp
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-typesupport-introspection-cpp
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - poco
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-typesupport-c
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - poco
+        - ros-eloquent-poco-vendor
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-fastrtps-c
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-rosidl-typesupport-fastrtps-cpp
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-fastrtps-cpp
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rmw
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-fastcdr
+        - ros-eloquent-fastrtps-cmake-module
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-fastrtps
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-interface
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-introspection-c
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-typesupport-introspection-cpp
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-generator-cpp
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-typesupport-interface
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rosidl-typesupport-introspection-c
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros-core
+    version: 0.8.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-ament-cmake-auto
+        - ros-eloquent-common-interfaces
+        - ros-eloquent-ros2param
+        - ros-eloquent-ros2msg
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-ros2component
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-ros2multicast
+        - ros-eloquent-rclcpp
+        - ros-eloquent-ros2topic
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-ros2action
+        - ros-eloquent-rclcpp-lifecycle
+        - ros-eloquent-ros2doctor
+        - ros-eloquent-ros2run
+        - ros-eloquent-ros2lifecycle
+        - ros-eloquent-class-loader
+        - ros-eloquent-ros2srv
+        - ros-eloquent-ament-cmake-gmock
+        - ros-eloquent-ros-environment
+        - ros-eloquent-ament-index-cpp
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2service
+        - ros-eloquent-ament-cmake-pytest
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-ros2node
+        - ros-eloquent-sros2-cmake
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rcl-lifecycle
+        - ros-eloquent-ros2launch
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-pluginlib
+        - ros-eloquent-ros2pkg
+        - ros-eloquent-sros2
+        - ros-eloquent-ros2interface
+        - ros-eloquent-ament-cmake-gtest
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros-environment
+    version: 2.4.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-ros-testing
+    version: 0.2.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-launch-testing-ros
+        - colcon-common-extensions
+        - ros-eloquent-ros2test
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-launch-testing-ament-cmake
+        - ros-eloquent-ament-cmake-export-dependencies
+        - ros-eloquent-launch-testing
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - ros-eloquent-launch-testing-ros
+        - ros-eloquent-ros2test
+        - ros-eloquent-launch-testing-ament-cmake
+        - ros-eloquent-launch-testing
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-sensor-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-shape-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-spdlog-vendor
+    version: 1.0.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - spdlog
+        - python {{ python }}
+      run:
+        - spdlog
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-sros2
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ros2cli
+        - ros-eloquent-rclpy
+        - python {{ python }}
+      run:
+        - cryptography
+        - ros-eloquent-rclpy
+        - ros-eloquent-ros2cli
+        - ros-eloquent-ament-index-python
+        - lxml
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-sros2-cmake
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-ros2cli
+        - ros-eloquent-sros2
+        - ros-eloquent-ament-cmake-test
+        - python {{ python }}
+      run:
+        - ros-eloquent-ros2cli
+        - ros-eloquent-sros2
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-std-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-std-srvs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-stereo-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-test-interface-files
+    version: 0.8.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-tinydir-vendor
+    version: 1.1.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - cmake
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-tinyxml2-vendor
+    version: 0.6.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - tinyxml2
+        - colcon-common-extensions
+        - cmake
+        - python {{ python }}
+      run:
+        - tinyxml2
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-tracetools
+    version: 0.2.12
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - colcon-common-extensions
+        - pkg-config
+        - ros-eloquent-ament-cmake-ros
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-trajectory-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-uncrustify-vendor
+    version: 1.3.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - uncrustify
+        - python {{ python }}
+      run:
+        - uncrustify
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-unique-identifier-msgs
+    version: 2.1.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-rosidl-default-runtime
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-visualization-msgs
+    version: 0.8.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-builtin-interfaces
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rosidl-default-generators
+        - python {{ python }}
+      run:
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-rosidl-default-runtime
+        - ros-eloquent-std-msgs
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
     script: bld_colcon.bat
 
 about:

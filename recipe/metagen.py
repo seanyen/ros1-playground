@@ -5,6 +5,7 @@ import rosdep2
 import os
 import catkin_pkg.package
 import json
+import datetime
 
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=2, sequence=4, offset=2)
@@ -12,9 +13,24 @@ yaml.indent(mapping=2, sequence=4, offset=2)
 def convert_os_override_option():
     return 'conda', '10'
 
-json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True)
+#json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True)
 #packages_released = json.loads(json_result)
 packages_released = {}
+
+packages_skipped = [
+    'rmw_cyclonedds_cpp',
+    'rmw_opensplice_cpp',
+    'rmw_connext_cpp',
+    'gmock_vendor',
+    'gtest_vendor',
+    'libyaml_vendor',
+    'connext_cmake_module',
+    'opensplice_cmake_module',
+    'rosidl_typesupport_connext_c',
+    'rosidl_typesupport_connext_cpp',
+    'rosidl_typesupport_opensplice_cpp',
+    'rosidl_typesupport_opensplice_c',
+    'test_msgs']
 
 rospack = rospkg.RosPack()
 
@@ -85,8 +101,8 @@ for pkg_shortname in rospack.list():
                 "ninja",
                 "cmake"
             ],
-            'host': ['colcon-common-extensions'],
-            'run': ['python']
+            'host': ['colcon-common-extensions', 'python {{ python }}'],
+            'run': ['python {{ python }}']
         }
     }
     pkg = catkin_pkg.package.parse_package('src\\%s\\package.xml' % pkg_shortname)
@@ -96,6 +112,8 @@ for pkg_shortname in rospack.list():
     build_deps = set(build_deps)
 
     for dep in build_deps:
+        if dep in packages_skipped:
+            continue
         resolved_dep = _resolve(dep)
         if not resolved_dep:
             unsatisfied_deps.add(dep)
@@ -109,6 +127,8 @@ for pkg_shortname in rospack.list():
     run_deps = set(run_deps)
 
     for dep in run_deps:
+        if dep in packages_skipped:
+            continue
         resolved_dep = _resolve(dep)
         if not resolved_dep:
             unsatisfied_deps.add(dep)
@@ -116,6 +136,17 @@ for pkg_shortname in rospack.list():
         # if resolved_dep[0].startswith('ros-') and not dep in rospack.list():
         #    continue
         output['requirements']['run'].extend(resolved_dep)
+
+    if pkg_shortname == 'foonathan_memory_vendor':
+        output['requirements']['run'].append('foonathan-memory')
+        output['requirements']['host'].append('foonathan-memory')
+
+    if pkg_shortname == 'rmw_implementation':
+        output['requirements']['run'].extend(_resolve('rmw_fastrtps_cpp'))
+        output['requirements']['host'].extend(_resolve('rmw_fastrtps_cpp'))
+
+    output['requirements']['run'] = list(set(output['requirements']['run']))
+    output['requirements']['host'] = list(set(output['requirements']['host']))
 
     output['script'] = 'bld_colcon.bat'
     outputs.append(output)
@@ -150,6 +181,7 @@ meta = yaml.load(template)
 
 meta['source'] = source
 meta['outputs'] = outputs
+meta['package']['version'] = f"{datetime.datetime.now():%Y.%m.%d}"
 
 with open("meta.yaml", 'w') as stream:
     yaml.dump(meta, stream)

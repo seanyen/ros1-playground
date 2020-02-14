@@ -13,7 +13,7 @@ rd /s /q "%SRC_DIR%\build"
 pushd %PKG_NAME%
 
 colcon build ^
-    --build-base %SRC_DIR% ^
+    --build-base %SRC_DIR%\build ^
     --install-base %LIBRARY_PREFIX% ^
     --merge-install ^
     --event-handlers console_cohesion+ ^
@@ -24,14 +24,6 @@ colcon build ^
 if errorlevel 1 exit 1
 
 if "%PKG_NAME%" == "ros-eloquent-ament-package" (
-    :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
-    :: This will allow them to be run on environment activation.
-    for %%F in (activate deactivate) DO (
-        if not exist %PREFIX%\etc\conda\%%F.d mkdir %PREFIX%\etc\conda\%%F.d
-        copy %RECIPE_DIR%\%%F.bat %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.bat
-    )
-    exit /b 0
-)
 
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.
