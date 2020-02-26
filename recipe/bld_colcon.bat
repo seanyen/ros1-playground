@@ -23,7 +23,7 @@ colcon build ^
         -DCMAKE_BUILD_TYPE=Release
 if errorlevel 1 exit 1
 
-if "%PKG_NAME%" == "ros-eloquent-ament-package" (
+if "%PKG_NAME%" == "ros-eloquent-ros-workspace" (
 
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.
@@ -32,6 +32,7 @@ for %%F in (activate deactivate) DO (
     copy %RECIPE_DIR%\%%F.bat %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.bat
 )
 
+exit /b 0
 )
 
 if exist %LIBRARY_PREFIX%\.colcon_install_layout (
