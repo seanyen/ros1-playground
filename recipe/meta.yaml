@@ -10,7 +10,7 @@ source:
       - patch/ros-eloquent-ros-workspace.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win64]
 
 outputs:
