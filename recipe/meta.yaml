@@ -1,21 +1,19 @@
 package:
   name: ros
-  version: 2020.02.26
+  version: 2020.02.27
 
 source:
-  - git_url: https://github.com/ros2-gbp/ros_workspace-release.git
-    git_rev: release/eloquent/ros_workspace/0.8.0-1
-    folder: ros-eloquent-ros-workspace/src/work
-    patches:
-      - patch/ros-eloquent-ros-workspace.patch
+  - git_url: https://github.com/ros2-gbp/ament_package-release.git
+    git_rev: release/eloquent/ament_package/0.8.8-1
+    folder: ros-eloquent-ament-package/src/work
 
 build:
-  number: 1
+  number: 5
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-ros-workspace
-    version: 0.8.0
+  - name: ros-eloquent-ament-package
+    version: 0.8.8
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -23,13 +21,12 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-ament-package
         - colcon-common-extensions
         - python {{ python }}
-        - ros-eloquent-ament-cmake-core
-        - cmake
+        - setuptools
       run:
         - python {{ python }}
+        - setuptools
     script: bld_colcon.bat
 
 about:
