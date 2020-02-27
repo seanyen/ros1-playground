@@ -14,7 +14,8 @@ def convert_os_override_option():
     return 'conda', '10'
 
 try:
-    json_result = subprocess.check_output('conda search --override-channels -c ros-playground/label/staging ros-%s --json' % os.environ['ROS_DISTRO'], shell=True, stderr=subprocess.STDOUT)
+    # json_result = subprocess.check_output('conda search --override-channels -c ros-playground/label/staging ros-%s --json' % os.environ['ROS_DISTRO'], shell=True, stderr=subprocess.STDOUT)
+    json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True, stderr=subprocess.STDOUT)
 except subprocess.CalledProcessError as e:
     json_result = e.output
 packages_released = json.loads(json_result)
