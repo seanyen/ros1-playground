@@ -96,21 +96,21 @@ outputs:
         - ninja
         - cmake
       host:
+        - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-sensor-msgs
         - ros-eloquent-python-cmake-module
-        - boost
-        - python {{ python }}
+        - opencv 3.*
+        - numpy
         - ros-eloquent-ament-cmake-ros
-        - numpy
-        - colcon-common-extensions
-        - opencv
-      run:
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-ament-index-python
         - boost
+      run:
         - python {{ python }}
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-sensor-msgs
+        - opencv 3.*
         - numpy
-        - opencv
+        - boost
     script: bld_colcon.bat
   - name: ros-eloquent-image-transport
     version: 2.2.1
@@ -121,16 +121,16 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-sensor-msgs
         - python {{ python }}
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-rclcpp
         - colcon-common-extensions
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-rclcpp
         - ros-eloquent-pluginlib
+        - ros-eloquent-ament-cmake-ros
         - ros-eloquent-message-filters
       run:
-        - ros-eloquent-sensor-msgs
         - python {{ python }}
+        - ros-eloquent-sensor-msgs
         - ros-eloquent-rclcpp
         - ros-eloquent-pluginlib
         - ros-eloquent-message-filters
@@ -144,11 +144,11 @@ outputs:
         - ninja
         - cmake
       host:
-        - qt
         - python {{ python }}
-        - ros-eloquent-ament-cmake
-        - pyqt
         - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - qt
+        - pyqt
       run:
         - python {{ python }}
         - pyqt
@@ -162,13 +162,13 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - pydot
-        - python {{ python }}
         - ros-eloquent-python-qt-binding
+        - python {{ python }}
+        - pydot
     script: bld_colcon.bat
   - name: ros-eloquent-qt-gui
     version: 1.0.7
@@ -179,15 +179,15 @@ outputs:
         - ninja
         - cmake
       host:
-        - qt
         - python {{ python }}
-        - ros-eloquent-ament-cmake
-        - pyqt
         - colcon-common-extensions
+        - ros-eloquent-ament-cmake
+        - qt
+        - pyqt
       run:
-        - ros-eloquent-ament-index-python
         - ros-eloquent-python-qt-binding
         - python {{ python }}
+        - ros-eloquent-ament-index-python
         - catkin_pkg
     script: bld_colcon.bat
   - name: ros-eloquent-qt-gui-cpp
@@ -199,18 +199,18 @@ outputs:
         - ninja
         - cmake
       host:
-        - qt
         - python {{ python }}
-        - pkg-config
-        - ros-eloquent-ament-cmake
         - colcon-common-extensions
-        - ros-eloquent-pluginlib
-        - ros-eloquent-tinyxml2-vendor
+        - pkg-config
         - ros-eloquent-python-qt-binding
-      run:
-        - ros-eloquent-qt-gui
         - ros-eloquent-tinyxml2-vendor
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-pluginlib
+        - qt
+      run:
         - python {{ python }}
+        - ros-eloquent-tinyxml2-vendor
+        - ros-eloquent-qt-gui
         - ros-eloquent-pluginlib
     script: bld_colcon.bat
   - name: ros-eloquent-qt-gui-py-common
@@ -222,13 +222,13 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-ament-index-python
-        - python {{ python }}
         - ros-eloquent-python-qt-binding
+        - python {{ python }}
+        - ros-eloquent-ament-index-python
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-action
     version: 1.0.1
@@ -239,16 +239,16 @@ outputs:
         - ninja
         - cmake
       host:
+        - python {{ python }}
         - colcon-common-extensions
-        - python {{ python }}
       run:
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
-        - python {{ python }}
-        - ros-eloquent-rqt-msg
         - ros-eloquent-rqt-gui
+        - python {{ python }}
         - ros-eloquent-python-qt-binding
         - ros-eloquent-rclpy
+        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-msg
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-common-plugins
     version: 1.0.0
@@ -259,26 +259,26 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-rqt-shell
-        - ros-eloquent-rqt-top
-        - ros-eloquent-rqt-publisher
-        - ros-eloquent-rqt-reconfigure
-        - ros-eloquent-rqt-plot
-        - ros-eloquent-rqt-py-console
-        - ros-eloquent-rqt-service-caller
-        - ros-eloquent-rqt-srv
-        - ros-eloquent-rqt-py-common
         - python {{ python }}
-        - ros-eloquent-rqt-graph
-        - ros-eloquent-rqt-msg
-        - ros-eloquent-rqt-image-view
-        - ros-eloquent-rqt-action
+        - ros-eloquent-rqt-publisher
         - ros-eloquent-rqt-console
+        - ros-eloquent-rqt-action
+        - ros-eloquent-rqt-top
+        - ros-eloquent-rqt-reconfigure
+        - ros-eloquent-rqt-image-view
+        - ros-eloquent-rqt-srv
+        - ros-eloquent-rqt-plot
+        - ros-eloquent-rqt-shell
+        - ros-eloquent-rqt-msg
         - ros-eloquent-rqt-topic
+        - ros-eloquent-rqt-service-caller
+        - ros-eloquent-rqt-graph
+        - ros-eloquent-rqt-py-console
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-console
     version: 1.1.1
@@ -289,18 +289,18 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rcl-interfaces
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-python-qt-binding
-        - ros-eloquent-rqt-gui
         - ros-eloquent-rclpy
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rcl-interfaces
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-graph
     version: 1.0.4
@@ -311,15 +311,15 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
       run:
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-dotgraph
-        - ros-eloquent-rqt-gui
         - ros-eloquent-python-qt-binding
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rqt-gui-py
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-gui
     version: 1.0.5
@@ -330,16 +330,16 @@ outputs:
         - ninja
         - cmake
       host:
+        - python {{ python }}
         - colcon-common-extensions
         - ros-eloquent-qt-gui
-        - python {{ python }}
       run:
-        - ros-eloquent-ament-index-python
-        - catkin_pkg
-        - ros-eloquent-qt-gui
         - python {{ python }}
         - ros-eloquent-python-qt-binding
         - ros-eloquent-rclpy
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-qt-gui
+        - catkin_pkg
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-gui-cpp
     version: 1.0.5
@@ -350,18 +350,18 @@ outputs:
         - ninja
         - cmake
       host:
-        - qt
-        - ros-eloquent-qt-gui
         - python {{ python }}
-        - ros-eloquent-rclcpp
-        - ros-eloquent-ament-cmake
         - colcon-common-extensions
+        - ros-eloquent-qt-gui
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rclcpp
+        - qt
         - ros-eloquent-qt-gui-cpp
       run:
-        - ros-eloquent-qt-gui
-        - ros-eloquent-rclcpp
-        - ros-eloquent-qt-gui-cpp
         - python {{ python }}
+        - ros-eloquent-rclcpp
+        - ros-eloquent-qt-gui
+        - ros-eloquent-qt-gui-cpp
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-gui-py
     version: 1.0.5
@@ -372,14 +372,14 @@ outputs:
         - ninja
         - cmake
       host:
+        - ros-eloquent-rqt-gui
+        - python {{ python }}
         - colcon-common-extensions
         - ros-eloquent-qt-gui
-        - ros-eloquent-rqt-gui
-        - python {{ python }}
       run:
         - ros-eloquent-rqt-gui
-        - ros-eloquent-qt-gui
         - python {{ python }}
+        - ros-eloquent-qt-gui
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-image-view
     version: 1.0.4
@@ -390,28 +390,28 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-image-transport
+        - ros-eloquent-rqt-gui
+        - python {{ python }}
+        - colcon-common-extensions
+        - ros-eloquent-qt-gui-cpp
         - ros-eloquent-sensor-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rclcpp
+        - ros-eloquent-cv-bridge
         - qt
         - ros-eloquent-geometry-msgs
-        - python {{ python }}
         - ros-eloquent-rqt-gui-cpp
-        - ros-eloquent-cv-bridge
-        - ros-eloquent-rclcpp
-        - ros-eloquent-ament-cmake
-        - colcon-common-extensions
-        - ros-eloquent-rqt-gui
-        - ros-eloquent-qt-gui-cpp
-      run:
         - ros-eloquent-image-transport
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-geometry-msgs
-        - python {{ python }}
-        - ros-eloquent-rqt-gui-cpp
-        - ros-eloquent-cv-bridge
-        - ros-eloquent-rclcpp
+      run:
         - ros-eloquent-rqt-gui
+        - python {{ python }}
         - ros-eloquent-qt-gui-cpp
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-rclcpp
+        - ros-eloquent-cv-bridge
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-rqt-gui-cpp
+        - ros-eloquent-image-transport
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-msg
     version: 1.0.2
@@ -422,18 +422,18 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - catkin_pkg
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
-        - python {{ python }}
-        - ros-eloquent-python-qt-binding
         - ros-eloquent-rqt-gui
+        - python {{ python }}
         - ros-eloquent-rqt-console
+        - ros-eloquent-python-qt-binding
         - ros-eloquent-rclpy
+        - ros-eloquent-rqt-gui-py
+        - catkin_pkg
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-plot
     version: 1.0.7
@@ -444,21 +444,21 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - catkin_pkg
-        - matplotlib
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-gui-py-common
         - ros-eloquent-std-msgs
-        - numpy
         - ros-eloquent-python-qt-binding
-        - ros-eloquent-rqt-gui
         - ros-eloquent-rclpy
+        - matplotlib
+        - numpy
+        - ros-eloquent-rqt-gui-py
+        - catkin_pkg
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-publisher
     version: 1.1.0
@@ -469,17 +469,17 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - catkin_pkg
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-gui-py-common
-        - ros-eloquent-rqt-gui
         - ros-eloquent-python-qt-binding
+        - ros-eloquent-rqt-gui-py
+        - catkin_pkg
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-py-common
     version: 1.0.5
@@ -490,19 +490,19 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-rosidl-default-generators
-        - qt
         - python {{ python }}
-        - ros-eloquent-ament-cmake
         - colcon-common-extensions
         - ros-eloquent-rclpy
-      run:
+        - ros-eloquent-ament-cmake
         - qt
-        - ros-eloquent-qt-gui
+        - ros-eloquent-rosidl-default-generators
+      run:
         - python {{ python }}
-        - ros-eloquent-rosidl-default-runtime
         - ros-eloquent-python-qt-binding
         - ros-eloquent-rclpy
+        - ros-eloquent-qt-gui
+        - ros-eloquent-rosidl-default-runtime
+        - qt
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-py-console
     version: 1.0.0
@@ -513,18 +513,18 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-qt-gui
-        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-gui-py-common
         - ros-eloquent-python-qt-binding
-        - ros-eloquent-rqt-gui
         - ros-eloquent-rclpy
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-qt-gui
+        - ros-eloquent-rqt-gui-py
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-reconfigure
     version: 1.0.4
@@ -535,19 +535,19 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
       run:
-        - ros-eloquent-ament-index-python
-        - ros-eloquent-rqt-gui-py
-        - ros-eloquent-rqt-py-common
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-gui-py-common
-        - ros-eloquent-python-qt-binding
-        - pyyaml
-        - ros-eloquent-rqt-gui
         - ros-eloquent-rqt-console
+        - ros-eloquent-python-qt-binding
         - ros-eloquent-rclpy
+        - ros-eloquent-ament-index-python
+        - ros-eloquent-rqt-gui-py
+        - pyyaml
+        - ros-eloquent-rqt-py-common
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-service-caller
     version: 1.0.3
@@ -558,14 +558,14 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
         - ros-eloquent-rqt-gui
+        - python {{ python }}
         - ros-eloquent-rqt-gui-py
         - ros-eloquent-rqt-py-common
-        - python {{ python }}
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-shell
     version: 1.0.0
@@ -576,17 +576,17 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - catkin_pkg
-        - ros-eloquent-qt-gui
-        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-qt-gui-py-common
-        - ros-eloquent-rqt-gui
         - ros-eloquent-python-qt-binding
+        - ros-eloquent-qt-gui
+        - ros-eloquent-rqt-gui-py
+        - catkin_pkg
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-srv
     version: 1.0.1
@@ -597,15 +597,15 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-rqt-gui-py
-        - python {{ python }}
-        - ros-eloquent-rqt-msg
         - ros-eloquent-rqt-gui
+        - python {{ python }}
         - ros-eloquent-rclpy
+        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-msg
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-top
     version: 1.0.0
@@ -616,16 +616,16 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
         - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-rqt-gui-py
+        - ros-eloquent-rqt-gui
         - python {{ python }}
         - ros-eloquent-python-qt-binding
-        - ros-eloquent-rqt-gui
         - ros-eloquent-rclpy
         - psutil
+        - ros-eloquent-rqt-gui-py
     script: bld_colcon.bat
   - name: ros-eloquent-rqt-topic
     version: 1.1.0
@@ -636,14 +636,14 @@ outputs:
         - ninja
         - cmake
       host:
-        - colcon-common-extensions
         - python {{ python }}
+        - colcon-common-extensions
       run:
+        - ros-eloquent-rqt-gui
+        - python {{ python }}
+        - ros-eloquent-python-qt-binding
         - ros-eloquent-rqt-gui-py
         - ros-eloquent-rqt-py-common
-        - python {{ python }}
-        - ros-eloquent-rqt-gui
-        - ros-eloquent-python-qt-binding
     script: bld_colcon.bat
 
 about:
