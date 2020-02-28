@@ -326,8 +326,10 @@ outputs:
         - freetype
         - pkg-config
         - git
+        - ogre
       run:
         - freetype
+        - ogre
         - python {{ python }}
     script: bld_colcon.bat
   - name: ros-eloquent-rviz-rendering
