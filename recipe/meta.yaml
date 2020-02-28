@@ -208,10 +208,10 @@ outputs:
         - python {{ python }}
         - ros-eloquent-ament-cmake
         - colcon-common-extensions
-        - assimp
+        - assimp 4.*
       run:
         - python {{ python }}
-        - assimp
+        - assimp 4.*
     script: bld_colcon.bat
   - name: ros-eloquent-rviz-common
     version: 7.0.4
