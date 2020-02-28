@@ -32,7 +32,7 @@ outputs:
         - ros-eloquent-python-cmake-module
         - ros-eloquent-ament-cmake-ros
         - numpy
-        - opencv 3.4.9
+        - opencv
         - colcon-common-extensions
         - python {{ python }}
       run:
@@ -40,7 +40,7 @@ outputs:
         - ros-eloquent-sensor-msgs
         - ros-eloquent-ament-index-python
         - numpy
-        - opencv 3.4.9
+        - opencv
         - python {{ python }}
     script: bld_colcon.bat
   - name: ros-eloquent-image-geometry
@@ -55,13 +55,13 @@ outputs:
         - ros-eloquent-ament-cmake-python
         - ros-eloquent-sensor-msgs
         - ros-eloquent-ament-cmake-ros
-        - opencv 3.4.9
+        - opencv
         - colcon-common-extensions
         - python {{ python }}
       run:
         - python {{ python }}
         - ros-eloquent-sensor-msgs
-        - opencv 3.4.9
+        - opencv
     script: bld_colcon.bat
   - name: ros-eloquent-vision-opencv
     version: 2.1.4
