@@ -176,3 +176,15 @@ libx11-dev:
   conda: []
 libxrandr:
   conda: []
+libopencv-dev:
+  conda: [opencv]
+qt5-qmake:
+  conda: [qt]
+python3-pydot:
+  conda: [pydot]
+python3-matplotlib:
+  conda: [matplotlib]
+python3-qt5-bindings:
+  conda: [pyqt]
+python3-psutil:
+  conda: [psutil]
