@@ -67,7 +67,9 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--ament--package-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-ament-package.svg)](https://anaconda.org/conda-forge/ros-eloquent-ament-package) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--cv--bridge-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-cv-bridge) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-cv-bridge.svg)](https://anaconda.org/conda-forge/ros-eloquent-cv-bridge) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-cv-bridge.svg)](https://anaconda.org/conda-forge/ros-eloquent-cv-bridge) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-cv-bridge.svg)](https://anaconda.org/conda-forge/ros-eloquent-cv-bridge) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--image--geometry-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-image-geometry) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-image-geometry.svg)](https://anaconda.org/conda-forge/ros-eloquent-image-geometry) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-image-geometry.svg)](https://anaconda.org/conda-forge/ros-eloquent-image-geometry) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-image-geometry.svg)](https://anaconda.org/conda-forge/ros-eloquent-image-geometry) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-ros--eloquent--vision--opencv-green.svg)](https://anaconda.org/conda-forge/ros-eloquent-vision-opencv) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/ros-eloquent-vision-opencv.svg)](https://anaconda.org/conda-forge/ros-eloquent-vision-opencv) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/ros-eloquent-vision-opencv.svg)](https://anaconda.org/conda-forge/ros-eloquent-vision-opencv) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/ros-eloquent-vision-opencv.svg)](https://anaconda.org/conda-forge/ros-eloquent-vision-opencv) |
 
 Installing ros
 ==============
@@ -78,16 +80,16 @@ Installing `ros` from the `conda-forge` channel can be achieved by adding `conda
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `ros-eloquent-ament-package` can be installed with:
+Once the `conda-forge` channel has been enabled, `ros-eloquent-cv-bridge, ros-eloquent-image-geometry, ros-eloquent-vision-opencv` can be installed with:
 
 ```
-conda install ros-eloquent-ament-package
+conda install ros-eloquent-cv-bridge ros-eloquent-image-geometry ros-eloquent-vision-opencv
 ```
 
-It is possible to list all of the versions of `ros-eloquent-ament-package` available on your platform with:
+It is possible to list all of the versions of `ros-eloquent-cv-bridge` available on your platform with:
 
 ```
-conda search ros-eloquent-ament-package --channel conda-forge
+conda search ros-eloquent-cv-bridge --channel conda-forge
 ```
 
 
