@@ -177,7 +177,7 @@ libx11-dev:
 libxrandr:
   conda: []
 libopencv-dev:
-  conda: [opencv]
+  conda: [opencv 3*]
 qt5-qmake:
   conda: [qt]
 python3-pydot:
