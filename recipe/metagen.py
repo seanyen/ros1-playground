@@ -18,8 +18,8 @@ try:
     json_result = subprocess.check_output('conda search ros-%s --json' % os.environ['ROS_DISTRO'], shell=True, stderr=subprocess.STDOUT)
 except subprocess.CalledProcessError as e:
     json_result = e.output
-packages_released = json.loads(json_result)
-#packages_released = {}
+#packages_released = json.loads(json_result)
+packages_released = {}
 
 packages_skipped = [
     'rmw_cyclonedds_cpp',
