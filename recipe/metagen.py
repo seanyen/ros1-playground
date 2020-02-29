@@ -34,7 +34,11 @@ packages_skipped = [
     'rosidl_typesupport_connext_cpp',
     'rosidl_typesupport_opensplice_cpp',
     'rosidl_typesupport_opensplice_c',
-    'test_msgs']
+    'test_msgs',
+    'rttest',
+    'tlsf',
+    'tlsf_cpp',
+    'pendulum_control']
 
 rospack = rospkg.RosPack()
 
