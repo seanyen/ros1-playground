@@ -3,17 +3,23 @@ package:
   version: 2020.03.03
 
 source:
-  - git_url: https://github.com/BehaviorTree/behaviortree_cpp_v3-release.git
-    git_rev: release/eloquent/behaviortree_cpp_v3/3.1.1-1
-    folder: ros-eloquent-behaviortree-cpp-v3/src/work
+  - git_url: https://github.com/SteveMacenski/navigation2-release.git
+    git_rev: release/eloquent/nav2_common/0.3.4-1
+    folder: ros-eloquent-nav2-common/src/work
+  - git_url: https://github.com/SteveMacenski/navigation2-release.git
+    git_rev: release/eloquent/nav2_msgs/0.3.4-1
+    folder: ros-eloquent-nav2-msgs/src/work
+  - git_url: https://github.com/SteveMacenski/navigation2-release.git
+    git_rev: release/eloquent/nav2_util/0.3.4-1
+    folder: ros-eloquent-nav2-util/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-behaviortree-cpp-v3
-    version: 3.1.1
+  - name: ros-eloquent-nav2-common
+    version: 0.3.4
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -21,14 +27,100 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-ament-cmake-gtest
-        - python {{ python }}
-        - zeromq
+        - ros-eloquent-launch
+        - ros-eloquent-launch-ros
+        - ros-eloquent-ament-cmake-core
         - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-      run:
-        - zeromq
+        - pyyaml
         - python {{ python }}
+        - ros-eloquent-rclpy
+        - ros-eloquent-ament-cmake-python
+        - ros-eloquent-osrf-pycommon
+      run:
+        - ros-eloquent-launch
+        - ros-eloquent-launch-ros
+        - ros-eloquent-ament-cmake-core
+        - pyyaml
+        - python {{ python }}
+        - ros-eloquent-rclpy
+        - ros-eloquent-osrf-pycommon
+    script: bld_colcon.bat
+  - name: ros-eloquent-nav2-msgs
+    version: 0.3.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-geometry-msgs
+        - colcon-common-extensions
+        - ros-eloquent-nav2-common
+        - python {{ python }}
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-action-msgs
+        - ros-eloquent-rclcpp
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-nav-msgs
+        - ros-eloquent-std-msgs
+      run:
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+        - ros-eloquent-rosidl-default-generators
+        - ros-eloquent-action-msgs
+        - ros-eloquent-rclcpp
+        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-nav-msgs
+        - ros-eloquent-std-msgs
+    script: bld_colcon.bat
+  - name: ros-eloquent-nav2-util
+    version: 0.3.4
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - sdl2_image
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-nav2-msgs
+        - python {{ python }}
+        - sdl2
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-ament-cmake-gtest
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-rclcpp
+        - ros-eloquent-tf2-ros
+        - colcon-common-extensions
+        - ros-eloquent-rclcpp-action
+        - ros-eloquent-nav2-common
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-tf2
+        - ros-eloquent-tf2-geometry-msgs
+        - ros-eloquent-rclcpp-lifecycle
+        - ros-eloquent-ament-lint-common
+        - ros-eloquent-nav-msgs
+        - ros-eloquent-std-srvs
+        - boost
+      run:
+        - sdl2_image
+        - ros-eloquent-geometry-msgs
+        - ros-eloquent-nav2-msgs
+        - ros-eloquent-rclcpp-lifecycle
+        - ros-eloquent-rclcpp-action
+        - ros-eloquent-nav2-common
+        - python {{ python }}
+        - sdl2
+        - ros-eloquent-tf2
+        - ros-eloquent-lifecycle-msgs
+        - ros-eloquent-tf2-geometry-msgs
+        - ros-eloquent-rclcpp
+        - boost
+        - ros-eloquent-tf2-ros
+        - ros-eloquent-nav-msgs
     script: bld_colcon.bat
 
 about:

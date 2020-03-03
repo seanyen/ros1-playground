@@ -189,13 +189,13 @@ python3-qt5-bindings:
 python3-psutil:
   conda: [psutil]
 sdl-image:
-  conda: []
+  conda: [sdl2_image]
 graphicsmagick:
-  conda: []
+  conda: [graphicsmagick]
 libboost-program-options:
   conda: [boost]
 sdl:
-  conda: []
+  conda: [sdl2]
 libzmq3-dev:
   conda: [zeromq]
 libboost-program-options-dev:
