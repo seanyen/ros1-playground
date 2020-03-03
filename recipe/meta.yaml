@@ -1,19 +1,25 @@
 package:
   name: ros
-  version: 2020.02.29
+  version: 2020.03.03
 
 source:
-  - git_url: https://github.com/ros2-gbp/variants-release.git
-    git_rev: release/eloquent/desktop/0.8.4-1
-    folder: ros-eloquent-desktop/src/work
+  - git_url: https://github.com/ros2-gbp/kdl_parser-release.git
+    git_rev: release/eloquent/kdl_parser/2.2.0-1
+    folder: ros-eloquent-kdl-parser/src/work
+  - git_url: https://github.com/ros2-gbp/robot_state_publisher-release.git
+    git_rev: release/eloquent/robot_state_publisher/2.3.1-1
+    folder: ros-eloquent-robot-state-publisher/src/work
+  - git_url: https://github.com/ros2-gbp/urdf-release.git
+    git_rev: release/eloquent/urdf/2.2.0-1
+    folder: ros-eloquent-urdf/src/work
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-desktop
-    version: 0.8.4
+  - name: ros-eloquent-kdl-parser
+    version: 2.2.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -21,54 +27,75 @@ outputs:
         - ninja
         - cmake
       host:
+        - ros-eloquent-tinyxml-vendor
+        - python {{ python }}
         - colcon-common-extensions
-        - ros-eloquent-ament-cmake
-        - python {{ python }}
+        - tinyxml
+        - ros-eloquent-orocos-kdl
+        - urdfdom_headers
+        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-urdf
       run:
-        - ros-eloquent-intra-process-demo
-        - ros-eloquent-examples-rclcpp-minimal-publisher
-        - ros-eloquent-rviz-default-plugins
+        - ros-eloquent-tinyxml-vendor
         - python {{ python }}
-        - ros-eloquent-action-tutorials-interfaces
-        - ros-eloquent-rqt-common-plugins
-        - ros-eloquent-teleop-twist-joy
-        - ros-eloquent-teleop-twist-keyboard
-        - ros-eloquent-quality-of-service-demo-cpp
-        - ros-eloquent-depthimage-to-laserscan
-        - ros-eloquent-quality-of-service-demo-py
-        - ros-eloquent-demo-nodes-cpp
-        - ros-eloquent-examples-rclcpp-minimal-action-client
-        - ros-eloquent-action-tutorials-py
-        - ros-eloquent-composition
-        - ros-eloquent-examples-rclpy-minimal-service
-        - ros-eloquent-examples-rclpy-minimal-action-server
-        - ros-eloquent-examples-rclpy-minimal-action-client
-        - ros-eloquent-examples-rclcpp-minimal-action-server
-        - ros-eloquent-demo-nodes-cpp-native
-        - ros-eloquent-ros-base
-        - ros-eloquent-demo-nodes-py
-        - ros-eloquent-dummy-sensors
-        - ros-eloquent-examples-rclpy-minimal-publisher
-        - ros-eloquent-examples-rclcpp-minimal-subscriber
-        - ros-eloquent-dummy-map-server
-        - ros-eloquent-examples-rclpy-minimal-client
-        - ros-eloquent-joy
-        - ros-eloquent-angles
-        - ros-eloquent-topic-monitor
-        - ros-eloquent-pendulum-msgs
-        - ros-eloquent-examples-rclcpp-minimal-timer
-        - ros-eloquent-logging-demo
-        - ros-eloquent-action-tutorials-cpp
-        - ros-eloquent-dummy-robot-bringup
-        - ros-eloquent-lifecycle
-        - ros-eloquent-image-tools
-        - ros-eloquent-examples-rclcpp-minimal-client
-        - ros-eloquent-rviz2
-        - ros-eloquent-examples-rclcpp-minimal-service
-        - ros-eloquent-examples-rclpy-minimal-subscriber
-        - ros-eloquent-examples-rclpy-executors
-        - ros-eloquent-pcl-conversions
-        - ros-eloquent-examples-rclcpp-minimal-composition
+        - tinyxml
+        - ros-eloquent-orocos-kdl
+        - urdfdom_headers
+        - ros-eloquent-urdf
+    script: bld_colcon.bat
+  - name: ros-eloquent-robot-state-publisher
+    version: 2.3.1
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+        - colcon-common-extensions
+        - ros-eloquent-rclcpp
+        - ros-eloquent-orocos-kdl
+        - urdfdom_headers
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-tf2-ros
+        - ros-eloquent-kdl-parser
+        - ros-eloquent-urdf
+      run:
+        - ros-eloquent-geometry-msgs
+        - python {{ python }}
+        - ros-eloquent-rclcpp
+        - ros-eloquent-orocos-kdl
+        - urdfdom_headers
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-tf2-ros
+        - ros-eloquent-kdl-parser
+        - ros-eloquent-urdf
+    script: bld_colcon.bat
+  - name: ros-eloquent-urdf
+    version: 2.2.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-tinyxml-vendor
+        - python {{ python }}
+        - colcon-common-extensions
+        - tinyxml
+        - urdfdom_headers
+        - urdfdom
+        - ros-eloquent-ament-cmake-ros
+      run:
+        - ros-eloquent-tinyxml-vendor
+        - python {{ python }}
+        - tinyxml
+        - urdfdom_headers
+        - urdfdom
     script: bld_colcon.bat
 
 about:

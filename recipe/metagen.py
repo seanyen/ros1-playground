@@ -115,6 +115,10 @@ for pkg_shortname in rospack.list():
     }
     pkg = catkin_pkg.package.parse_package('src\\%s\\package.xml' % pkg_shortname)
     pkg.evaluate_conditions(os.environ)
+
+    if 'cmake' == pkg.get_build_type():
+        print('cmake %s' % pkg_shortname)
+        continue
     build_deps = pkg.build_depends + pkg.buildtool_depends + pkg.build_export_depends + pkg.buildtool_export_depends
     build_deps = [d.name for d in build_deps if d.evaluated_condition]
     build_deps = set(build_deps)
