@@ -13,6 +13,7 @@ rd /s /q "%SRC_DIR%\build"
 pushd %PKG_NAME%
 
 colcon build ^
+    --packages-select %PKG_NAME% ^
     --build-base %SRC_DIR%\build ^
     --install-base %LIBRARY_PREFIX% ^
     --merge-install ^

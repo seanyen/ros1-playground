@@ -6,3 +6,7 @@
     local-name: ros2_dotnet/ros2_dotnet
     uri: https://github.com/ros2-dotnet/ros2_dotnet.git
     version: master
+- git:
+    local-name: esteve/ament_cmake_export_assemblies
+    uri: https://github.com/esteve/ament_cmake_export_assemblies
+    version: master

@@ -18,12 +18,31 @@ source:
   - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
     git_rev: master
     folder: ros-eloquent-rosidl-generator-dotnet/src/work
+  - git_url: https://github.com/esteve/ament_cmake_export_assemblies
+    git_rev: master
+    folder: ros-eloquent-ament-cmake-export-assemblies/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
+  - name: ros-eloquent-ament-cmake-export-assemblies
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+        - colcon-common-extensions
+        - python {{ python }}
+      run:
+        - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+    script: bld_colcon.bat
   - name: ros-eloquent-dotnet-cmake-module
     version: 0.0.0
     requirements:
@@ -35,9 +54,9 @@ outputs:
       host:
         - colcon-common-extensions
         - ros-eloquent-ament-lint-common
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-ament-lint-auto
         - python {{ python }}
+        - ros-eloquent-ament-lint-auto
+        - ros-eloquent-ament-cmake
       run:
         - python {{ python }}
     script: bld_colcon.bat
@@ -51,23 +70,23 @@ outputs:
         - cmake
       host:
         - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rcldotnet-common
         - colcon-common-extensions
         - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rcl
         - ros-eloquent-rmw
-        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw-implementation-cmake
         - python {{ python }}
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rcl
       run:
         - ros-eloquent-rmw-implementation
-        - ros-eloquent-rosidl-generator-c
         - ros-eloquent-rosidl-parser
+        - ros-eloquent-rosidl-generator-c
         - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rcl
-        - ros-eloquent-rosidl-cmake
         - python {{ python }}
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rcl
     script: bld_colcon.bat
   - name: ros-eloquent-rcldotnet-common
     version: 0.0.0
@@ -81,9 +100,9 @@ outputs:
         - ros-eloquent-dotnet-cmake-module
         - colcon-common-extensions
         - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-cmake
         - python {{ python }}
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
       run:
         - ros-eloquent-rosidl-cmake
         - python {{ python }}
@@ -97,25 +116,25 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-std-msgs
-        - ros-eloquent-rcldotnet
         - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-sensor-msgs
         - colcon-common-extensions
+        - ros-eloquent-example-interfaces
         - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-cmake
-        - python {{ python }}
-        - ros-eloquent-example-interfaces
-      run:
-        - ros-eloquent-std-msgs
         - ros-eloquent-rcldotnet
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-rosidl-cmake
         - python {{ python }}
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
+      run:
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-sensor-msgs
         - ros-eloquent-example-interfaces
+        - ros-eloquent-rcldotnet
+        - python {{ python }}
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-cmake
     script: bld_colcon.bat
   - name: ros-eloquent-rosidl-generator-dotnet
     version: 0.0.0
@@ -127,24 +146,24 @@ outputs:
         - cmake
       host:
         - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rcldotnet-common
         - ros-eloquent-rosidl-generator-c
         - colcon-common-extensions
         - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-ament-cmake
-        - ros-eloquent-rosidl-cmake
         - python {{ python }}
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
       run:
-        - ros-eloquent-rmw-implementation
         - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-parser
         - ros-eloquent-rosidl-generator-c
         - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-rosidl-parser
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-ament-cmake
         - ros-eloquent-rmw-implementation-cmake
-        - ros-eloquent-rosidl-cmake
         - python {{ python }}
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-ament-cmake
     script: bld_colcon.bat
 
 about:
