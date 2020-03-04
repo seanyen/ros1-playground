@@ -3,23 +3,29 @@ package:
   version: 2020.03.03
 
 source:
-  - git_url: https://github.com/SteveMacenski/navigation2-release.git
-    git_rev: release/eloquent/nav2_common/0.3.4-1
-    folder: ros-eloquent-nav2-common/src/work
-  - git_url: https://github.com/SteveMacenski/navigation2-release.git
-    git_rev: release/eloquent/nav2_msgs/0.3.4-1
-    folder: ros-eloquent-nav2-msgs/src/work
-  - git_url: https://github.com/SteveMacenski/navigation2-release.git
-    git_rev: release/eloquent/nav2_util/0.3.4-1
-    folder: ros-eloquent-nav2-util/src/work
+  - git_url: https://github.com/ros2-dotnet/dotnet_cmake_module.git
+    git_rev: master
+    folder: ros-eloquent-dotnet-cmake-module/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet-common/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet-examples/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rosidl-generator-dotnet/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-nav2-common
-    version: 0.3.4
+  - name: ros-eloquent-dotnet-cmake-module
+    version: 0.0.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -27,56 +33,63 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-launch
-        - ros-eloquent-launch-ros
-        - ros-eloquent-ament-cmake-core
         - colcon-common-extensions
-        - pyyaml
-        - python {{ python }}
-        - ros-eloquent-rclpy
-        - ros-eloquent-ament-cmake-python
-        - ros-eloquent-osrf-pycommon
-      run:
-        - ros-eloquent-launch
-        - ros-eloquent-launch-ros
-        - ros-eloquent-ament-cmake-core
-        - pyyaml
-        - python {{ python }}
-        - ros-eloquent-rclpy
-        - ros-eloquent-osrf-pycommon
-    script: bld_colcon.bat
-  - name: ros-eloquent-nav2-msgs
-    version: 0.3.4
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - ros-eloquent-geometry-msgs
-        - colcon-common-extensions
-        - ros-eloquent-nav2-common
-        - python {{ python }}
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-action-msgs
-        - ros-eloquent-rclcpp
-        - ros-eloquent-builtin-interfaces
+        - ros-eloquent-ament-lint-common
         - ros-eloquent-ament-cmake
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-std-msgs
+        - ros-eloquent-ament-lint-auto
+        - python {{ python }}
+      run:
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcldotnet
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-dotnet-cmake-module
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rcl
+        - ros-eloquent-rmw
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+      run:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rcl
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcldotnet-common
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-dotnet-cmake-module
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
       run:
         - ros-eloquent-rosidl-cmake
         - python {{ python }}
-        - ros-eloquent-rosidl-default-generators
-        - ros-eloquent-action-msgs
-        - ros-eloquent-rclcpp
-        - ros-eloquent-builtin-interfaces
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-std-msgs
     script: bld_colcon.bat
-  - name: ros-eloquent-nav2-util
-    version: 0.3.4
+  - name: ros-eloquent-rcldotnet-examples
+    version: 0.0.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -84,43 +97,54 @@ outputs:
         - ninja
         - cmake
       host:
-        - sdl2_image
-        - ros-eloquent-geometry-msgs
-        - ros-eloquent-nav2-msgs
-        - python {{ python }}
-        - sdl2
-        - ros-eloquent-lifecycle-msgs
-        - ros-eloquent-ament-cmake-gtest
-        - ros-eloquent-ament-lint-auto
-        - ros-eloquent-rclcpp
-        - ros-eloquent-tf2-ros
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rcldotnet
+        - ros-eloquent-dotnet-cmake-module
         - colcon-common-extensions
-        - ros-eloquent-rclcpp-action
-        - ros-eloquent-nav2-common
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-rcldotnet-common
         - ros-eloquent-ament-cmake
-        - ros-eloquent-tf2
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-rclcpp-lifecycle
-        - ros-eloquent-ament-lint-common
-        - ros-eloquent-nav-msgs
-        - ros-eloquent-std-srvs
-        - boost
-      run:
-        - sdl2_image
-        - ros-eloquent-geometry-msgs
-        - ros-eloquent-nav2-msgs
-        - ros-eloquent-rclcpp-lifecycle
-        - ros-eloquent-rclcpp-action
-        - ros-eloquent-nav2-common
+        - ros-eloquent-rosidl-cmake
         - python {{ python }}
-        - sdl2
-        - ros-eloquent-tf2
-        - ros-eloquent-lifecycle-msgs
-        - ros-eloquent-tf2-geometry-msgs
-        - ros-eloquent-rclcpp
-        - boost
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-nav-msgs
+        - ros-eloquent-example-interfaces
+      run:
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rcldotnet
+        - ros-eloquent-sensor-msgs
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+        - ros-eloquent-example-interfaces
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-generator-dotnet
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rosidl-generator-c
+        - colcon-common-extensions
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+      run:
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
     script: bld_colcon.bat
 
 about:
