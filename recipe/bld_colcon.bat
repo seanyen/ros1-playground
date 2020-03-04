@@ -10,7 +10,7 @@ set CXX=cl.exe
 :: remove the build folder
 rd /s /q "%SRC_DIR%\build"
 
-for /f "delims=" %a in ('python %RECIPE_DIR%\output_pkg.py') do @set RAW_PKG_NAME=%a
+for /f "delims=" %%a in ('python %%RECIPE_DIR%%\output_pkg.py') do @set RAW_PKG_NAME=%%a
 
 pushd %PKG_NAME%
 
