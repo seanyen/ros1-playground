@@ -6,6 +6,7 @@ import os
 import catkin_pkg.package
 import json
 import datetime
+import copy
 
 yaml = ruamel.yaml.YAML()
 yaml.indent(mapping=2, sequence=4, offset=2)
@@ -66,6 +67,8 @@ def _resolve(pkg):
         resolved = installer.resolve(rule)
     except:
         pass
+    if len(resolved) == 0:
+        return ['ros-%s-%s' % (os.getenv('ROS_DISTRO'), pkg.replace("_", "-")) ]
     return resolved
 
 source = []
@@ -73,24 +76,25 @@ with open("ros.rosinstall", 'r') as stream:
     data = yaml.load(stream)
     for repo in data:
         entry = {}
+        pkg_name = ""
         if 'tar' in repo:
             local_name = repo['tar']['local-name']
-            pkg_name = _resolve(local_name)[0]
             entry['url'] = repo['tar']['uri']
-            entry['folder'] = '%s/src/work' % pkg_name
-            entry['fn'] = "%s.tar.gz" % pkg_name
         if 'git' in repo:
             local_name = repo['git']['local-name']
-            pkg_name = _resolve(local_name)[0]
             entry['git_url'] = repo['git']['uri']
             entry['git_rev'] = repo['git']['version']
-            entry['folder'] = '%s/src/work' % pkg_name
-        if pkg_name in packages_released:
-            continue
-        location_to_test = os.path.join(os.getenv('CURRENT_PATH'), 'patch', '%s.patch' % pkg_name)
-        if os.path.exists(location_to_test):
-            entry['patches'] = [ 'patch/%s.patch' % pkg_name ]
-        source.append(entry)
+        local_rospack = rospkg.RosPack([os.path.join('src', local_name)])
+        for pkg_shortname in local_rospack.list():
+            local_entry = copy.deepcopy(entry)
+            pkg_name = _resolve(pkg_shortname)[0]
+            local_entry['folder'] = '%s/src/work' % pkg_name
+            if pkg_name in packages_released:
+                continue
+            location_to_test = os.path.join(os.getenv('CURRENT_PATH'), 'patch', '%s.patch' % pkg_name)
+            if os.path.exists(location_to_test):
+                local_entry['patches'] = [ 'patch/%s.patch' % pkg_name ]
+            source.append(local_entry)
 
 unsatisfied_deps = set()
 outputs = []
@@ -113,7 +117,8 @@ for pkg_shortname in rospack.list():
             'run': ['python {{ python }}']
         }
     }
-    pkg = catkin_pkg.package.parse_package('src\\%s\\package.xml' % pkg_shortname)
+    package_uri = rospack.get_path(pkg_shortname)
+    pkg = catkin_pkg.package.parse_package('%s\\package.xml' % package_uri)
     pkg.evaluate_conditions(os.environ)
 
     if 'cmake' == pkg.get_build_type():

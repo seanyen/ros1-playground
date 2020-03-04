@@ -3,23 +3,29 @@ package:
   version: 2020.03.03
 
 source:
-  - git_url: https://github.com/ros2-gbp/kdl_parser-release.git
-    git_rev: release/eloquent/kdl_parser/2.2.0-1
-    folder: ros-eloquent-kdl-parser/src/work
-  - git_url: https://github.com/ros2-gbp/robot_state_publisher-release.git
-    git_rev: release/eloquent/robot_state_publisher/2.3.1-1
-    folder: ros-eloquent-robot-state-publisher/src/work
-  - git_url: https://github.com/ros2-gbp/urdf-release.git
-    git_rev: release/eloquent/urdf/2.2.0-1
-    folder: ros-eloquent-urdf/src/work
+  - git_url: https://github.com/ros2-dotnet/dotnet_cmake_module.git
+    git_rev: master
+    folder: ros-eloquent-dotnet-cmake-module/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet-common/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rcldotnet-examples/src/work
+  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
+    git_rev: master
+    folder: ros-eloquent-rosidl-generator-dotnet/src/work
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-eloquent-kdl-parser
-    version: 2.2.0
+  - name: ros-eloquent-dotnet-cmake-module
+    version: 0.0.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -27,55 +33,14 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-tinyxml-vendor
-        - python {{ python }}
-        - colcon-common-extensions
-        - tinyxml
-        - ros-eloquent-orocos-kdl
-        - urdfdom_headers
-        - ros-eloquent-ament-cmake-ros
-        - ros-eloquent-urdf
-      run:
-        - ros-eloquent-tinyxml-vendor
-        - python {{ python }}
-        - tinyxml
-        - ros-eloquent-orocos-kdl
-        - urdfdom_headers
-        - ros-eloquent-urdf
-    script: bld_colcon.bat
-  - name: ros-eloquent-robot-state-publisher
-    version: 2.3.1
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - ros-eloquent-geometry-msgs
-        - python {{ python }}
-        - colcon-common-extensions
-        - ros-eloquent-rclcpp
-        - ros-eloquent-orocos-kdl
-        - urdfdom_headers
-        - ros-eloquent-sensor-msgs
         - ros-eloquent-ament-cmake
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-kdl-parser
-        - ros-eloquent-urdf
-      run:
-        - ros-eloquent-geometry-msgs
+        - colcon-common-extensions
         - python {{ python }}
-        - ros-eloquent-rclcpp
-        - ros-eloquent-orocos-kdl
-        - urdfdom_headers
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-tf2-ros
-        - ros-eloquent-kdl-parser
-        - ros-eloquent-urdf
+      run:
+        - python {{ python }}
     script: bld_colcon.bat
-  - name: ros-eloquent-urdf
-    version: 2.2.0
+  - name: ros-eloquent-rcldotnet
+    version: 0.0.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -83,19 +48,101 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-tinyxml-vendor
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-dotnet-cmake-module
         - python {{ python }}
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw-implementation-cmake
         - colcon-common-extensions
-        - tinyxml
-        - urdfdom_headers
-        - urdfdom
-        - ros-eloquent-ament-cmake-ros
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-rcl
+        - ros-eloquent-rmw
       run:
-        - ros-eloquent-tinyxml-vendor
         - python {{ python }}
-        - tinyxml
-        - urdfdom_headers
-        - urdfdom
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rosidl-generator-c
+        - ros-eloquent-rcl
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcldotnet-common
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-dotnet-cmake-module
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rosidl-cmake
+        - colcon-common-extensions
+      run:
+        - ros-eloquent-rosidl-cmake
+        - python {{ python }}
+    script: bld_colcon.bat
+  - name: ros-eloquent-rcldotnet-examples
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-dotnet-cmake-module
+        - ros-eloquent-sensor-msgs
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rcldotnet
+        - ros-eloquent-example-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rcldotnet-common
+      run:
+        - ros-eloquent-sensor-msgs
+        - python {{ python }}
+        - ros-eloquent-rcldotnet
+        - ros-eloquent-example-interfaces
+        - ros-eloquent-std-msgs
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rcldotnet-common
+    script: bld_colcon.bat
+  - name: ros-eloquent-rosidl-generator-dotnet
+    version: 0.0.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-dotnet-cmake-module
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rosidl-cmake
+        - colcon-common-extensions
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-rosidl-generator-c
+      run:
+        - ros-eloquent-ament-cmake
+        - ros-eloquent-dotnet-cmake-module
+        - python {{ python }}
+        - ros-eloquent-rosidl-parser
+        - ros-eloquent-ament-cmake-export-assemblies
+        - ros-eloquent-rmw-implementation
+        - ros-eloquent-rosidl-cmake
+        - ros-eloquent-rmw-implementation-cmake
+        - ros-eloquent-rcldotnet-common
+        - ros-eloquent-rosidl-generator-c
     script: bld_colcon.bat
 
 about:

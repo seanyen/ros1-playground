@@ -23,16 +23,20 @@ set ROS_ETC_DIR=%TEMP_PATH%\etc
 
 rosdep init
 
-set "URI_PATH=%CURRENT_PATH:\=/%/conda-forge.yaml"
-echo yaml file:///%URI_PATH% conda > %ROS_ETC_DIR%\rosdep\sources.list.d\00-default.list
+set "CONDA_FORGE_PATH=%CURRENT_PATH:\=/%/conda-forge.yaml"
+echo yaml file:///%CONDA_FORGE_PATH% conda > %ROS_ETC_DIR%\rosdep\sources.list.d\00-default.list
+:: set "UNRELEASED_PATH=%CURRENT_PATH:\=/%/unreleased.yaml"
+:: echo yaml file:///%UNRELEASED_PATH% conda > %ROS_ETC_DIR%\rosdep\sources.list.d\00-default.list
 
 rosdep update
 
 copy metagen.py %TEMP_PATH%\metagen.py /y
+copy ros2_dotnet.rosinstall %TEMP_PATH%\ros2_dotnet.rosinstall /y
 
 pushd %TEMP_PATH%
 
 set ROS_DISTRO=eloquent
+set ROS_ROOT=
 set ROS_PACKAGE_PATH=%TEMP_PATH%\src
 set ROS_PYTHON_VERSION=3
 
@@ -45,11 +49,13 @@ rosinstall_generator %UP_TO_PACKAGE% --deps --flat ^
     rosidl_typesupport_opensplice_cpp rosidl_typesupport_opensplice_c ^
     test_msgs ^
     rttest tlsf tlsf_cpp pendulum_control ^
-  > ros.rosinstall
+  > temp.rosinstall
 IF %ERRORLEVEL% NEQ 0 (
   echo "Cannot create meta.yaml"
-  exit /b 1
 )
+
+:: copy temp.rosinstall ros.rosinstall /y
+copy ros2_dotnet.rosinstall ros.rosinstall /y
 
 mkdir src
 vcs import src < ros.rosinstall
