@@ -14,9 +14,6 @@ source:
     folder: ros-eloquent-rcldotnet-common/src/work
   - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
     git_rev: master
-    folder: ros-eloquent-rcldotnet-examples/src/work
-  - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
-    git_rev: master
     folder: ros-eloquent-rosidl-generator-dotnet/src/work
   - git_url: https://github.com/esteve/ament_cmake_export_assemblies
     git_rev: master
@@ -106,35 +103,6 @@ outputs:
       run:
         - ros-eloquent-rosidl-cmake
         - python {{ python }}
-    script: bld_colcon.bat
-  - name: ros-eloquent-rcldotnet-examples
-    version: 0.0.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - ros-eloquent-dotnet-cmake-module
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-sensor-msgs
-        - colcon-common-extensions
-        - ros-eloquent-example-interfaces
-        - ros-eloquent-ament-cmake-export-assemblies
-        - ros-eloquent-rcldotnet
-        - python {{ python }}
-        - ros-eloquent-std-msgs
-        - ros-eloquent-rosidl-cmake
-        - ros-eloquent-ament-cmake
-      run:
-        - ros-eloquent-rcldotnet-common
-        - ros-eloquent-sensor-msgs
-        - ros-eloquent-example-interfaces
-        - ros-eloquent-rcldotnet
-        - python {{ python }}
-        - ros-eloquent-std-msgs
-        - ros-eloquent-rosidl-cmake
     script: bld_colcon.bat
   - name: ros-eloquent-rosidl-generator-dotnet
     version: 0.0.0
