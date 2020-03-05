@@ -1,7 +1,7 @@
 c_compiler:
 - vs2017
 channel_sources:
-- ros-playground,conda-forge,defaults
+- ros-playground/label/staging,conda-forge,defaults
 channel_targets:
 - ros-playground staging
 cxx_compiler:
