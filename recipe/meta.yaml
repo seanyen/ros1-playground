@@ -1,0 +1,246 @@
+package:
+  name: ros
+  version: 2020.03.05
+
+source:
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_core/0.8.2-1
+    folder: ros-eloquent-ament-cmake-core/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_definitions/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-definitions/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_dependencies/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-dependencies/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_include_directories/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-include-directories/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_interfaces/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-interfaces/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_libraries/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-libraries/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_export_link_flags/0.8.2-1
+    folder: ros-eloquent-ament-cmake-export-link-flags/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_libraries/0.8.2-1
+    folder: ros-eloquent-ament-cmake-libraries/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_python/0.8.2-1
+    folder: ros-eloquent-ament-cmake-python/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_target_dependencies/0.8.2-1
+    folder: ros-eloquent-ament-cmake-target-dependencies/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_test/0.8.2-1
+    folder: ros-eloquent-ament-cmake-test/src/work
+  - git_url: https://github.com/ros2-gbp/ament_cmake-release.git
+    git_rev: release/eloquent/ament_cmake_version/0.8.2-1
+    folder: ros-eloquent-ament-cmake-version/src/work
+  - git_url: https://github.com/ros2-gbp/ament_package-release.git
+    git_rev: release/eloquent/ament_package/0.8.8-1
+    folder: ros-eloquent-ament-package/src/work
+
+build:
+  number: 0
+  skip: true  # [not win64]
+
+outputs:
+  - name: ros-eloquent-ament-cmake-core
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-package
+        - catkin_pkg
+        - cmake
+      run:
+        - ros-eloquent-ament-package
+        - catkin_pkg
+        - cmake
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-definitions
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-dependencies
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+      run:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-include-directories
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-interfaces
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-export-libraries
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-libraries
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-export-link-flags
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-libraries
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-python
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-target-dependencies
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-include-directories
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+      run:
+        - ros-eloquent-ament-cmake-include-directories
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-libraries
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-test
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-python
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-cmake-version
+    version: 0.8.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - ros-eloquent-ament-cmake-core
+      run:
+        - ros-eloquent-ament-cmake-core
+    script: bld_cmake.bat
+  - name: ros-eloquent-ament-package
+    version: 0.8.8
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - flake8
+        - setuptools
+        - pytest
+      run:
+        - python {{ python }}
+        - setuptools
+    script: bld_python.bat
+
+about:
+  home: https://www.ros.org/
+  license: BSD-3-Clause
+  summary: |
+    Robot Operating System
+
+extra:
+  recipe-maintainers:
+    - seanyen
