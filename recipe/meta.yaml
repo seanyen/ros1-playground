@@ -15,12 +15,14 @@ source:
   - git_url: https://github.com/ros2-dotnet/ros2_dotnet.git
     git_rev: master
     folder: ros-eloquent-rosidl-generator-dotnet/src/work
+    patches:
+      - patch/ros-eloquent-rosidl-generator-dotnet.patch
   - git_url: https://github.com/esteve/ament_cmake_export_assemblies
     git_rev: master
     folder: ros-eloquent-ament-cmake-export-assemblies/src/work
 
 build:
-  number: 1
+  number: 2
   skip: true  # [not win64]
 
 outputs:
