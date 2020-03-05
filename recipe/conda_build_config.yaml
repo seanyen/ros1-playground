@@ -1,5 +1,5 @@
 channel_sources:
-  - ros-playground,conda-forge,defaults
+  - ros-playground/label/staging,conda-forge,defaults
 channel_targets:
   - ros-playground staging
 c_compiler:                    # [win]
