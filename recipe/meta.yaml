@@ -60,13 +60,15 @@ outputs:
         - ninja
         - cmake
       host:
-        - catkin_pkg
-        - ros-eloquent-ament-package
         - cmake
+        - ros-eloquent-ament-package
+        - python {{ python }}
+        - catkin_pkg
       run:
-        - catkin_pkg
-        - ros-eloquent-ament-package
         - cmake
+        - ros-eloquent-ament-package
+        - python {{ python }}
+        - catkin_pkg
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-definitions
     version: 0.8.2
@@ -78,8 +80,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-dependencies
     version: 0.8.2
@@ -90,11 +94,13 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-ament-cmake-libraries
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-libraries
       run:
-        - ros-eloquent-ament-cmake-libraries
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-libraries
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-include-directories
     version: 0.8.2
@@ -106,8 +112,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-interfaces
     version: 0.8.2
@@ -118,11 +126,13 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-ament-cmake-export-libraries
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-export-libraries
+        - python {{ python }}
       run:
-        - ros-eloquent-ament-cmake-export-libraries
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-export-libraries
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-libraries
     version: 0.8.2
@@ -134,8 +144,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-export-link-flags
     version: 0.8.2
@@ -147,8 +159,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-include-directories
     version: 0.8.2
@@ -160,8 +174,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-libraries
     version: 0.8.2
@@ -173,8 +189,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-python
     version: 0.8.2
@@ -186,8 +204,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-target-dependencies
     version: 0.8.2
@@ -198,13 +218,15 @@ outputs:
         - ninja
         - cmake
       host:
-        - ros-eloquent-ament-cmake-include-directories
-        - ros-eloquent-ament-cmake-libraries
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-include-directories
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-libraries
       run:
-        - ros-eloquent-ament-cmake-include-directories
-        - ros-eloquent-ament-cmake-libraries
         - ros-eloquent-ament-cmake-core
+        - ros-eloquent-ament-cmake-include-directories
+        - python {{ python }}
+        - ros-eloquent-ament-cmake-libraries
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-test
     version: 0.8.2
@@ -217,8 +239,10 @@ outputs:
       host:
         - ros-eloquent-ament-cmake-python
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-cmake-version
     version: 0.8.2
@@ -230,8 +254,10 @@ outputs:
         - cmake
       host:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
       run:
         - ros-eloquent-ament-cmake-core
+        - python {{ python }}
     script: bld_cmake.bat
   - name: ros-eloquent-ament-package
     version: 0.8.8
@@ -242,9 +268,9 @@ outputs:
         - ninja
         - cmake
       host:
-        - setuptools
-        - pytest
         - flake8
+        - pytest
+        - setuptools
         - python {{ python }}
       run:
         - setuptools
