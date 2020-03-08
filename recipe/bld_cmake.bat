@@ -1,5 +1,7 @@
-:: MSVC is preferred.
 setlocal
+set "PYTHONPATH=%LIBRARY_PREFIX%\lib\site-packages;%SP_DIR%"
+
+:: MSVC is preferred.
 set CC=cl.exe
 set CXX=cl.exe
 
