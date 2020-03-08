@@ -1,7 +1,7 @@
-ros_distro: eloquent
+ros_distro: noetic
 ros_python_version: 3
 
-repos: 2020.03.04.rosinstall
+repos: noetic.2020.03.07.rosinstall
 # repos: build_tools.repos
 
 # mapping for package keys
@@ -12,6 +12,7 @@ conda_index:
 packages_skip_by_deps:
 
 packages_select_by_deps:
-  - ament_cmake
+  - rospy
+  - roscpp
 
 patch_dir: ./patch
