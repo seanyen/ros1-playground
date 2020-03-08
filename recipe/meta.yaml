@@ -1,6 +1,6 @@
 package:
   name: ros
-  version: 2020.03.07
+  version: 2020.03.08
 
 source:
   - git_url: https://github.com/ros-gbp/catkin-release.git
@@ -338,16 +338,15 @@ outputs:
         - python {{ python }}
         - ros-noetic-catkin
         - ros-noetic-cpp-common
-        - ros-noetic-libboost-regex-dev
         - ros-noetic-rosbuild
         - ros-noetic-rostime
         - ros-noetic-rosunit
       run:
         - apr
+        - boost
         - log4cxx
         - python {{ python }}
         - ros-noetic-cpp-common
-        - ros-noetic-libboost-regex-dev
         - ros-noetic-rosbuild
         - ros-noetic-rostime
     script: bld_cmake.bat
@@ -365,8 +364,6 @@ outputs:
         - python {{ python }}
         - ros-noetic-catkin
         - ros-noetic-cpp-common
-        - ros-noetic-libboost-chrono-dev
-        - ros-noetic-libboost-filesystem-dev
         - ros-noetic-message-generation
         - ros-noetic-message-runtime
         - ros-noetic-rosconsole
@@ -381,8 +378,6 @@ outputs:
         - boost
         - python {{ python }}
         - ros-noetic-cpp-common
-        - ros-noetic-libboost-chrono-dev
-        - ros-noetic-libboost-filesystem-dev
         - ros-noetic-message-runtime
         - ros-noetic-rosconsole
         - ros-noetic-roscpp-serialization
@@ -496,7 +491,6 @@ outputs:
         - boost
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-libboost-filesystem-dev
         - ros-noetic-rosmake
         - ros-noetic-rospack
         - setuptools
@@ -540,14 +534,12 @@ outputs:
         - python {{ python }}
         - ros-noetic-catkin
         - ros-noetic-cmake-modules
-        - ros-noetic-libboost-filesystem-dev
         - tinyxml2
       run:
         - boost
         - catkin_pkg
         - pkg-config
         - python {{ python }}
-        - ros-noetic-libboost-filesystem-dev
         - ros-noetic-ros-environment
         - rosdep
         - tinyxml2

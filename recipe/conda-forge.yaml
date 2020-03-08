@@ -196,3 +196,9 @@ libzmq3-dev:
   win64: [zeromq]
 libboost-program-options-dev:
   win64: [boost]
+libboost-regex-dev:
+  win64: [boost]
+libboost-chrono-dev:
+  win64: [boost]
+libboost-filesystem-dev:
+  win64: [boost]
