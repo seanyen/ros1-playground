@@ -12,7 +12,6 @@ conda_index:
 packages_skip_by_deps:
 
 packages_select_by_deps:
-  - rospy
-  - roscpp
+  - std_msgs
 
 patch_dir: ./patch
