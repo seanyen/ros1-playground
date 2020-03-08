@@ -12,6 +12,7 @@ conda_index:
 packages_skip_by_deps:
 
 packages_select_by_deps:
-  - std_msgs
+  - message_generation
+  - message_runtime
 
 patch_dir: ./patch

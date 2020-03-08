@@ -42,9 +42,6 @@ source:
   - git_url: https://github.com/ros-gbp/roscpp_core-release.git
     git_rev: release/noetic/rostime/0.7.1-1
     folder: ros-noetic-rostime/src/work
-  - git_url: https://github.com/ros-gbp/std_msgs-release.git
-    git_rev: release/noetic/std_msgs/0.5.13-1
-    folder: ros-noetic-std-msgs/src/work
 
 build:
   number: 0
@@ -78,7 +75,7 @@ outputs:
         - nose
         - python {{ python }}
         - setuptools
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-cpp-common
     version: 0.7.1
     requirements:
@@ -96,7 +93,7 @@ outputs:
         - boost
         - console_bridge
         - python {{ python }}
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-gencpp
     version: 0.6.5
     requirements:
@@ -113,7 +110,7 @@ outputs:
       run:
         - python {{ python }}
         - ros-noetic-genmsg
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-geneus
     version: 3.0.0
     requirements:
@@ -130,7 +127,7 @@ outputs:
       run:
         - python {{ python }}
         - ros-noetic-genmsg
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-genlisp
     version: 0.4.18
     requirements:
@@ -147,7 +144,7 @@ outputs:
       run:
         - python {{ python }}
         - ros-noetic-genmsg
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-genmsg
     version: 0.5.15
     requirements:
@@ -164,7 +161,7 @@ outputs:
         - empy
         - python {{ python }}
         - ros-noetic-catkin
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-gennodejs
     version: 2.0.2
     requirements:
@@ -181,7 +178,7 @@ outputs:
       run:
         - python {{ python }}
         - ros-noetic-genmsg
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-genpy
     version: 0.6.10
     requirements:
@@ -199,7 +196,7 @@ outputs:
         - python {{ python }}
         - pyyaml
         - ros-noetic-genmsg
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-message-generation
     version: 0.4.1
     requirements:
@@ -225,7 +222,7 @@ outputs:
         - ros-noetic-genmsg
         - ros-noetic-gennodejs
         - ros-noetic-genpy
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-message-runtime
     version: 0.4.13
     requirements:
@@ -249,7 +246,7 @@ outputs:
         - ros-noetic-roscpp-serialization
         - ros-noetic-roscpp-traits
         - ros-noetic-rostime
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-roscpp-serialization
     version: 0.7.1
     requirements:
@@ -269,7 +266,7 @@ outputs:
         - ros-noetic-cpp-common
         - ros-noetic-roscpp-traits
         - ros-noetic-rostime
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-roscpp-traits
     version: 0.7.1
     requirements:
@@ -287,7 +284,7 @@ outputs:
         - python {{ python }}
         - ros-noetic-cpp-common
         - ros-noetic-rostime
-    script: bld_cmake.bat
+    script: bld_catkin.bat
   - name: ros-noetic-rostime
     version: 0.7.1
     requirements:
@@ -305,24 +302,7 @@ outputs:
         - boost
         - python {{ python }}
         - ros-noetic-cpp-common
-    script: bld_cmake.bat
-  - name: ros-noetic-std-msgs
-    version: 0.5.13
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-      run:
-        - python {{ python }}
-        - ros-noetic-message-runtime
-    script: bld_cmake.bat
+    script: bld_catkin.bat
 
 about:
   home: https://www.ros.org/
