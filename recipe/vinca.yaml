@@ -10,11 +10,8 @@ conda_index:
   - packages-ignore.yaml
 
 packages_skip_by_deps:
-  - message_generation
-  - message_runtime
 
 packages_select_by_deps:
-  - roscpp
-  - rospy
+  - catkin
 
 patch_dir: ./patch
