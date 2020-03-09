@@ -18,6 +18,5 @@ packages_skip_by_deps:
 packages_select_by_deps:
   - roscpp_tutorials
   - rospy_tutorials
-  - turtlesim
 
 patch_dir: ./patch

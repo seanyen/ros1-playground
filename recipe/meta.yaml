@@ -1,11 +1,8 @@
 package:
   name: ros
-  version: 2020.03.08
+  version: 2020.03.09
 
 source:
-  - git_url: https://github.com/ros-gbp/common_msgs-release.git
-    git_rev: release/noetic/geometry_msgs/1.12.7-1
-    folder: ros-noetic-geometry-msgs/src/work
   - git_url: https://github.com/ros-gbp/ros-release.git
     git_rev: release/noetic/rosclean/1.15.0-1
     folder: ros-noetic-rosclean/src/work
@@ -30,37 +27,12 @@ source:
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
     git_rev: release/noetic/rostest/1.15.3-1
     folder: ros-noetic-rostest/src/work
-  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
-    git_rev: release/noetic/std_srvs/1.11.3-1
-    folder: ros-noetic-std-srvs/src/work
-  - git_url: https://github.com/ros-gbp/ros_tutorials-release.git
-    git_rev: release/noetic/turtlesim/0.9.2-1
-    folder: ros-noetic-turtlesim/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-noetic-geometry-msgs
-    version: 1.12.7
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-        - ros-noetic-std-msgs
-      run:
-        - python {{ python }}
-        - ros-noetic-message-runtime
-        - ros-noetic-std-msgs
-    script: bld_catkin.bat
   - name: ros-noetic-rosclean
     version: 1.15.0
     requirements:
@@ -229,60 +201,6 @@ outputs:
         - ros-noetic-rosmaster
         - ros-noetic-rospy
         - ros-noetic-rosunit
-    script: bld_catkin.bat
-  - name: ros-noetic-std-srvs
-    version: 1.11.3
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-      run:
-        - python {{ python }}
-        - ros-noetic-message-runtime
-    script: bld_catkin.bat
-  - name: ros-noetic-turtlesim
-    version: 0.9.2
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - boost
-        - python {{ python }}
-        - qt
-        - ros-noetic-catkin
-        - ros-noetic-geometry-msgs
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-roslib
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
-        - ros-noetic-std-srvs
-      run:
-        - boost
-        - python {{ python }}
-        - qt
-        - ros-noetic-geometry-msgs
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-roslib
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
-        - ros-noetic-std-srvs
     script: bld_catkin.bat
 
 about:
