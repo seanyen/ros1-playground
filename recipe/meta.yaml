@@ -6,6 +6,8 @@ source:
   - git_url: https://github.com/ros-gbp/catkin-release.git
     git_rev: release/noetic/catkin/0.8.1-1
     folder: ros-noetic-catkin/src/work
+    patches:
+      - patch/ros-noetic-catkin.patch
   - git_url: https://github.com/ros-gbp/roscpp_core-release.git
     git_rev: release/noetic/cpp_common/0.7.1-1
     folder: ros-noetic-cpp-common/src/work
@@ -44,7 +46,7 @@ source:
     folder: ros-noetic-rostime/src/work
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win64]
 
 outputs:

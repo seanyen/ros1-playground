@@ -1,0 +1,11 @@
+diff --git a/cmake/templates/python_distutils_install.bat.in b/cmake/templates/python_distutils_install.bat.in
+index 315db1b9..56db79b7 100644
+--- a/cmake/templates/python_distutils_install.bat.in
++++ b/cmake/templates/python_distutils_install.bat.in
+@@ -15,5 +15,6 @@ set "CATKIN_BINARY_DIR=@CMAKE_BINARY_DIR@"
+     "@CMAKE_CURRENT_SOURCE_DIR@\setup.py" ^
+     build --build-base "@CMAKE_CURRENT_BINARY_DIR@" ^
+     install %DESTDIR_ARG% @SETUPTOOLS_ARG_EXTRA@ ^
++    --single-version-externally-managed --record record.txt ^
+     --prefix="@SETUPTOOLS_INSTALL_PREFIX@" ^
+     --install-scripts="@SETUPTOOLS_INSTALL_PREFIX@\@CATKIN_GLOBAL_BIN_DESTINATION@"
