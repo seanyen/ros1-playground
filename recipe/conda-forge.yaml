@@ -202,3 +202,7 @@ libboost-chrono-dev:
   win64: [boost]
 libboost-filesystem-dev:
   win64: [boost]
+python3-paramiko:
+  win64: [paramiko]
+python3-defusedxml:
+  win64: [defusedxml]

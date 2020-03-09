@@ -12,9 +12,12 @@ conda_index:
 packages_skip_by_deps:
   - message_generation
   - message_runtime
-
-packages_select_by_deps:
   - roscpp
   - rospy
+
+packages_select_by_deps:
+  - roscpp_tutorials
+  - rospy_tutorials
+  - turtlesim
 
 patch_dir: ./patch
