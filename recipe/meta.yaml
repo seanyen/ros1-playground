@@ -3,37 +3,285 @@ package:
   version: 2020.03.09
 
 source:
+  - git_url: https://github.com/ros-gbp/class_loader-release.git
+    git_rev: release/noetic/class_loader/0.5.0-1
+    folder: ros-noetic-class-loader/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/message_filters/1.15.3-1
+    folder: ros-noetic-message-filters/src/work
   - git_url: https://github.com/ros-gbp/ros-release.git
-    git_rev: release/noetic/rosclean/1.15.0-1
-    folder: ros-noetic-rosclean/src/work
-  - git_url: https://github.com/ros-gbp/ros_tutorials-release.git
-    git_rev: release/noetic/roscpp_tutorials/0.9.2-1
-    folder: ros-noetic-roscpp-tutorials/src/work
+    git_rev: release/noetic/mk/1.15.0-1
+    folder: ros-noetic-mk/src/work
+  - git_url: https://github.com/ros-gbp/pluginlib-release.git
+    git_rev: release/noetic/pluginlib/1.12.2-1
+    folder: ros-noetic-pluginlib/src/work
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/ros/1.15.0-1
+    folder: ros-noetic-ros/src/work
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
-    git_rev: release/noetic/roslaunch/1.15.3-1
-    folder: ros-noetic-roslaunch/src/work
+    git_rev: release/noetic/ros_comm/1.15.3-1
+    folder: ros-noetic-ros-comm/src/work
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
-    git_rev: release/noetic/rosmaster/1.15.3-1
-    folder: ros-noetic-rosmaster/src/work
+    git_rev: release/noetic/rosbag/1.15.3-1
+    folder: ros-noetic-rosbag/src/work
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
-    git_rev: release/noetic/rosout/1.15.3-1
-    folder: ros-noetic-rosout/src/work
+    git_rev: release/noetic/rosbag_storage/1.15.3-1
+    folder: ros-noetic-rosbag-storage/src/work
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosbash/1.15.0-1
+    folder: ros-noetic-rosbash/src/work
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/rosboost_cfg/1.15.0-1
+    folder: ros-noetic-rosboost-cfg/src/work
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/noetic/roscreate/1.15.0-1
+    folder: ros-noetic-roscreate/src/work
+  - git_url: https://github.com/ros-gbp/roslisp-release.git
+    git_rev: release/noetic/roslisp/1.9.24-1
+    folder: ros-noetic-roslisp/src/work
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
-    git_rev: release/noetic/rosparam/1.15.3-1
-    folder: ros-noetic-rosparam/src/work
-  - git_url: https://github.com/ros-gbp/ros_tutorials-release.git
-    git_rev: release/noetic/rospy_tutorials/0.9.2-1
-    folder: ros-noetic-rospy-tutorials/src/work
+    git_rev: release/noetic/roslz4/1.15.3-1
+    folder: ros-noetic-roslz4/src/work
   - git_url: https://github.com/ros-gbp/ros_comm-release.git
-    git_rev: release/noetic/rostest/1.15.3-1
-    folder: ros-noetic-rostest/src/work
+    git_rev: release/noetic/rosmsg/1.15.3-1
+    folder: ros-noetic-rosmsg/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosnode/1.15.3-1
+    folder: ros-noetic-rosnode/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rosservice/1.15.3-1
+    folder: ros-noetic-rosservice/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/rostopic/1.15.3-1
+    folder: ros-noetic-rostopic/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/roswtf/1.15.3-1
+    folder: ros-noetic-roswtf/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    git_rev: release/noetic/std_srvs/1.11.3-1
+    folder: ros-noetic-std-srvs/src/work
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/noetic/topic_tools/1.15.3-1
+    folder: ros-noetic-topic-tools/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-noetic-rosclean
+  - name: ros-noetic-class-loader
+    version: 0.5.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - console_bridge
+        - poco
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-cmake-modules
+      run:
+        - boost
+        - console_bridge
+        - poco
+        - python {{ python }}
+    script: bld_catkin.bat
+  - name: ros-noetic-message-filters
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-rostest
+        - ros-noetic-rosunit
+      run:
+        - boost
+        - python {{ python }}
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+    script: bld_catkin.bat
+  - name: ros-noetic-mk
+    version: 1.15.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rosbuild
+        - ros-noetic-rospack
+      run:
+        - python {{ python }}
+        - ros-noetic-rosbuild
+        - ros-noetic-rospack
+    script: bld_catkin.bat
+  - name: ros-noetic-pluginlib
+    version: 1.12.2
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-class-loader
+        - ros-noetic-cmake-modules
+        - ros-noetic-rosconsole
+        - ros-noetic-roslib
+        - tinyxml2
+      run:
+        - boost
+        - python {{ python }}
+        - ros-noetic-class-loader
+        - ros-noetic-rosconsole
+        - ros-noetic-roslib
+        - tinyxml2
+    script: bld_catkin.bat
+  - name: ros-noetic-ros
+    version: 1.15.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-mk
+        - ros-noetic-rosbash
+        - ros-noetic-rosboost-cfg
+        - ros-noetic-rosbuild
+        - ros-noetic-rosclean
+        - ros-noetic-roscreate
+        - ros-noetic-roslang
+        - ros-noetic-roslib
+        - ros-noetic-rosmake
+        - ros-noetic-rosunit
+      run:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-mk
+        - ros-noetic-rosbash
+        - ros-noetic-rosboost-cfg
+        - ros-noetic-rosbuild
+        - ros-noetic-rosclean
+        - ros-noetic-roscreate
+        - ros-noetic-roslang
+        - ros-noetic-roslib
+        - ros-noetic-rosmake
+        - ros-noetic-rosunit
+    script: bld_catkin.bat
+  - name: ros-noetic-rosbag
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - pillow
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-cpp-common
+        - ros-noetic-rosbag-storage
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-roscpp-serialization
+        - ros-noetic-std-srvs
+        - ros-noetic-topic-tools
+        - ros-noetic-xmlrpcpp
+      run:
+        - boost
+        - pycryptodome
+        - python {{ python }}
+        - python-gnupg
+        - ros-noetic-genmsg
+        - ros-noetic-genpy
+        - ros-noetic-rosbag-storage
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-roslib
+        - ros-noetic-rospy
+        - ros-noetic-std-srvs
+        - ros-noetic-topic-tools
+        - ros-noetic-xmlrpcpp
+        - rospkg
+    script: bld_catkin.bat
+  - name: ros-noetic-rosbag-storage
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - bzip2
+        - console_bridge
+        - openssl
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-cpp-common
+        - ros-noetic-pluginlib
+        - ros-noetic-roscpp-serialization
+        - ros-noetic-roscpp-traits
+        - ros-noetic-roslz4
+        - ros-noetic-rostest
+        - ros-noetic-rostime
+        - ros-noetic-std-msgs
+      run:
+        - boost
+        - bzip2
+        - console_bridge
+        - openssl
+        - python {{ python }}
+        - ros-noetic-cpp-common
+        - ros-noetic-pluginlib
+        - ros-noetic-roscpp-serialization
+        - ros-noetic-roscpp-traits
+        - ros-noetic-roslz4
+        - ros-noetic-rostime
+    script: bld_catkin.bat
+  - name: ros-noetic-rosbash
+    version: 1.15.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rospack
+      run:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rospack
+    script: bld_catkin.bat
+  - name: ros-noetic-rosboost-cfg
     version: 1.15.0
     requirements:
       build:
@@ -47,10 +295,9 @@ outputs:
         - setuptools
       run:
         - python {{ python }}
-        - rospkg
     script: bld_catkin.bat
-  - name: ros-noetic-roscpp-tutorials
-    version: 0.9.2
+  - name: ros-noetic-roscreate
+    version: 1.15.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -58,27 +305,57 @@ outputs:
         - ninja
         - cmake
       host:
-        - boost
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
+        - setuptools
       run:
-        - boost
         - python {{ python }}
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
+        - ros-noetic-roslib
+        - rospkg
     script: bld_catkin.bat
-  - name: ros-noetic-roslaunch
+  - name: ros-noetic-roslisp
+    version: 1.9.24
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-ros-environment
+        - ros-noetic-rosgraph-msgs
+        - ros-noetic-roslang
+        - ros-noetic-rospack
+        - ros-noetic-std-srvs
+      run:
+        - python {{ python }}
+        - ros-noetic-ros-environment
+        - ros-noetic-rosgraph-msgs
+        - ros-noetic-roslang
+        - ros-noetic-rospack
+        - ros-noetic-std-srvs
+    script: bld_catkin.bat
+  - name: ros-noetic-roslz4
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - lz4
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-cpp-common
+        - ros-noetic-rosunit
+      run:
+        - lz4
+        - python {{ python }}
+    script: bld_catkin.bat
+  - name: ros-noetic-rosmsg
     version: 1.15.3
     requirements:
       build:
@@ -89,21 +366,108 @@ outputs:
       host:
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-rosbuild
+        - ros-noetic-std-msgs
+      run:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-genmsg
+        - ros-noetic-genpy
+        - ros-noetic-rosbag
+        - ros-noetic-roslib
+        - rospkg
+    script: bld_catkin.bat
+  - name: ros-noetic-rosnode
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rosgraph
+        - ros-noetic-rostest
+        - ros-noetic-rostopic
+      run:
+        - python {{ python }}
+        - ros-noetic-rosgraph
+        - ros-noetic-rostopic
+    script: bld_catkin.bat
+  - name: ros-noetic-rosservice
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-genpy
+        - ros-noetic-rosgraph
+        - ros-noetic-roslib
+        - ros-noetic-rosmsg
+        - ros-noetic-rospy
+      run:
+        - python {{ python }}
+        - ros-noetic-genpy
+        - ros-noetic-rosgraph
+        - ros-noetic-roslib
+        - ros-noetic-rosmsg
+        - ros-noetic-rospy
+    script: bld_catkin.bat
+  - name: ros-noetic-rostopic
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-genpy
+        - ros-noetic-rosbag
+        - ros-noetic-rospy
+        - ros-noetic-rostest
+      run:
+        - python {{ python }}
+        - ros-noetic-genpy
+        - ros-noetic-rosbag
+        - ros-noetic-rospy
+    script: bld_catkin.bat
+  - name: ros-noetic-roswtf
+    version: 1.15.3
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-cmake-modules
+        - ros-noetic-rosbag
+        - ros-noetic-roslang
+        - ros-noetic-rostest
+        - ros-noetic-std-srvs
       run:
         - paramiko
         - python {{ python }}
-        - pyyaml
-        - ros-noetic-rosclean
-        - ros-noetic-rosgraph-msgs
+        - ros-noetic-rosbuild
+        - ros-noetic-rosgraph
+        - ros-noetic-roslaunch
         - ros-noetic-roslib
-        - ros-noetic-rosmaster
-        - ros-noetic-rosout
-        - ros-noetic-rosparam
-        - ros-noetic-rosunit
+        - ros-noetic-rosnode
+        - ros-noetic-rosservice
         - rospkg
     script: bld_catkin.bat
-  - name: ros-noetic-rosmaster
+  - name: ros-noetic-ros-comm
     version: 1.15.3
     requirements:
       build:
@@ -114,47 +478,55 @@ outputs:
       host:
         - python {{ python }}
         - ros-noetic-catkin
-      run:
-        - defusedxml
-        - python {{ python }}
-        - ros-noetic-rosgraph
-    script: bld_catkin.bat
-  - name: ros-noetic-rosout
-    version: 1.15.3
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
+        - ros-noetic-message-filters
+        - ros-noetic-ros
+        - ros-noetic-rosbag
+        - ros-noetic-rosconsole
         - ros-noetic-roscpp
-        - ros-noetic-rosgraph-msgs
-      run:
-        - python {{ python }}
-        - ros-noetic-roscpp
-        - ros-noetic-rosgraph-msgs
-    script: bld_catkin.bat
-  - name: ros-noetic-rosparam
-    version: 1.15.3
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-      run:
-        - python {{ python }}
-        - pyyaml
         - ros-noetic-rosgraph
+        - ros-noetic-rosgraph-msgs
+        - ros-noetic-roslaunch
+        - ros-noetic-roslisp
+        - ros-noetic-rosmaster
+        - ros-noetic-rosmsg
+        - ros-noetic-rosnode
+        - ros-noetic-rosout
+        - ros-noetic-rosparam
+        - ros-noetic-rospy
+        - ros-noetic-rosservice
+        - ros-noetic-rostest
+        - ros-noetic-rostopic
+        - ros-noetic-roswtf
+        - ros-noetic-std-srvs
+        - ros-noetic-topic-tools
+        - ros-noetic-xmlrpcpp
+      run:
+        - python {{ python }}
+        - ros-noetic-message-filters
+        - ros-noetic-ros
+        - ros-noetic-rosbag
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-rosgraph
+        - ros-noetic-rosgraph-msgs
+        - ros-noetic-roslaunch
+        - ros-noetic-roslisp
+        - ros-noetic-rosmaster
+        - ros-noetic-rosmsg
+        - ros-noetic-rosnode
+        - ros-noetic-rosout
+        - ros-noetic-rosparam
+        - ros-noetic-rospy
+        - ros-noetic-rosservice
+        - ros-noetic-rostest
+        - ros-noetic-rostopic
+        - ros-noetic-roswtf
+        - ros-noetic-std-srvs
+        - ros-noetic-topic-tools
+        - ros-noetic-xmlrpcpp
     script: bld_catkin.bat
-  - name: ros-noetic-rospy-tutorials
-    version: 0.9.2
+  - name: ros-noetic-std-srvs
+    version: 1.11.3
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -166,17 +538,11 @@ outputs:
         - ros-noetic-catkin
         - ros-noetic-message-generation
         - ros-noetic-message-runtime
-        - ros-noetic-roscpp-tutorials
-        - ros-noetic-rospy
-        - ros-noetic-rostest
-        - ros-noetic-std-msgs
       run:
         - python {{ python }}
         - ros-noetic-message-runtime
-        - ros-noetic-rospy
-        - ros-noetic-std-msgs
     script: bld_catkin.bat
-  - name: ros-noetic-rostest
+  - name: ros-noetic-topic-tools
     version: 1.15.3
     requirements:
       build:
@@ -185,22 +551,27 @@ outputs:
         - ninja
         - cmake
       host:
-        - boost
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-rosgraph
-        - ros-noetic-roslaunch
-        - ros-noetic-rosmaster
-        - ros-noetic-rospy
+        - ros-noetic-cpp-common
+        - ros-noetic-message-generation
+        - ros-noetic-message-runtime
+        - ros-noetic-rosbash
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-rostest
+        - ros-noetic-rostime
         - ros-noetic-rosunit
+        - ros-noetic-std-msgs
+        - ros-noetic-xmlrpcpp
       run:
-        - boost
         - python {{ python }}
-        - ros-noetic-rosgraph
-        - ros-noetic-roslaunch
-        - ros-noetic-rosmaster
-        - ros-noetic-rospy
-        - ros-noetic-rosunit
+        - ros-noetic-message-runtime
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-rostime
+        - ros-noetic-std-msgs
+        - ros-noetic-xmlrpcpp
     script: bld_catkin.bat
 
 about:

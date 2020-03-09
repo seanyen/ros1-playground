@@ -206,3 +206,9 @@ python3-paramiko:
   win64: [paramiko]
 python3-defusedxml:
   win64: [defusedxml]
+python3-gnupg:
+  win64: [python-gnupg]
+python3-pil:
+  win64: [pillow]
+python3-pycryptodome:
+  win64: [pycryptodome]

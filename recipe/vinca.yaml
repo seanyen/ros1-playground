@@ -14,9 +14,11 @@ packages_skip_by_deps:
   - message_runtime
   - roscpp
   - rospy
-
-packages_select_by_deps:
   - roscpp_tutorials
   - rospy_tutorials
+
+packages_select_by_deps:
+  - ros
+  - ros_comm
 
 patch_dir: ./patch
