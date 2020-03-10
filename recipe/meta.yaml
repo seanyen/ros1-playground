@@ -10,7 +10,7 @@ source:
       - patch/ros-noetic-catkin.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [not win64]
 
 outputs:
