@@ -1,24 +1,14 @@
 ros_distro: noetic
 ros_python_version: 3
 
-repos: noetic.2020.03.07.rosinstall
-# repos: build_tools.repos
-
 # mapping for package keys
 conda_index:
   - conda-forge.yaml
   - packages-ignore.yaml
 
 packages_skip_by_deps:
-  - message_generation
-  - message_runtime
-  - roscpp
-  - rospy
-  - roscpp_tutorials
-  - rospy_tutorials
 
 packages_select_by_deps:
-  - ros
   - ros_comm
 
-patch_dir: ./patch
+patch_dir: patch
