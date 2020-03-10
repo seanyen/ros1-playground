@@ -3,17 +3,19 @@ package:
   version: 2020.03.10
 
 source:
-  - git_url: https://github.com/ros-gbp/ros_tutorials-release.git
-    git_rev: release/noetic/roscpp_tutorials/0.9.2-1
-    folder: ros-noetic-roscpp-tutorials/src/work
+  - git_url: https://github.com/ros-gbp/catkin-release.git
+    git_rev: release/noetic/catkin/0.8.1-1
+    folder: ros-noetic-catkin/src/work
+    patches:
+      - patch/ros-noetic-catkin.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-noetic-roscpp-tutorials
-    version: 0.9.2
+  - name: ros-noetic-catkin
+    version: 0.8.1
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -21,25 +23,24 @@ outputs:
         - ninja
         - cmake
       host:
-        - boost
+        - catkin_pkg
+        - cmake
+        - empy
+        - gmock
+        - gtest
+        - mock
+        - nose
         - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-message-generation
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
+        - setuptools
       run:
-        - boost
+        - catkin_pkg
+        - cmake
+        - empy
+        - gmock
+        - gtest
+        - nose
         - python {{ python }}
-        - ros-noetic-message-runtime
-        - ros-noetic-rosconsole
-        - ros-noetic-roscpp
-        - ros-noetic-roscpp-serialization
-        - ros-noetic-rostime
-        - ros-noetic-std-msgs
+        - setuptools
     script: bld_catkin.bat
 
 about:
