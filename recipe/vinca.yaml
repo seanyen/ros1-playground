@@ -6,8 +6,11 @@ conda_index:
   - packages-ignore.yaml
 
 packages_skip_by_deps:
+  - ros_comm
+  - roscpp_tutorials
 
 packages_select_by_deps:
-  - catkin
+  - rqt
+  - urdf
 
 patch_dir: patch

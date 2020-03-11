@@ -212,3 +212,11 @@ python3-pil:
   win64: [pillow]
 python3-pycryptodome:
   win64: [pycryptodome]
+uuid:
+  win64: []
+tango-icon-theme:
+  win64: []
+liburdfdom-headers-dev:
+  win64: [urdfdom_headers]
+liburdfdom-dev:
+  win64: [urdfdom]
