@@ -10,7 +10,6 @@ packages_skip_by_deps:
   - roscpp_tutorials
 
 packages_select_by_deps:
-  - rqt
-  - urdf
+  - python_qt_binding
 
 patch_dir: patch
