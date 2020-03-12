@@ -11,6 +11,9 @@ packages_skip_by_deps:
   - python_qt_binding
 
 packages_select_by_deps:
-  - qt_gui
+  - geometry
+  - geometry2
+  - urdf
+  - urdf_geometry_parser
 
 patch_dir: patch
