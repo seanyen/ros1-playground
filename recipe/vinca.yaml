@@ -8,8 +8,10 @@ conda_index:
 packages_skip_by_deps:
   - ros_comm
   - roscpp_tutorials
+  - python_qt_binding
 
 packages_select_by_deps:
-  - python_qt_binding
+  - urdf_geometry_parser
+  - rqt
 
 patch_dir: patch
