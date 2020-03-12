@@ -9,9 +9,11 @@ packages_skip_by_deps:
   - ros_comm
   - roscpp_tutorials
   - python_qt_binding
-
-packages_select_by_deps:
   - urdf
   - urdf_geometry_parser
+
+packages_select_by_deps:
+  - geometry2
+  - media_export
 
 patch_dir: patch
