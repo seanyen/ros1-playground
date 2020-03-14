@@ -1,52 +1,40 @@
 package:
   name: ros
-  version: 2020.03.12
+  version: 2020.03.13
 
 source:
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_sensor_msgs/0.7.0-1
-    folder: ros-noetic-tf2-sensor-msgs/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_bullet/0.7.0-1
-    folder: ros-noetic-tf2-bullet/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_ros/0.7.0-1
-    folder: ros-noetic-tf2-ros/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_eigen/0.7.0-1
-    folder: ros-noetic-tf2-eigen/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/geometry2/0.7.0-1
-    folder: ros-noetic-geometry2/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_kdl/0.7.0-1
-    folder: ros-noetic-tf2-kdl/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_py/0.7.0-1
-    folder: ros-noetic-tf2-py/src/work
-  - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_tools/0.7.0-1
-    folder: ros-noetic-tf2-tools/src/work
+  - git_url: https://github.com/ros-gbp/media_export-release.git
+    git_rev: release/noetic/media_export/0.3.0-1
+    folder: ros-noetic-media-export/src/work
   - git_url: https://github.com/ros-gbp/common_msgs-release.git
     git_rev: release/noetic/sensor_msgs/1.12.7-1
     folder: ros-noetic-sensor-msgs/src/work
   - git_url: https://github.com/ros-gbp/geometry2-release.git
-    git_rev: release/noetic/tf2_geometry_msgs/0.7.0-1
-    folder: ros-noetic-tf2-geometry-msgs/src/work
-  - git_url: https://github.com/ros-gbp/media_export-release.git
-    git_rev: release/noetic/media_export/0.3.0-1
-    folder: ros-noetic-media-export/src/work
+    git_rev: release/noetic/tf2_ros/0.7.0-1
+    folder: ros-noetic-tf2-ros/src/work
+  - git_url: https://github.com/ros-gbp/geometry_angles_utils-release.git
+    git_rev: release/noetic/angles/1.9.13-1
+    folder: ros-noetic-angles/src/work
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/noetic/tf/1.13.0-1
+    folder: ros-noetic-tf/src/work
   - git_url: https://github.com/ros-gbp/actionlib-release.git
     git_rev: release/noetic/actionlib/1.13.0-1
     folder: ros-noetic-actionlib/src/work
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/noetic/tf2_py/0.7.0-1
+    folder: ros-noetic-tf2-py/src/work
+  - git_url: https://github.com/ros-gbp/laser_geometry-release.git
+    git_rev: release/noetic/laser_geometry/1.6.5-1
+    folder: ros-noetic-laser-geometry/src/work
 
 build:
   number: 0
   skip: true  # [not win64]
 
 outputs:
-  - name: ros-noetic-tf2-sensor-msgs
-    version: 0.7.0
+  - name: ros-noetic-media-export
+    version: 0.3.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -54,26 +42,13 @@ outputs:
         - ninja
         - cmake
       host:
-        - eigen
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-cmake-modules
-        - ros-noetic-geometry-msgs
-        - ros-noetic-rostest
-        - ros-noetic-sensor-msgs
-        - ros-noetic-tf2
-        - ros-noetic-tf2-ros
       run:
-        - eigen
         - python {{ python }}
-        - python-orocos-kdl
-        - ros-noetic-rospy
-        - ros-noetic-sensor-msgs
-        - ros-noetic-tf2
-        - ros-noetic-tf2-ros
     script: bld_catkin.bat
-  - name: ros-noetic-tf2-bullet
-    version: 0.7.0
+  - name: ros-noetic-sensor-msgs
+    version: 1.12.7
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -81,17 +56,19 @@ outputs:
         - ninja
         - cmake
       host:
-        - bullet
-        - pkg-config
         - python {{ python }}
         - ros-noetic-catkin
         - ros-noetic-geometry-msgs
-        - ros-noetic-tf2
+        - ros-noetic-message-generation
+        - ros-noetic-message-runtime
+        - ros-noetic-rosbag
+        - ros-noetic-rosunit
+        - ros-noetic-std-msgs
       run:
-        - bullet
         - python {{ python }}
         - ros-noetic-geometry-msgs
-        - ros-noetic-tf2
+        - ros-noetic-message-runtime
+        - ros-noetic-std-msgs
     script: bld_catkin.bat
   - name: ros-noetic-tf2-ros
     version: 0.7.0
@@ -132,29 +109,8 @@ outputs:
         - ros-noetic-tf2-py
         - ros-noetic-xmlrpcpp
     script: bld_catkin.bat
-  - name: ros-noetic-tf2-eigen
-    version: 0.7.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - eigen
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-cmake-modules
-        - ros-noetic-geometry-msgs
-        - ros-noetic-tf2
-      run:
-        - eigen
-        - python {{ python }}
-        - ros-noetic-geometry-msgs
-        - ros-noetic-tf2
-    script: bld_catkin.bat
-  - name: ros-noetic-geometry2
-    version: 0.7.0
+  - name: ros-noetic-angles
+    version: 1.9.13
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -164,31 +120,12 @@ outputs:
       host:
         - python {{ python }}
         - ros-noetic-catkin
-        - ros-noetic-tf2
-        - ros-noetic-tf2-bullet
-        - ros-noetic-tf2-eigen
-        - ros-noetic-tf2-geometry-msgs
-        - ros-noetic-tf2-kdl
-        - ros-noetic-tf2-msgs
-        - ros-noetic-tf2-py
-        - ros-noetic-tf2-ros
-        - ros-noetic-tf2-sensor-msgs
-        - ros-noetic-tf2-tools
+        - ros-noetic-rosunit
       run:
         - python {{ python }}
-        - ros-noetic-tf2
-        - ros-noetic-tf2-bullet
-        - ros-noetic-tf2-eigen
-        - ros-noetic-tf2-geometry-msgs
-        - ros-noetic-tf2-kdl
-        - ros-noetic-tf2-msgs
-        - ros-noetic-tf2-py
-        - ros-noetic-tf2-ros
-        - ros-noetic-tf2-sensor-msgs
-        - ros-noetic-tf2-tools
     script: bld_catkin.bat
-  - name: ros-noetic-tf2-kdl
-    version: 0.7.0
+  - name: ros-noetic-tf
+    version: 1.13.0
     requirements:
       build:
         - "{{ compiler('cxx') }}"
@@ -196,122 +133,35 @@ outputs:
         - ninja
         - cmake
       host:
-        - eigen
-        - orocos-kdl
+        - graphviz
         - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-cmake-modules
-        - ros-noetic-ros-environment
-        - ros-noetic-rostest
-        - ros-noetic-tf2
-        - ros-noetic-tf2-ros
-      run:
-        - eigen
-        - orocos-kdl
-        - python {{ python }}
-        - ros-noetic-tf2
-        - ros-noetic-tf2-ros
-    script: bld_catkin.bat
-  - name: ros-noetic-tf2-py
-    version: 0.7.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-rospy
-        - ros-noetic-tf2
-      run:
-        - python {{ python }}
-        - ros-noetic-rospy
-        - ros-noetic-tf2
-    script: bld_catkin.bat
-  - name: ros-noetic-tf2-tools
-    version: 0.7.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-        - ros-noetic-tf2
-        - ros-noetic-tf2-msgs
-        - ros-noetic-tf2-ros
-      run:
-        - python {{ python }}
-        - ros-noetic-tf2
-        - ros-noetic-tf2-msgs
-        - ros-noetic-tf2-ros
-    script: bld_catkin.bat
-  - name: ros-noetic-sensor-msgs
-    version: 1.12.7
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
+        - ros-noetic-angles
         - ros-noetic-catkin
         - ros-noetic-geometry-msgs
+        - ros-noetic-message-filters
         - ros-noetic-message-generation
         - ros-noetic-message-runtime
-        - ros-noetic-rosbag
-        - ros-noetic-rosunit
-        - ros-noetic-std-msgs
-      run:
-        - python {{ python }}
-        - ros-noetic-geometry-msgs
-        - ros-noetic-message-runtime
-        - ros-noetic-std-msgs
-    script: bld_catkin.bat
-  - name: ros-noetic-tf2-geometry-msgs
-    version: 0.7.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - orocos-kdl
-        - python {{ python }}
-        - python-orocos-kdl
-        - ros-noetic-catkin
-        - ros-noetic-geometry-msgs
-        - ros-noetic-ros-environment
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
         - ros-noetic-rostest
-        - ros-noetic-tf2
+        - ros-noetic-rostime
+        - ros-noetic-rosunit
+        - ros-noetic-roswtf
+        - ros-noetic-sensor-msgs
+        - ros-noetic-std-msgs
         - ros-noetic-tf2-ros
       run:
-        - orocos-kdl
+        - graphviz
         - python {{ python }}
-        - python-orocos-kdl
         - ros-noetic-geometry-msgs
-        - ros-noetic-tf2
+        - ros-noetic-message-filters
+        - ros-noetic-message-runtime
+        - ros-noetic-rosconsole
+        - ros-noetic-roscpp
+        - ros-noetic-roswtf
+        - ros-noetic-sensor-msgs
+        - ros-noetic-std-msgs
         - ros-noetic-tf2-ros
-    script: bld_catkin.bat
-  - name: ros-noetic-media-export
-    version: 0.3.0
-    requirements:
-      build:
-        - "{{ compiler('cxx') }}"
-        - "{{ compiler('c') }}"
-        - ninja
-        - cmake
-      host:
-        - python {{ python }}
-        - ros-noetic-catkin
-      run:
-        - python {{ python }}
     script: bld_catkin.bat
   - name: ros-noetic-actionlib
     version: 1.13.0
@@ -342,6 +192,54 @@ outputs:
         - ros-noetic-rospy
         - ros-noetic-rostest
         - ros-noetic-std-msgs
+    script: bld_catkin.bat
+  - name: ros-noetic-tf2-py
+    version: 0.7.0
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - python {{ python }}
+        - ros-noetic-catkin
+        - ros-noetic-rospy
+        - ros-noetic-tf2
+      run:
+        - python {{ python }}
+        - ros-noetic-rospy
+        - ros-noetic-tf2
+    script: bld_catkin.bat
+  - name: ros-noetic-laser-geometry
+    version: 1.6.5
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - boost
+        - eigen
+        - python {{ python }}
+        - ros-noetic-angles
+        - ros-noetic-catkin
+        - ros-noetic-roscpp
+        - ros-noetic-rosunit
+        - ros-noetic-sensor-msgs
+        - ros-noetic-tf
+        - ros-noetic-tf2
+      run:
+        - boost
+        - eigen
+        - numpy
+        - python {{ python }}
+        - ros-noetic-angles
+        - ros-noetic-roscpp
+        - ros-noetic-sensor-msgs
+        - ros-noetic-tf
+        - ros-noetic-tf2
     script: bld_catkin.bat
 
 about:

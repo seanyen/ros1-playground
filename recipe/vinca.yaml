@@ -13,7 +13,7 @@ packages_skip_by_deps:
   - urdf_geometry_parser
 
 packages_select_by_deps:
-  - geometry2
+  - laser_geometry
   - media_export
 
 patch_dir: patch
